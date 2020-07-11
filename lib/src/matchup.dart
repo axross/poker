@@ -2,12 +2,15 @@ import "dart:math" show Random;
 import "card.dart" show Card, Rank, Suit;
 import "card_pair.dart" show CardPair;
 import "hand.dart" show Hand;
-import "player.dart" show Player;
 
 class Matchup {
-  Matchup({Set<Card> this.communityCards, List<Player> this.players})
-      : playerCardPairCombinations =
-            players.map((player) => player.cardPairCombinations).toList(),
+  Matchup({
+    Set<Card> this.communityCards,
+    List<Set<CardPairCombinationsGeneratable>> this.players,
+  })  : playerCardPairCombinations = players
+            .map<Set<CardPair>>((player) => player.fold(<CardPair>{},
+                (combs, player) => combs..addAll(player.cardPairCombinations)))
+            .toList(),
         orderedPlayerIndexes = List.generate(players.length, (index) => index) {
     orderedPlayerIndexes.sort((a, b) {
       if (playerCardPairCombinations[a].length == 1) {
@@ -32,7 +35,7 @@ class Matchup {
 
   final Set<Card> communityCards;
 
-  final List<Player> players;
+  final List<Set<CardPairCombinationsGeneratable>> players;
 
   final List<Set<CardPair>> playerCardPairCombinations;
 
@@ -172,4 +175,76 @@ class NoPossibleMatchupException implements Exception {
 
   @override
   String toString() => "NoPossibleMatchupException";
+}
+
+mixin CardPairCombinationsGeneratable {
+  Set<CardPair> get cardPairCombinations;
+}
+
+class HoleCards with CardPairCombinationsGeneratable {
+  HoleCards({this.cardPair}) : cardPairCombinations = {cardPair};
+
+  final CardPair cardPair;
+
+  final Set<CardPair> cardPairCombinations;
+
+  int get hashCode => cardPair.hashCode;
+
+  operator ==(Object other) => other is HoleCards && other.cardPair == cardPair;
+}
+
+class HandRangePart with CardPairCombinationsGeneratable {
+  static final _cache = <HandRangePart, Set<CardPair>>{};
+
+  HandRangePart({this.high, this.kicker, this.isSuited = false});
+
+  final Rank high;
+  final Rank kicker;
+  final bool isSuited;
+
+  Set<CardPair> get cardPairCombinations {
+    if (!_cache.containsKey(this)) {
+      if (isSuited) {
+        _cache[this] = Suit.values
+            .map((suit) => CardPair(
+                  Card(rank: high, suit: suit),
+                  Card(rank: kicker, suit: suit),
+                ))
+            .toSet();
+      } else {
+        final cardPairs = <CardPair>{};
+
+        for (final highSuit in Suit.values) {
+          for (final kickerSuit in Suit.values) {
+            if (kickerSuit == highSuit) continue;
+
+            cardPairs.add(CardPair(
+              Card(rank: high, suit: highSuit),
+              Card(rank: kicker, suit: kickerSuit),
+            ));
+          }
+        }
+
+        _cache[this] = cardPairs;
+      }
+    }
+
+    return _cache[this];
+  }
+
+  int get hashCode {
+    int result = 17;
+
+    result = 37 * result + high.hashCode;
+    result = 37 * result + kicker.hashCode;
+    result = 37 * result + isSuited.hashCode;
+
+    return result;
+  }
+
+  operator ==(Object other) =>
+      other is HandRangePart &&
+      other.high == high &&
+      other.kicker == kicker &&
+      other.isSuited == isSuited;
 }

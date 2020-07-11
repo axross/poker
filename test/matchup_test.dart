@@ -22,18 +22,16 @@ void main() {
             Card(rank: Rank.six, suit: Suit.diamond),
           },
           players: [
-            HoleCards(
-              cardPair: CardPair(
-                Card(rank: Rank.six, suit: Suit.spade),
-                Card(rank: Rank.seven, suit: Suit.spade),
-              ),
-            ),
-            HandRange({
-              HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true)
-            }),
-            HandRange({
-              HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true)
-            }),
+            {
+              HoleCards(
+                cardPair: CardPair(
+                  Card(rank: Rank.six, suit: Suit.spade),
+                  Card(rank: Rank.seven, suit: Suit.spade),
+                ),
+              )
+            },
+            {HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true)},
+            {HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true)},
           ],
         );
 

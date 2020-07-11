@@ -8,7 +8,7 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
     Matchup(
       communityCards: {},
       players: [
-        HandRange({
+        {
           HandRangePart(high: Rank.ace, kicker: Rank.deuce, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.three, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.four, isSuited: true),
@@ -31,8 +31,8 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.ace, kicker: Rank.deuce, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.three, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.four, isSuited: true),
@@ -55,8 +55,8 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.ace, kicker: Rank.deuce, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.three, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.four, isSuited: true),
@@ -79,8 +79,8 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.eight, kicker: Rank.seven, isSuited: true),
           HandRangePart(high: Rank.nine, kicker: Rank.eight, isSuited: true),
           HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true),
@@ -89,8 +89,8 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.eight, kicker: Rank.seven, isSuited: true),
           HandRangePart(high: Rank.nine, kicker: Rank.eight, isSuited: true),
           HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true),
@@ -99,8 +99,8 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.eight, kicker: Rank.seven, isSuited: true),
           HandRangePart(high: Rank.nine, kicker: Rank.eight, isSuited: true),
           HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true),
@@ -109,7 +109,7 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
+        },
       ],
     );
   }
@@ -124,7 +124,7 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
     matchup = Matchup(
       communityCards: {},
       players: [
-        HandRange({
+        {
           HandRangePart(high: Rank.ace, kicker: Rank.deuce, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.three, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.four, isSuited: true),
@@ -147,8 +147,8 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.ace, kicker: Rank.deuce, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.three, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.four, isSuited: true),
@@ -171,8 +171,8 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.ace, kicker: Rank.deuce, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.three, isSuited: true),
           HandRangePart(high: Rank.ace, kicker: Rank.four, isSuited: true),
@@ -195,8 +195,8 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.eight, kicker: Rank.seven, isSuited: true),
           HandRangePart(high: Rank.nine, kicker: Rank.eight, isSuited: true),
           HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true),
@@ -205,8 +205,8 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.eight, kicker: Rank.seven, isSuited: true),
           HandRangePart(high: Rank.nine, kicker: Rank.eight, isSuited: true),
           HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true),
@@ -215,8 +215,8 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
-        HandRange({
+        },
+        {
           HandRangePart(high: Rank.eight, kicker: Rank.seven, isSuited: true),
           HandRangePart(high: Rank.nine, kicker: Rank.eight, isSuited: true),
           HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true),
@@ -225,7 +225,7 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
           HandRangePart(high: Rank.queen, kicker: Rank.queen),
           HandRangePart(high: Rank.king, kicker: Rank.king),
           HandRangePart(high: Rank.ace, kicker: Rank.ace),
-        }),
+        },
       ],
     );
   }
