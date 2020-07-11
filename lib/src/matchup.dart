@@ -150,20 +150,20 @@ class MatchupResult {
 
   final List<Hand> hands;
 
-  Set<int> get wonPlayerIndexes {
-    Set<int> wonPlayerIndexes = {};
-    int wonPlayerHandId = 10000;
+  Set<int> get bestHandIndexes {
+    Set<int> bestHandIndexes = {};
+    int bestHandStrongness = -1;
 
-    for (int i = 0; i < hands.length; ++i) {
-      final hand = hands[i];
+    for (int index = 0; index < hands.length; ++index) {
+      final hand = hands[index];
 
-      if (hand.id < wonPlayerHandId) {
-        wonPlayerHandId = hand.id;
-        wonPlayerIndexes = {i};
+      if (hand.strongness < bestHandStrongness) {
+        bestHandStrongness = hand.strongness;
+        bestHandIndexes = {index};
       }
     }
 
-    return wonPlayerIndexes;
+    return bestHandIndexes;
   }
 }
 

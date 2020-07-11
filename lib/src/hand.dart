@@ -17,7 +17,11 @@ class Hand {
     return Hand._(forNonFlush[_hashForNonFlush(cards: cards)]);
   }
 
+  /// An id of Cactus Kev's poker hand equivalence enums
+  // http://suffe.cool/poker/7462.html
   final int id;
+
+  int get strongness => 7462 - id;
 
   get type {
     if (id > 6185) return HandType.highCard;
