@@ -1,0 +1,14 @@
+name: poker
+version: 0.0.1
+description: >-
+  Hello
+homepage: https://pub.dev/packages/poker
+repository: https://github.com/axross/poker
+documentation: https://pub.dev/documentation/poker/latest/
+environment:
+  sdk: ">=2.8.4 <3.0.0"
+dependencies:
+  meta: ^1.1.8
+dev_dependencies:
+  benchmark_harness: 1.0.5
+  test: 1.15.1
