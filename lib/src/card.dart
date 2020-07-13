@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 /// A piece of playing cards.
 class Card {
   /// Creates a card by its rank and suit.
-  const Card({@required Rank this.rank, @required Suit this.suit})
+  const Card({@required this.rank, @required this.suit})
       : assert(rank != null),
         assert(suit != null);
 
@@ -63,6 +63,7 @@ enum Suit {
   club,
 }
 
+// ignore: missing_return
 String _rankToChar(Rank rank) {
   switch (rank) {
     case Rank.ace:
@@ -94,6 +95,7 @@ String _rankToChar(Rank rank) {
   }
 }
 
+// ignore: missing_return
 String _suitToChar(Suit suit) {
   switch (suit) {
     case Suit.spade:

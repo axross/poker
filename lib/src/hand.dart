@@ -3,7 +3,7 @@ import 'precalculated_table.dart' show dpReference, asFlush, forNonFlush;
 
 /// An object representing a made hand.
 class Hand {
-  Hand._(int this._id);
+  Hand._(this._id);
 
   /// Creates a hand by the given 7-length card array.
   factory Hand.bestFrom(Iterable<Card> cards) {

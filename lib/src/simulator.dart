@@ -8,8 +8,8 @@ import 'hand.dart' show Hand;
 class Simulator {
   /// Creates
   Simulator({
-    @required Set<Card> this.communityCards,
-    @required List<Set<CardPairCombinationsGeneratable>> this.players,
+    @required this.communityCards,
+    @required this.players,
   })  : assert(communityCards != null),
         assert(players != null),
         assert(communityCards.length <= 5),
@@ -116,7 +116,7 @@ class Simulator {
     for (final playerIndex in _orderedPlayerIndexes) {
       final cardPairCombinations = {...playerCardPairCombinations[playerIndex]};
 
-      while (cardPairCombinations.length >= 1) {
+      while (cardPairCombinations.isNotEmpty) {
         final cardPairIndex = Random().nextInt(cardPairCombinations.length);
         final cardPair = cardPairCombinations.elementAt(cardPairIndex);
 
