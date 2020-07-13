@@ -1,11 +1,12 @@
 import 'package:poker/poker.dart';
 import "package:benchmark_harness/benchmark_harness.dart";
 
-class MatchupInitializationBenchmark extends BenchmarkBase {
-  MatchupInitializationBenchmark() : super("MatchupInitializationBenchmark");
+class SimulatorInitializationBenchmark extends BenchmarkBase {
+  SimulatorInitializationBenchmark()
+      : super("SimulatorInitializationBenchmark");
 
   void run() {
-    Matchup(
+    Simulator(
       communityCards: {},
       players: [
         {
@@ -115,13 +116,13 @@ class MatchupInitializationBenchmark extends BenchmarkBase {
   }
 }
 
-class MatchupEvaluationBenchmark extends BenchmarkBase {
-  MatchupEvaluationBenchmark() : super("MatchupEvaluationBenchmark");
+class SimulatorEvaluationBenchmark extends BenchmarkBase {
+  SimulatorEvaluationBenchmark() : super("SimulatorEvaluationBenchmark");
 
-  Matchup matchup;
+  Simulator simulator;
 
   void setup() {
-    matchup = Matchup(
+    simulator = Simulator(
       communityCards: {},
       players: [
         {
@@ -231,15 +232,15 @@ class MatchupEvaluationBenchmark extends BenchmarkBase {
   }
 
   void teardown() {
-    matchup = null;
+    simulator = null;
   }
 
   void run() {
-    matchup.evaluate();
+    simulator.evaluate();
   }
 }
 
 void main() {
-  MatchupInitializationBenchmark().report();
-  MatchupEvaluationBenchmark().report();
+  SimulatorInitializationBenchmark().report();
+  SimulatorEvaluationBenchmark().report();
 }

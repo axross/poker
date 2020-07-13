@@ -1,18 +1,25 @@
 import "dart:math" show Random;
-import "card.dart" show Card, Rank, Suit;
-import "card_pair.dart" show CardPair;
-import "hand.dart" show Hand;
+import 'package:meta/meta.dart';
+import 'card.dart' show Card, Rank, Suit;
+import 'card_pair.dart' show CardPair;
+import 'hand.dart' show Hand;
 
-class Matchup {
-  Matchup({
-    Set<Card> this.communityCards,
-    List<Set<CardPairCombinationsGeneratable>> this.players,
-  })  : playerCardPairCombinations = players
+///
+class Simulator {
+  /// Creates
+  Simulator({
+    @required Set<Card> this.communityCards,
+    @required List<Set<CardPairCombinationsGeneratable>> this.players,
+  })  : assert(communityCards != null),
+        assert(players != null),
+        assert(communityCards.length <= 5),
+        playerCardPairCombinations = players
             .map<Set<CardPair>>((player) => player.fold(<CardPair>{},
                 (combs, player) => combs..addAll(player.cardPairCombinations)))
             .toList(),
-        orderedPlayerIndexes = List.generate(players.length, (index) => index) {
-    orderedPlayerIndexes.sort((a, b) {
+        _orderedPlayerIndexes =
+            List.generate(players.length, (index) => index) {
+    _orderedPlayerIndexes.sort((a, b) {
       if (playerCardPairCombinations[a].length == 1) {
         return -2;
       }
@@ -33,15 +40,19 @@ class Matchup {
     });
   }
 
+  ///
   final Set<Card> communityCards;
 
+  ///
   final List<Set<CardPairCombinationsGeneratable>> players;
 
+  ///
   final List<Set<CardPair>> playerCardPairCombinations;
 
-  final List<int> orderedPlayerIndexes;
+  final List<int> _orderedPlayerIndexes;
 
-  MatchupResult evaluate() {
+  /// Returns matchup evaluation result. Card pairs as player hands and community cards are randomly picked.
+  Matchup evaluate() {
     final deck = {
       const Card(rank: Rank.ace, suit: Suit.spade),
       const Card(rank: Rank.deuce, suit: Suit.spade),
@@ -102,7 +113,7 @@ class Matchup {
     final finalCommunityCards = {...this.communityCards};
     final List<CardPair> playerHoleCards = List(players.length);
 
-    for (final playerIndex in orderedPlayerIndexes) {
+    for (final playerIndex in _orderedPlayerIndexes) {
       final cardPairCombinations = {...playerCardPairCombinations[playerIndex]};
 
       while (cardPairCombinations.length >= 1) {
@@ -111,10 +122,10 @@ class Matchup {
 
         cardPairCombinations.remove(cardPair);
 
-        if (deck.contains(cardPair.a) && deck.contains(cardPair.b)) {
+        if (deck.contains(cardPair[0]) && deck.contains(cardPair[1])) {
           playerHoleCards[playerIndex] = cardPair;
-          deck.remove(cardPair.a);
-          deck.remove(cardPair.b);
+          deck.remove(cardPair[0]);
+          deck.remove(cardPair[1]);
 
           break;
         }
@@ -133,26 +144,31 @@ class Matchup {
       deck.remove(card);
     }
 
-    return MatchupResult(
+    return Matchup._(
       communityCards: finalCommunityCards,
       holeCards: playerHoleCards,
     );
   }
 }
 
-class MatchupResult {
-  MatchupResult({this.communityCards, this.holeCards})
+/// An object representing a matchup.
+class Matchup {
+  Matchup._({@required this.communityCards, @required this.holeCards})
       : hands = holeCards
             .map((cardPair) =>
-                Hand.bestFrom({...communityCards, cardPair.a, cardPair.b}))
+                Hand.bestFrom({...communityCards, cardPair[0], cardPair[1]}))
             .toList();
 
+  /// The chosen/decided community cards for the matchup.
   final Set<Card> communityCards;
 
+  /// The chosen hole cards for each player.
   final List<CardPair> holeCards;
 
+  /// The players' made hand.
   final List<Hand> hands;
 
+  /// The indexes of winners in the matchup.
   Set<int> get bestHandIndexes {
     Set<int> bestHandIndexes = {};
     int bestHandStrongness = -1;
@@ -182,7 +198,9 @@ mixin CardPairCombinationsGeneratable {
 }
 
 class HoleCards with CardPairCombinationsGeneratable {
-  HoleCards({this.cardPair}) : cardPairCombinations = {cardPair};
+  HoleCards({@required this.cardPair})
+      : assert(cardPair != null),
+        cardPairCombinations = {cardPair};
 
   final CardPair cardPair;
 
@@ -196,7 +214,12 @@ class HoleCards with CardPairCombinationsGeneratable {
 class HandRangePart with CardPairCombinationsGeneratable {
   static final _cache = <HandRangePart, Set<CardPair>>{};
 
-  HandRangePart({this.high, this.kicker, this.isSuited = false});
+  HandRangePart({
+    @required this.high,
+    @required this.kicker,
+    this.isSuited = false,
+  })  : assert(high != null),
+        assert(kicker != null);
 
   final Rank high;
   final Rank kicker;

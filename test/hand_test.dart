@@ -2,11 +2,13 @@ import 'package:poker/poker.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test("Hand.bestFrom() returns", () {
+  test(
+      "Hand.bestFrom() creates a hand that is made of the best combination from the given cards",
+      () {
     for (final entry in _handAndIds.entries) {
       final hand = Hand.bestFrom(entry.key);
 
-      expect(hand.id, equals(entry.value));
+      expect(hand.strongness, equals(entry.value));
     }
   });
 }
@@ -20,7 +22,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 5581,
+  ]: 1881,
   [
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.spade),
@@ -29,7 +31,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 5850,
+  ]: 1612,
   [
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.club),
@@ -37,3788 +39,3788 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 3177,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 4894,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 3173,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 504,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 3464,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 6315,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 4225,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 2177,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 2842,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3263,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 3574,
-  [
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 4704,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 6420,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 4869,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 244,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2835,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 1611,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 2769,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 5336,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 7112,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 318,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 6195,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 6680,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 6483,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 6727,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 6885,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6912,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 7036,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 3293,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 4673,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 5143,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 3834,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 4596,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 6919,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2833,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 5966,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 6295,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 6736,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 2804,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 2350,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 3614,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 5410,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 5406,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 3684,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 6104,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 5096,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 5549,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 186,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 3556,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 6371,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 5765,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3611,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 3199,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 6130,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 7291,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 4216,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 2864,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 2512,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 4866,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 2846,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 6478,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 1605,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 3769,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 5848,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 4507,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5415,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 5765,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 3346,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 3110,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 3866,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6499,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 6350,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 6203,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 1600,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 5172,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 4006,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 2845,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 2572,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 3845,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 4041,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 2779,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 4043,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 5553,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 6389,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 6084,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 4940,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 4501,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 5391,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4314,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 2854,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 2568,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 3339,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 5757,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 3188,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 6749,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5538,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 2848,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 6352,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 3151,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 2831,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 3062,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 4453,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 5746,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 2820,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 3426,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 3293,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 6686,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 3361,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 2858,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 6186,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3867,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 181,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 5442,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 7346,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 6273,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 1886,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 3261,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 4646,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3610,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 1607,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5825,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 6888,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 3062,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2848,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 1603,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 2936,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 6580,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 5862,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 4360,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3110,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 2723,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 2673,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 5271,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 415,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 3987,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 2855,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 7237,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6420,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 201,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 6753,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 1603,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 3426,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6315,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 2579,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 6436,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5203,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 4541,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5105,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 2892,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 4227,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 3851,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 3084,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 6359,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3786,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 2780,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 6744,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 1606,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 1389,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 7097,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2558,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 3272,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 1608,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 2336,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 2832,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 5626,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 3573,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 3320,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 1625,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 3098,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 5528,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 6421,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 2963,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 2525,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 4612,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 2945,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 6699,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 3716,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 2612,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 4676,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3051,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 1764,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 5160,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 5545,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 3821,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 5086,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 6763,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 3043,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6022,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 1285,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 4534,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 198,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 5087,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5100,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3766,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4233,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 5966,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 4886,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5895,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 3793,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6358,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 6279,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 6723,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 5222,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 4217,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 5696,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 5545,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3398,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 7009,
-  [
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 2716,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 3496,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 7009,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 2486,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 7253,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 1605,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 87,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 1458,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4162,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 4869,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 6102,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 4483,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 5098,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 3840,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 4251,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2414,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 5442,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 5372,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 6083,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 429,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 1604,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 2974,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 6315,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 4327,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 6625,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 5187,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 6722,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2624,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 3306,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 4974,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 3040,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 3823,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 3084,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 3029,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4207,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 6359,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 2910,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 3996,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 4490,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 3040,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 241,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 2627,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 2634,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 3866,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 6031,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4455,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 2655,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 3576,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 3822,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 942,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 6022,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 3393,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 4015,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4270,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 5367,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 3118,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 3877,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 3326,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 2909,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 810,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 5194,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 4967,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 3832,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3924,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 3307,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 6194,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 4216,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 6799,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 1896,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 6269,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 5396,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 6680,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 1808,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 3285,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 6215,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3350,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 5090,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 1333,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 7061,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 175,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 1603,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 6238,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 4481,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 5087,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4945,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 6499,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 2804,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 3255,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 3667,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 4648,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 2821,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 4657,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 4681,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 2776,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 4437,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 298,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 1603,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 1609,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 1603,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 5194,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 2528,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 5088,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 3029,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 3197,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5591,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 2416,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 5812,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 2672,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 5801,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 6769,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 4938,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 4872,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 1605,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6909,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 2991,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 7219,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 2634,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 5756,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 6509,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 2679,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 5202,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 5310,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 5408,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 5187,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3062,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 6554,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 7020,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 6714,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 3250,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3019,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 3876,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 6076,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3794,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 265,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 6359,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 6187,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 6131,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 3998,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3305,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 4939,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 6189,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 6908,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 6472,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 5126,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 132,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 4278,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 6187,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 6415,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 4450,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 4878,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 6194,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5966,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 5847,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 6121,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 5882,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 2504,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 7056,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 5378,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 6021,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 6505,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 4653,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 5099,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 6721,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 2710,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 6266,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 6075,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 6301,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 2629,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 3575,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 2580,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 4461,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 4009,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 5088,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 3846,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 4226,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 3249,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4876,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 3131,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.spade)
   ]: 4285,
   [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 3074,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 2546,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 6387,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 6239,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 5848,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 3326,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 7015,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 6321,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 2853,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 4658,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 1625,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 5031,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 7217,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 3076,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3205,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 4280,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 1528,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4377,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 2820,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 3682,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 1101,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 2702,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 6267,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 6195,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 3776,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 4381,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 2754,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 4481,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 3249,
+  ]: 2568,
   [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4876,
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 4289,
   [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 4211,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 4647,
-  [
+    Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 6958,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 3998,
+  [
     Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart)
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 1147,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 3237,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 5285,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 4620,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 4199,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 3888,
+  [
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond)
   ]: 2758,
   [
     Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 1042,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 2593,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 7218,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 4627,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 5851,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4693,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 2126,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 350,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 7144,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 1267,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 782,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 979,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 735,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 577,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 550,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 426,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 4169,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 2789,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 2319,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3628,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 2866,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 543,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 4629,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 1496,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 1167,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 726,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 4658,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 5112,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 3848,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 2052,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 2056,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 3778,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 1358,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 2366,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 1913,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 7276,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 3906,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 1091,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 1697,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 3851,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 4263,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 1332,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 171,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 3246,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 4598,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 4950,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 2596,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4616,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 984,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 5857,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3693,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 1614,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 2955,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 2047,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 1697,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 4116,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4352,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 3596,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 963,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1112,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 1259,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 5862,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 2290,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 3456,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 4617,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 4890,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 3617,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 3421,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 4683,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 3419,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 1909,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 1073,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 1378,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 2522,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 2961,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 2071,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3148,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 4608,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 4894,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 4123,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 1705,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 4274,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 713,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 1924,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 4614,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 1110,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 4311,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 4631,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 4400,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 3009,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 1716,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 4642,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 4036,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 4169,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 776,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 4101,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 4604,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 1276,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 3595,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 7281,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 2020,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 116,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 1189,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 5576,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 4201,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 2816,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 3852,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 5855,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1637,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 574,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 4400,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 4614,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 5859,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 4526,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 882,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 1600,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 3102,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 4352,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 4739,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4789,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 2191,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 7047,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 3475,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 4607,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 225,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 1042,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 7261,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 709,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 5859,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 4036,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 1147,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 4883,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 1026,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 2259,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 2921,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 2357,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 4570,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 3235,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 3611,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 4378,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 1103,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 3676,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 4682,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 718,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 5856,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 6073,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 365,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 4904,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 4190,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 5854,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 5126,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 4630,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 1836,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 3889,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 4142,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 5837,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 4364,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 1934,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 1041,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 4499,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 4937,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 2850,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 4517,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 763,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 3746,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 4850,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 2786,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 4411,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 5698,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 2302,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 1917,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 3641,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 2376,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 699,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4419,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 1440,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 6177,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 2928,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 7264,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 2375,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 2362,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 3696,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3229,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 1496,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 2576,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1567,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 3669,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 1104,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 1183,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 739,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 2240,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 3245,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 1766,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 1917,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4064,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 453,
+  [
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 4746,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 3966,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 453,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 4976,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 209,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 5857,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 7375,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 6004,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 3300,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 2593,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 1360,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 2979,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 2364,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 3622,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 3211,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 5048,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 2020,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 2090,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 1379,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 7033,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 5858,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 4488,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 1147,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 3135,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 837,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 2275,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 740,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4838,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 4156,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 2488,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 4422,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 3639,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 4378,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 4433,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 3255,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1103,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 4552,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 3466,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 2972,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 4422,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 7221,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 4835,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 4828,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 3596,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 1431,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 3007,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 4807,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 3886,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 3640,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 6520,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 1440,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 4069,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 3447,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3192,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 2095,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 4344,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3585,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 4136,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 4553,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 6652,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 2268,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 2495,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 3630,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 3538,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 4155,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 1268,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 3246,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 663,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 5566,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 1193,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 2066,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 782,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 5654,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 4177,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 1247,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 4112,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 2372,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 6129,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 401,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 7287,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 5859,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 1224,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 2981,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 2375,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 2517,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 963,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 4658,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4207,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 3795,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 2814,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 4641,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 2805,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 2781,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 4686,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 3025,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 7164,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 5859,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 5853,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 5859,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 2268,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 4934,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 2374,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 4433,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 4265,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 1871,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 5046,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 1650,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 4790,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 1661,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 693,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 2524,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 2590,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 5857,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 553,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 4471,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 243,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 4828,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 1706,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 953,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 4783,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 2260,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 2152,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 2054,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 2275,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 4400,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 908,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 442,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 748,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 4212,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 4443,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 3586,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 1386,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 3668,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 7197,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 1103,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 1275,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 1331,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 3464,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4157,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 2523,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 1273,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 554,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 990,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 2336,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 7330,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 3184,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 1275,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 1047,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 3012,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 2584,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 1268,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1496,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 1615,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1341,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 1580,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 4958,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 406,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 2084,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 1441,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 957,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 2809,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 2363,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 741,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 4752,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 1196,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 1387,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 1161,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 4833,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 3887,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 4882,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 3001,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 3453,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 2374,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 3616,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 3236,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 4213,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 2586,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 4331,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 3177,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4388,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 4916,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 1075,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 1223,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 1614,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 4136,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 447,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 1141,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 4609,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 2804,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 5837,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 2431,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 245,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 4386,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 4257,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 3182,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 5934,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3085,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 4642,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 3780,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 6361,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 4760,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 1195,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 1267,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 3686,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 3081,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 4708,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 2981,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 4213,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 2586,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 3251,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 2815,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 4704,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 6414,
+  ]: 1048,
   [
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.club),
@@ -3827,1870 +3829,1870 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 1607,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 5765,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 7246,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 4310,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 4020,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 5765,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 1600,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 2604,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 2724,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 3087,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 2941,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 6798,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 3649,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 4527,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 6230,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 226,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3932,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 6246,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 3249,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 5317,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 2857,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 7042,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 2864,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 4939,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3306,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 3611,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 4059,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5801,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 2591,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5429,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 3631,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 3000,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 3560,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 7022,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 1839,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 7009,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 4563,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2645,
-  [
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 2627,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4426,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6231,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 5663,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 4755,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 5966,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 2661,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 3219,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 6882,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 3605,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 5611,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 3337,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 3462,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 4308,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 3003,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 3646,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 3721,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 1689,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 6300,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 5052,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 5333,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 3559,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 5141,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 2711,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 2633,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 6194,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 2887,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 3353,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 2600,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 4445,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 2273,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 3491,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 6904,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 3462,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 3338,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 3212,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 1140,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 2009,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 7121,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 7020,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 4323,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 3902,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 6799,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 186,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4327,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 1355,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 4658,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 1840,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 3771,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 1808,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4006,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 1475,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 3284,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 5582,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 2207,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 2933,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 2847,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 2501,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 3875,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 195,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 4088,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 5318,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3014,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 4701,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 4102,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 5802,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 3866,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 4570,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 5847,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 1605,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 4140,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5414,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 4888,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 4767,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 4490,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 353,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 6251,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 2844,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 3328,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 2990,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 3767,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 7008,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 2700,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 5151,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 4157,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 6436,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 4207,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 3382,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3986,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 2985,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 4350,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 6714,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 5847,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 4887,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4547,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4736,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 2660,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 3294,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 6350,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5811,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 3354,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 3435,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 3018,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 2138,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 2111,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 6350,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 784,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 4688,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 1602,
-  [
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 3631,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 1608,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 3996,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 5528,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 5751,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 3997,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 3029,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 3304,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 2759,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 294,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 4492,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 4705,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 2746,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 5087,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 4342,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 5442,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 4484,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 2645,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 4020,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 6554,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5536,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 4650,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 5325,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 2811,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 6483,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 3683,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 5223,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 6266,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 6302,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 5213,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 5976,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 4005,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 2689,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 2316,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 1197,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 4349,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 3384,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3931,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 6399,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 5318,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 1605,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 5628,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 2842,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 1831,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 5333,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 2801,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 1297,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 3887,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 2942,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 4569,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 6687,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5106,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 3108,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 6473,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 5801,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6943,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3646,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 5015,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 3075,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond)
   ]: 5855,
   [
     Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 1697,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 216,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 3152,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 3442,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 1697,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 5862,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 4858,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 4738,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4375,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 4521,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 664,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 3813,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 2935,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 1232,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 7236,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 3530,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 1216,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 4213,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 2145,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 4605,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 420,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 4598,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 2523,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4156,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 3851,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 3403,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1661,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 4871,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 2033,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 3831,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 4462,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 3902,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 440,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 5623,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 453,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 2899,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4817,
+  [
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 4835,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3036,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 1231,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 1799,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 2707,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 1496,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 4801,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 4243,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 580,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 3857,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 1851,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 4125,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 4000,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3154,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 4459,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 3816,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 3741,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 5773,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 1162,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 2410,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 2129,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 3903,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 2321,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4751,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 4829,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 1268,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 4575,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 4109,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 4862,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 3017,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 5189,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 3971,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 558,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 4000,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 4124,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 4250,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 6322,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 5453,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 341,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 442,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 3139,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3560,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 663,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 7276,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 3135,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 6107,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 2804,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 5622,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 3691,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 5654,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 3456,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 5987,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 4178,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 1880,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 5255,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 4529,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 4615,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 4961,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 3587,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 7267,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 3374,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 2144,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 4448,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 2761,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3360,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 1660,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 3596,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 2892,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 1615,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 5857,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 3322,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 2048,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 2574,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 2695,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 2972,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 7109,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 1211,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 4618,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 4134,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 4472,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 3695,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 454,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 4762,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 2311,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 3305,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 1026,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 3255,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4080,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 3476,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4477,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 3112,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 748,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 1615,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 2575,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 2915,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 2726,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 4802,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4168,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 1112,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 1651,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4108,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 4027,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 4444,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 5324,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 5351,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 1112,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 6678,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 2774,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 5860,
+  [
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 3831,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 5854,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 3466,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 1934,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 1711,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 3465,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 4433,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 4158,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4703,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 7168,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 2970,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 2757,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4716,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 2375,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 3120,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 2020,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 2978,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 4817,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 3442,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 908,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 1926,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 2812,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 2137,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4651,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 979,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 3779,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 2239,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 1196,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 1160,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 2249,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 1486,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 3457,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 4773,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 5146,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 6265,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 3113,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 4078,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 3531,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 1063,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 2144,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 5857,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 1834,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 4620,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 5631,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 2129,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 4661,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 6165,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 3575,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 4520,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 2893,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 775,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 2356,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4354,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 989,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 1661,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 519,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 3816,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 2447,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 4387,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 1607,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.heart)
-  ]: 3037,
+  ]: 4425,
   [
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.heart),
@@ -5699,7 +5701,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.club)
-  ]: 7035,
+  ]: 427,
   [
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.spade),
@@ -5708,7 +5710,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 5120,
+  ]: 2342,
   [
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.spade),
@@ -5717,7 +5719,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 4095,
+  ]: 3367,
   [
     Card(rank: Rank.king, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.spade),
@@ -5726,7 +5728,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.heart)
-  ]: 3546,
+  ]: 3916,
   [
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.heart),
@@ -5735,7 +5737,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 6679,
+  ]: 783,
   [
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.club),
@@ -5744,7 +5746,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 4526,
+  ]: 2936,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.diamond),
@@ -5753,7 +5755,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.club)
-  ]: 4795,
+  ]: 2667,
   [
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.heart),
@@ -5762,7 +5764,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 6700,
+  ]: 762,
   [
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.heart),
@@ -5771,7 +5773,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.spade)
-  ]: 2667,
+  ]: 4795,
   [
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond),
@@ -5780,7 +5782,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 2987,
+  ]: 4475,
   [
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.heart),
@@ -5789,7 +5791,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 4494,
+  ]: 2968,
   [
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.spade),
@@ -5798,7 +5800,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.club)
-  ]: 3786,
+  ]: 3676,
   [
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -5807,7 +5809,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 7222,
+  ]: 240,
   [
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.heart),
@@ -5816,7 +5818,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 3822,
+  ]: 3640,
   [
     Card(rank: Rank.jack, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -5825,7 +5827,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.club)
-  ]: 7008,
+  ]: 454,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart),
@@ -5834,7 +5836,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 3019,
+  ]: 4443,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.club),
@@ -5843,7 +5845,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 3346,
+  ]: 4116,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.heart),
@@ -5852,7 +5854,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.club)
-  ]: 4226,
+  ]: 3236,
   [
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.club),
@@ -5861,7 +5863,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4150,
+  ]: 3312,
   [
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.heart),
@@ -5870,7 +5872,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 1600,
+  ]: 5862,
   [
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.club),
@@ -5879,7 +5881,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 4867,
+  ]: 2595,
   [
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.club),
@@ -5888,7 +5890,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 5967,
+  ]: 1495,
   [
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.diamond),
@@ -5897,7 +5899,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.club)
-  ]: 7163,
+  ]: 299,
   [
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.club),
@@ -5906,7 +5908,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 328,
+  ]: 7134,
   [
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.heart),
@@ -5915,7 +5917,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 6611,
+  ]: 851,
   [
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.diamond),
@@ -5924,7 +5926,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 6727,
+  ]: 735,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.diamond),
@@ -5933,7 +5935,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 4666,
+  ]: 2796,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.spade),
@@ -5942,7 +5944,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 5592,
+  ]: 1870,
   [
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.club),
@@ -5951,7 +5953,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 2846,
+  ]: 4616,
   [
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.spade),
@@ -5960,7 +5962,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.club)
-  ]: 3647,
+  ]: 3815,
   [
     Card(rank: Rank.ten, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.diamond),
@@ -5969,7 +5971,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.spade)
-  ]: 4211,
+  ]: 3251,
   [
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.heart),
@@ -5978,7 +5980,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 2857,
+  ]: 4605,
   [
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.heart),
@@ -5987,7 +5989,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.heart)
-  ]: 5188,
+  ]: 2274,
   [
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.spade),
@@ -5996,7 +5998,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.club)
-  ]: 245,
+  ]: 7217,
   [
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.club),
@@ -6005,7 +6007,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 6763,
+  ]: 699,
   [
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.club),
@@ -6014,7 +6016,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 3086,
+  ]: 4376,
   [
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.spade),
@@ -6023,7 +6025,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 4309,
+  ]: 3153,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.club),
@@ -6032,7 +6034,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 2699,
+  ]: 4763,
   [
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.diamond),
@@ -6041,7 +6043,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 4216,
+  ]: 3246,
   [
     Card(rank: Rank.five, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.club),
@@ -6050,7 +6052,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.club)
-  ]: 6753,
+  ]: 709,
   [
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.club),
@@ -6059,7 +6061,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.club)
-  ]: 5106,
+  ]: 2356,
   [
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.club),
@@ -6068,7 +6070,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.club)
-  ]: 1145,
+  ]: 6317,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.club),
@@ -6077,7 +6079,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.club)
-  ]: 1604,
+  ]: 5858,
   [
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.spade),
@@ -6086,7 +6088,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.club)
-  ]: 2661,
+  ]: 4801,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.spade),
@@ -6095,7 +6097,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5680,
+  ]: 1782,
   [
     Card(rank: Rank.ten, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.diamond),
@@ -6104,1708 +6106,1708 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.club)
+  ]: 4429,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 3251,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 4902,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 4108,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 4564,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 3397,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 7147,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 3466,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 1706,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 2540,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 3814,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 3915,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4179,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 7167,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 3116,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 7100,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4901,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 2805,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 4638,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 2751,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 6014,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 3970,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 421,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 4477,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 3581,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 4851,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 4641,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 2426,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 2713,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 3856,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 2851,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 3852,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 4167,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 4244,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 3476,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 1704,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 3236,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 4575,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 2092,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 2967,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 1076,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 4608,
+  [
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 4913,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 2734,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 1110,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 5861,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart)
+  ]: 2816,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 1232,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 6569,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 1800,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club)
+  ]: 882,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 3191,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 3410,
+  [
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 4543,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 2035,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4641,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3246,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 1855,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 6414,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond)
+  ]: 6207,
+  [
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 2420,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 1097,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 1260,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 3906,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 4366,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 4477,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 714,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 1104,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 4928,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 5643,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 3001,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 523,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 4441,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 1388,
+  [
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 774,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 2191,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 4351,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 4218,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 2047,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 744,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 4488,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 6713,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club)
+  ]: 2812,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 5366,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 1146,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 1834,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 3686,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club)
+  ]: 3588,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 3008,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 3035,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart)
+  ]: 2396,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 4983,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade)
+  ]: 5853,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 4730,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart)
+  ]: 4289,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 4344,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 4506,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4784,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3852,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 2915,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade)
+  ]: 5439,
+  [
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart)
+  ]: 4565,
+  [
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 3691,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond)
+  ]: 1710,
+  [
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4553,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade)
+  ]: 3403,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 3237,
+  [
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club)
+  ]: 1358,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade)
+  ]: 4156,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 2789,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 4617,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond)
+  ]: 2586,
+  [
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade)
+  ]: 5510,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond)
+  ]: 748,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 992,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 1160,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 6709,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 3676,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade)
+  ]: 4574,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 1232,
+  [
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 2232,
+  [
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade)
+  ]: 4883,
+  [
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 4623,
+  [
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 6838,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.club)
+  ]: 4580,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 783,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 3201,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart)
+  ]: 3035,
+  [
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.club)
+  ]: 1991,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 3876,
+  [
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond)
+  ]: 1096,
+  [
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade)
+  ]: 4992,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 1074,
+  [
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 5653,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 6102,
+  [
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 3997,
+  [
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4836,
+  [
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 4051,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 3192,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 2456,
+  [
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond)
+  ]: 7233,
+  [
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 5256,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club)
+  ]: 4664,
+  [
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade)
+  ]: 1652,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club)
+  ]: 4773,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.spade)
+  ]: 783,
+  [
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 3465,
+  [
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 3842,
+  [
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 4969,
+  [
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4683,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 7253,
+  [
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 4741,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3025,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 656,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 1230,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond)
+  ]: 2320,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 2708,
+  [
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond)
+  ]: 3135,
+  [
+    Card(rank: Rank.queen, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 4685,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.spade)
+  ]: 1231,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 1441,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond)
+  ]: 635,
+  [
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.spade)
+  ]: 1834,
+  [
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club)
+  ]: 1933,
+  [
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 5423,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.diamond)
+  ]: 6004,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 3034,
+  [
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 5168,
+  [
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 6836,
+  [
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club)
+  ]: 4322,
+  [
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond)
+  ]: 3410,
+  [
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart)
+  ]: 1353,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 4812,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club)
+  ]: 5848,
+  [
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.heart),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 4649,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.five, suit: Suit.diamond),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.seven, suit: Suit.diamond)
+  ]: 2127,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.club),
+    Card(rank: Rank.queen, suit: Suit.heart)
+  ]: 4398,
+  [
+    Card(rank: Rank.eight, suit: Suit.heart),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.four, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.queen, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.diamond)
+  ]: 2700,
+  [
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.heart)
+  ]: 3456,
+  [
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.deuce, suit: Suit.heart)
+  ]: 3442,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.club),
+    Card(rank: Rank.three, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.eight, suit: Suit.spade),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.ace, suit: Suit.heart)
+  ]: 1705,
+  [
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.nine, suit: Suit.heart)
+  ]: 4950,
+  [
+    Card(rank: Rank.nine, suit: Suit.club),
+    Card(rank: Rank.ten, suit: Suit.spade),
+    Card(rank: Rank.ten, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.club)
+  ]: 3192,
+  [
+    Card(rank: Rank.eight, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.heart),
+    Card(rank: Rank.jack, suit: Suit.spade),
+    Card(rank: Rank.jack, suit: Suit.club)
+  ]: 7258,
+  [
+    Card(rank: Rank.queen, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.heart),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.club),
+    Card(rank: Rank.jack, suit: Suit.diamond),
+    Card(rank: Rank.five, suit: Suit.spade)
+  ]: 1090,
+  [
+    Card(rank: Rank.five, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.club),
+    Card(rank: Rank.six, suit: Suit.spade),
+    Card(rank: Rank.deuce, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.spade),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 1491,
+  [
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.diamond),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.king, suit: Suit.diamond),
+    Card(rank: Rank.three, suit: Suit.club),
+    Card(rank: Rank.king, suit: Suit.club),
+    Card(rank: Rank.five, suit: Suit.heart)
+  ]: 5747,
+  [
+    Card(rank: Rank.ten, suit: Suit.diamond),
+    Card(rank: Rank.ace, suit: Suit.diamond),
+    Card(rank: Rank.jack, suit: Suit.club),
+    Card(rank: Rank.seven, suit: Suit.spade),
+    Card(rank: Rank.six, suit: Suit.diamond),
+    Card(rank: Rank.four, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart)
+  ]: 1230,
+  [
+    Card(rank: Rank.eight, suit: Suit.diamond),
+    Card(rank: Rank.king, suit: Suit.heart),
+    Card(rank: Rank.seven, suit: Suit.club),
+    Card(rank: Rank.deuce, suit: Suit.heart),
+    Card(rank: Rank.nine, suit: Suit.spade),
+    Card(rank: Rank.nine, suit: Suit.heart),
+    Card(rank: Rank.ace, suit: Suit.diamond)
   ]: 3033,
   [
     Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 4211,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 2560,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 3354,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 2898,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 4065,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 315,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 3996,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 5756,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 4922,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 3648,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 3547,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 3283,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 295,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4346,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 362,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 2561,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 4657,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 2824,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4711,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 1448,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 3492,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 7041,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 2985,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3881,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 2611,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 2821,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 5036,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 4749,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 3606,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 4611,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3610,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 3295,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 3218,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3986,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 5758,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 4226,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 2887,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 5370,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 4495,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 6386,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2854,
-  [
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 2549,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 4728,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 6352,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 1601,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 4646,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 6230,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 893,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5662,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club)
-  ]: 6580,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 4271,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 4052,
-  [
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 2919,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 5427,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 2821,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 4216,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 5607,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 1048,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 1255,
-  [
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 5042,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 6365,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6202,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 3556,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 3096,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 2985,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6748,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 6358,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 2534,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 1819,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 4461,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 6939,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 3021,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 6074,
-  [
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 6688,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 5271,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 3111,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 3244,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 5415,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 6718,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 2974,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 749,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club)
-  ]: 4650,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 2096,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 6316,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 5628,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 3776,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club)
-  ]: 3874,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4454,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 4427,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart)
-  ]: 5066,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 2479,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 1609,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 2732,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 3173,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 3118,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 2956,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2678,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 3610,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 4547,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade)
-  ]: 2023,
-  [
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart)
-  ]: 2897,
-  [
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 3771,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 5752,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2909,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4059,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 4225,
-  [
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club)
-  ]: 6104,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 3306,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 4673,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 2845,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 4876,
-  [
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 1952,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 6714,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 6470,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 6302,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 753,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 3786,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 2888,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 6230,
-  [
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 5230,
-  [
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade)
-  ]: 2579,
-  [
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2839,
-  [
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 624,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.club)
-  ]: 2882,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6679,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 4261,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart)
-  ]: 4427,
-  [
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.club)
-  ]: 5471,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 3586,
-  [
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 6366,
-  [
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade)
-  ]: 2470,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 6388,
-  [
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 1809,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 1360,
-  [
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 3465,
-  [
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2626,
-  [
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3411,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 4270,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 5006,
-  [
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 229,
-  [
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 2206,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club)
-  ]: 2798,
-  [
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 5810,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club)
-  ]: 2689,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 6679,
-  [
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 3997,
-  [
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 3620,
-  [
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 2493,
-  [
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 2779,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 209,
-  [
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 2721,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4437,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 6806,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 6232,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 5142,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4754,
-  [
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4327,
-  [
-    Card(rank: Rank.queen, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 2777,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 6231,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 6021,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond)
-  ]: 6827,
-  [
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5628,
-  [
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club)
-  ]: 5529,
-  [
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 2039,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 1458,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 4428,
-  [
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 2294,
-  [
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 626,
-  [
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club)
-  ]: 3140,
-  [
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 4052,
-  [
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 6109,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 2650,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club)
-  ]: 1614,
-  [
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.heart),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 2813,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.five, suit: Suit.diamond),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 5335,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.club),
-    Card(rank: Rank.queen, suit: Suit.heart)
-  ]: 3064,
-  [
-    Card(rank: Rank.eight, suit: Suit.heart),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.four, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.queen, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 4762,
-  [
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 4006,
-  [
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 4020,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.club),
-    Card(rank: Rank.three, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.eight, suit: Suit.spade),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 5757,
-  [
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 2512,
-  [
-    Card(rank: Rank.nine, suit: Suit.club),
-    Card(rank: Rank.ten, suit: Suit.spade),
-    Card(rank: Rank.ten, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.club)
-  ]: 4270,
-  [
-    Card(rank: Rank.eight, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.heart),
-    Card(rank: Rank.jack, suit: Suit.spade),
-    Card(rank: Rank.jack, suit: Suit.club)
-  ]: 204,
-  [
-    Card(rank: Rank.queen, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.heart),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.club),
-    Card(rank: Rank.jack, suit: Suit.diamond),
-    Card(rank: Rank.five, suit: Suit.spade)
-  ]: 6372,
-  [
-    Card(rank: Rank.five, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.club),
-    Card(rank: Rank.six, suit: Suit.spade),
-    Card(rank: Rank.deuce, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.spade),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 5971,
-  [
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.diamond),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.king, suit: Suit.diamond),
-    Card(rank: Rank.three, suit: Suit.club),
-    Card(rank: Rank.king, suit: Suit.club),
-    Card(rank: Rank.five, suit: Suit.heart)
-  ]: 1715,
-  [
-    Card(rank: Rank.ten, suit: Suit.diamond),
-    Card(rank: Rank.ace, suit: Suit.diamond),
-    Card(rank: Rank.jack, suit: Suit.club),
-    Card(rank: Rank.seven, suit: Suit.spade),
-    Card(rank: Rank.six, suit: Suit.diamond),
-    Card(rank: Rank.four, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart)
-  ]: 6232,
-  [
-    Card(rank: Rank.eight, suit: Suit.diamond),
-    Card(rank: Rank.king, suit: Suit.heart),
-    Card(rank: Rank.seven, suit: Suit.club),
-    Card(rank: Rank.deuce, suit: Suit.heart),
-    Card(rank: Rank.nine, suit: Suit.spade),
-    Card(rank: Rank.nine, suit: Suit.heart),
-    Card(rank: Rank.ace, suit: Suit.diamond)
-  ]: 4429,
-  [
-    Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 3601,
+  ]: 3861,
   [
     Card(rank: Rank.six, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.diamond),
@@ -7814,7 +7816,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 6204,
+  ]: 1258,
   [
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.spade),
@@ -7823,7 +7825,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.club)
-  ]: 3384,
+  ]: 4078,
   [
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.club),
@@ -7832,7 +7834,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.heart)
-  ]: 6022,
+  ]: 1440,
   [
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.diamond),
@@ -7841,7 +7843,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 238,
+  ]: 7224,
   [
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.club),
@@ -7850,7 +7852,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4429,
+  ]: 3033,
   [
     Card(rank: Rank.jack, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.diamond),
@@ -7859,7 +7861,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.heart)
-  ]: 1830,
+  ]: 5632,
   [
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -7868,7 +7870,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 6360,
+  ]: 1102,
   [
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.heart),
@@ -7877,7 +7879,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 5160,
+  ]: 2302,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.club),
@@ -7886,7 +7888,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.spade)
-  ]: 246,
+  ]: 7216,
   [
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club),
@@ -7895,7 +7897,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.club)
-  ]: 6714,
+  ]: 748,
   [
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.diamond),
@@ -7904,7 +7906,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart)
-  ]: 3328,
+  ]: 4134,
   [
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.heart),
@@ -7913,7 +7915,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 3153,
+  ]: 4309,
   [
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.club),
@@ -7922,7 +7924,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 1609,
+  ]: 5853,
   [
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club),
@@ -7931,7 +7933,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.diamond)
-  ]: 6736,
+  ]: 726,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.heart),
@@ -7940,7 +7942,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 3282,
+  ]: 4180,
   [
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.diamond),
@@ -7949,7 +7951,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.club)
-  ]: 2075,
+  ]: 5387,
   [
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond),
@@ -7958,7 +7960,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 2625,
+  ]: 4837,
   [
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.heart),
@@ -7967,7 +7969,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.spade)
-  ]: 2688,
+  ]: 4774,
   [
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.diamond),
@@ -7976,7 +7978,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.spade)
-  ]: 4282,
+  ]: 3180,
   [
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.spade),
@@ -7985,7 +7987,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.club)
-  ]: 3293,
+  ]: 4169,
   [
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.heart),
@@ -7994,7 +7996,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.five, suit: Suit.spade)
-  ]: 605,
+  ]: 6857,
   [
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.club),
@@ -8003,7 +8005,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 4976,
+  ]: 2486,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.diamond),
@@ -8012,7 +8014,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 5107,
+  ]: 2355,
   [
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.club),
@@ -8021,7 +8023,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 1382,
+  ]: 6080,
   [
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.diamond),
@@ -8030,7 +8032,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 809,
+  ]: 6653,
   [
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.heart),
@@ -8039,7 +8041,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.club)
-  ]: 5582,
+  ]: 1880,
   [
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.diamond),
@@ -8048,7 +8050,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.heart)
-  ]: 3661,
+  ]: 3801,
   [
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.spade),
@@ -8057,7 +8059,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.heart)
-  ]: 4043,
+  ]: 3419,
   [
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.diamond),
@@ -8066,7 +8068,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.spade)
-  ]: 2668,
+  ]: 4794,
   [
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.club),
@@ -8075,7 +8077,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 6699,
+  ]: 763,
   [
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.queen, suit: Suit.diamond),
@@ -8084,7 +8086,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4751,
+  ]: 2711,
   [
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.club),
@@ -8093,7 +8095,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 3175,
+  ]: 4287,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.diamond),
@@ -8102,7 +8104,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 2468,
+  ]: 4994,
   [
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.eight, suit: Suit.heart),
@@ -8111,7 +8113,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.diamond)
-  ]: 4938,
+  ]: 2524,
   [
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.spade),
@@ -8120,7 +8122,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 6743,
+  ]: 719,
   [
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.club),
@@ -8129,7 +8131,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 260,
+  ]: 7202,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.heart),
@@ -8138,7 +8140,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 3426,
+  ]: 4036,
   [
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.club),
@@ -8147,7 +8149,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 4005,
+  ]: 3457,
   [
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.diamond),
@@ -8156,7 +8158,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 7009,
+  ]: 453,
   [
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.club),
@@ -8165,7 +8167,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.club)
-  ]: 6715,
+  ]: 747,
   [
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club),
@@ -8174,7 +8176,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.club)
-  ]: 4426,
+  ]: 3036,
   [
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.diamond),
@@ -8183,7 +8185,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.club)
-  ]: 6279,
+  ]: 1183,
   [
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.club),
@@ -8192,7 +8194,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3988,
+  ]: 3474,
   [
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.diamond),
@@ -8201,7 +8203,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 3101,
+  ]: 4361,
   [
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.spade),
@@ -8210,7 +8212,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 4206,
+  ]: 3256,
   [
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.club),
@@ -8219,7 +8221,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2767,
+  ]: 4695,
   [
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.spade),
@@ -8228,7 +8230,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 6273,
+  ]: 1189,
   [
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.diamond),
@@ -8237,7 +8239,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.heart)
-  ]: 4541,
+  ]: 2921,
   [
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.club),
@@ -8246,7 +8248,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4867,
+  ]: 2595,
   [
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.heart),
@@ -8255,7 +8257,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.club)
-  ]: 4233,
+  ]: 3229,
   [
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.diamond),
@@ -8264,7 +8266,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.club)
-  ]: 6763,
+  ]: 699,
   [
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.spade),
@@ -8273,7 +8275,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.spade)
-  ]: 2502,
+  ]: 4960,
   [
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.spade),
@@ -8282,7 +8284,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.spade)
-  ]: 2549,
+  ]: 4913,
   [
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.club),
@@ -8291,7 +8293,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.spade)
-  ]: 4945,
+  ]: 2517,
   [
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.queen, suit: Suit.club),
@@ -8300,7 +8302,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 3604,
+  ]: 3858,
   [
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.diamond),
@@ -8309,7 +8311,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 5801,
+  ]: 1661,
   [
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.club),
@@ -8318,7 +8320,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 4667,
+  ]: 2795,
   [
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.heart),
@@ -8327,7 +8329,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.heart)
-  ]: 4426,
+  ]: 3036,
   [
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.club),
@@ -8336,7 +8338,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.diamond)
-  ]: 4718,
+  ]: 2744,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.heart),
@@ -8345,7 +8347,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 6197,
+  ]: 1265,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.spade),
@@ -8354,7 +8356,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.spade)
-  ]: 6742,
+  ]: 720,
   [
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.heart),
@@ -8363,7 +8365,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 4026,
+  ]: 3436,
   [
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.diamond),
@@ -8372,7 +8374,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 2037,
+  ]: 5425,
   [
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.spade),
@@ -8381,7 +8383,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.club)
-  ]: 6805,
+  ]: 657,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.spade),
@@ -8390,7 +8392,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 3346,
+  ]: 4116,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.spade),
@@ -8399,7 +8401,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 5746,
+  ]: 1716,
   [
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club),
@@ -8408,7 +8410,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.five, suit: Suit.spade)
-  ]: 211,
+  ]: 7251,
   [
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.heart),
@@ -8417,7 +8419,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.diamond)
-  ]: 6203,
+  ]: 1259,
   [
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.spade),
@@ -8426,7 +8428,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.club)
-  ]: 6682,
+  ]: 780,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.heart),
@@ -8435,7 +8437,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.heart)
-  ]: 3428,
+  ]: 4034,
   [
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.heart),
@@ -8444,7 +8446,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 4436,
+  ]: 3026,
   [
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.diamond),
@@ -8453,7 +8455,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 6749,
+  ]: 713,
   [
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.diamond),
@@ -8462,7 +8464,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.heart)
-  ]: 2501,
+  ]: 4961,
   [
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.ten, suit: Suit.heart),
@@ -8471,7 +8473,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.heart)
-  ]: 5325,
+  ]: 2137,
   [
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.club),
@@ -8480,7 +8482,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.club)
-  ]: 2766,
+  ]: 4696,
   [
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.club),
@@ -8489,7 +8491,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.diamond)
-  ]: 2908,
+  ]: 4554,
   [
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.diamond),
@@ -8498,7 +8500,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond)
-  ]: 5186,
+  ]: 2276,
   [
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.club),
@@ -8507,7 +8509,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.club)
-  ]: 2546,
+  ]: 4916,
   [
     Card(rank: Rank.king, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.heart),
@@ -8516,7 +8518,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.club)
-  ]: 6301,
+  ]: 1161,
   [
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.diamond),
@@ -8525,7 +8527,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 3398,
+  ]: 4064,
   [
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club),
@@ -8534,7 +8536,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 2603,
+  ]: 4859,
   [
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.heart),
@@ -8543,7 +8545,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.five, suit: Suit.club)
-  ]: 2419,
+  ]: 5043,
   [
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.club),
@@ -8552,7 +8554,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.spade)
-  ]: 1603,
+  ]: 5859,
   [
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.queen, suit: Suit.heart),
@@ -8561,7 +8563,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 5627,
+  ]: 1835,
   [
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.heart),
@@ -8570,7 +8572,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 5979,
+  ]: 1483,
   [
     Card(rank: Rank.king, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.club),
@@ -8579,7 +8581,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.club)
-  ]: 3228,
+  ]: 4234,
   [
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.eight, suit: Suit.heart),
@@ -8588,7 +8590,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 7036,
+  ]: 426,
   [
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.spade),
@@ -8597,7 +8599,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 2603,
+  ]: 4859,
   [
     Card(rank: Rank.jack, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.spade),
@@ -8606,7 +8608,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.heart),
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 7238,
+  ]: 224,
   [
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.club),
@@ -8615,7 +8617,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.heart)
-  ]: 3216,
+  ]: 4246,
   [
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.diamond),
@@ -8624,7 +8626,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.heart)
-  ]: 5825,
+  ]: 1637,
   [
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.heart),
@@ -8633,7 +8635,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 5889,
+  ]: 1573,
   [
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -8642,7 +8644,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.heart)
-  ]: 7036,
+  ]: 426,
   [
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -8651,7 +8653,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 6280,
+  ]: 1182,
   [
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.heart),
@@ -8660,7 +8662,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart)
-  ]: 6023,
+  ]: 1439,
   [
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.heart),
@@ -8669,7 +8671,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.heart)
-  ]: 6269,
+  ]: 1193,
   [
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
@@ -8678,7 +8680,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.diamond)
-  ]: 7041,
+  ]: 421,
   [
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.heart),
@@ -8687,7 +8689,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.heart)
-  ]: 470,
+  ]: 6992,
   [
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.club),
@@ -8696,7 +8698,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.spade)
-  ]: 3293,
+  ]: 4169,
   [
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.heart),
@@ -8705,7 +8707,7 @@ final _handAndIds = {
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.heart),
     Card(rank: Rank.queen, suit: Suit.diamond)
-  ]: 2746,
+  ]: 4716,
   [
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.spade),
@@ -8714,7 +8716,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.heart)
-  ]: 2184,
+  ]: 5278,
   [
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.six, suit: Suit.heart),
@@ -8723,7 +8725,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 6051,
+  ]: 1411,
   [
     Card(rank: Rank.five, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.diamond),
@@ -8732,7 +8734,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.spade)
-  ]: 2561,
+  ]: 4901,
   [
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -8741,7 +8743,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.spade)
-  ]: 4095,
+  ]: 3367,
   [
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.three, suit: Suit.spade),
@@ -8750,7 +8752,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.spade)
-  ]: 6031,
+  ]: 1431,
   [
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.king, suit: Suit.spade),
@@ -8759,7 +8761,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.diamond)
-  ]: 3647,
+  ]: 3815,
   [
     Card(rank: Rank.ten, suit: Suit.heart),
     Card(rank: Rank.four, suit: Suit.spade),
@@ -8768,7 +8770,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.heart),
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.spade)
-  ]: 5253,
+  ]: 2209,
   [
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.spade),
@@ -8777,7 +8779,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.heart)
-  ]: 4321,
+  ]: 3141,
   [
     Card(rank: Rank.six, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.heart),
@@ -8786,7 +8788,7 @@ final _handAndIds = {
     Card(rank: Rank.six, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 274,
+  ]: 7188,
   [
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.diamond),
@@ -8795,7 +8797,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.club),
     Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 2754,
+  ]: 4708,
   [
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.diamond),
@@ -8804,7 +8806,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.heart)
-  ]: 6199,
+  ]: 1263,
   [
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.club),
@@ -8813,7 +8815,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.club)
-  ]: 5340,
+  ]: 2122,
   [
     Card(rank: Rank.king, suit: Suit.club),
     Card(rank: Rank.four, suit: Suit.club),
@@ -8822,7 +8824,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.queen, suit: Suit.spade)
-  ]: 5526,
+  ]: 1936,
   [
     Card(rank: Rank.queen, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.heart),
@@ -8831,7 +8833,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.four, suit: Suit.diamond),
     Card(rank: Rank.deuce, suit: Suit.heart)
-  ]: 3930,
+  ]: 3532,
   [
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.deuce, suit: Suit.spade),
@@ -8840,7 +8842,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.king, suit: Suit.heart)
-  ]: 6268,
+  ]: 1194,
   [
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.club),
@@ -8849,7 +8851,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club)
-  ]: 4327,
+  ]: 3135,
   [
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.five, suit: Suit.diamond),
@@ -8858,7 +8860,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.jack, suit: Suit.club)
-  ]: 3217,
+  ]: 4245,
   [
     Card(rank: Rank.nine, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.heart),
@@ -8867,7 +8869,7 @@ final _handAndIds = {
     Card(rank: Rank.deuce, suit: Suit.club),
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.ten, suit: Suit.club)
-  ]: 5977,
+  ]: 1485,
   [
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.spade),
@@ -8876,7 +8878,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.heart),
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.club)
-  ]: 2579,
+  ]: 4883,
   [
     Card(rank: Rank.deuce, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.spade),
@@ -8885,7 +8887,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.heart)
-  ]: 2858,
+  ]: 4604,
   [
     Card(rank: Rank.three, suit: Suit.spade),
     Card(rank: Rank.seven, suit: Suit.heart),
@@ -8894,7 +8896,7 @@ final _handAndIds = {
     Card(rank: Rank.five, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.club)
-  ]: 3172,
+  ]: 4290,
   [
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.spade),
@@ -8903,7 +8905,7 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.six, suit: Suit.club)
-  ]: 5931,
+  ]: 1531,
   [
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.spade),
@@ -8912,7 +8914,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 6000,
+  ]: 1462,
   [
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.ten, suit: Suit.club),
@@ -8921,7 +8923,7 @@ final _handAndIds = {
     Card(rank: Rank.seven, suit: Suit.diamond),
     Card(rank: Rank.five, suit: Suit.club),
     Card(rank: Rank.eight, suit: Suit.spade)
-  ]: 3121,
+  ]: 4341,
   [
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.seven, suit: Suit.spade),
@@ -8930,7 +8932,7 @@ final _handAndIds = {
     Card(rank: Rank.ace, suit: Suit.diamond),
     Card(rank: Rank.queen, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.heart)
-  ]: 245,
+  ]: 7217,
   [
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.jack, suit: Suit.club),
@@ -8939,7 +8941,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.diamond),
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.six, suit: Suit.diamond)
-  ]: 2963,
+  ]: 4499,
   [
     Card(rank: Rank.three, suit: Suit.heart),
     Card(rank: Rank.nine, suit: Suit.heart),
@@ -8948,7 +8950,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.heart),
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.club)
-  ]: 6832,
+  ]: 630,
   [
     Card(rank: Rank.jack, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.heart),
@@ -8957,7 +8959,7 @@ final _handAndIds = {
     Card(rank: Rank.ten, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.club),
     Card(rank: Rank.nine, suit: Suit.spade)
-  ]: 4563,
+  ]: 2899,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.ten, suit: Suit.heart),
@@ -8966,7 +8968,7 @@ final _handAndIds = {
     Card(rank: Rank.eight, suit: Suit.spade),
     Card(rank: Rank.ace, suit: Suit.heart),
     Card(rank: Rank.three, suit: Suit.spade)
-  ]: 4648,
+  ]: 2814,
   [
     Card(rank: Rank.ten, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.spade),
@@ -8975,7 +8977,7 @@ final _handAndIds = {
     Card(rank: Rank.king, suit: Suit.heart),
     Card(rank: Rank.king, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.diamond)
-  ]: 3648,
+  ]: 3814,
   [
     Card(rank: Rank.ten, suit: Suit.spade),
     Card(rank: Rank.six, suit: Suit.diamond),
@@ -8984,7 +8986,7 @@ final _handAndIds = {
     Card(rank: Rank.jack, suit: Suit.heart),
     Card(rank: Rank.seven, suit: Suit.club),
     Card(rank: Rank.five, suit: Suit.club)
-  ]: 5004,
+  ]: 2458,
   [
     Card(rank: Rank.eight, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.club),
@@ -8993,7 +8995,7 @@ final _handAndIds = {
     Card(rank: Rank.queen, suit: Suit.diamond),
     Card(rank: Rank.nine, suit: Suit.spade),
     Card(rank: Rank.nine, suit: Suit.club)
-  ]: 2844,
+  ]: 4618,
   [
     Card(rank: Rank.king, suit: Suit.spade),
     Card(rank: Rank.four, suit: Suit.club),
@@ -9002,7 +9004,7 @@ final _handAndIds = {
     Card(rank: Rank.four, suit: Suit.spade),
     Card(rank: Rank.eight, suit: Suit.club),
     Card(rank: Rank.three, suit: Suit.spade)
-  ]: 5611,
+  ]: 1851,
   [
     Card(rank: Rank.three, suit: Suit.diamond),
     Card(rank: Rank.seven, suit: Suit.club),
@@ -9011,5 +9013,5 @@ final _handAndIds = {
     Card(rank: Rank.three, suit: Suit.club),
     Card(rank: Rank.deuce, suit: Suit.diamond),
     Card(rank: Rank.eight, suit: Suit.club)
-  ]: 5946,
+  ]: 1516,
 };

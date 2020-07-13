@@ -1,7 +1,7 @@
 name: poker
 version: 0.0.3
 description: >-
-  Hello
+  A Dart implementation of Henry Lee's Poker Hand Evaluator.
 homepage: https://pub.dev/packages/poker
 repository: https://github.com/axross/poker
 documentation: https://pub.dev/documentation/poker/latest/

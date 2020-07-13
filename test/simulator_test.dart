@@ -1,19 +1,13 @@
-import 'package:poker/src/matchup.dart';
 import "package:test/test.dart";
 import "package:poker/poker.dart";
 
 void main() {
-  // ランダムにコミュニティカードが選択されるかどうか
-  // ランダムにプレイヤーのカードが選択されるかどうか
-  // 組み合わせとして不可能な場合にエラーを投げるかどうか
-  // 勝利プレイヤーのindexが正しいかどうか
-
-  group("Matchup", () {
+  group("Simulator", () {
     group("#evaluate()", () {
       test(
           "it throws NoPossibleMatchupException when there's no possible card combination",
           () {
-        final matchup = Matchup(
+        final matchup = Simulator(
           communityCards: {
             Card(rank: Rank.ten, suit: Suit.spade),
             Card(rank: Rank.nine, suit: Suit.spade),

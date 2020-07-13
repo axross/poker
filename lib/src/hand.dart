@@ -1,41 +1,44 @@
 import 'card.dart' show Card, Rank, Suit;
 import 'precalculated_table.dart' show dpReference, asFlush, forNonFlush;
 
+/// An object representing a made hand.
 class Hand {
-  Hand._(int this.id);
+  Hand._(int this._id);
 
+  /// Creates a hand by the given 7-length card array.
   factory Hand.bestFrom(Iterable<Card> cards) {
-    if (cards.length != 7) {
-      throw Exception();
-    }
+    assert(cards.length == 7, "The cards should a 7-length cards.");
 
     final flushSuit = _findFlushSuit(cards);
 
     if (flushSuit != null) {
       return Hand._(asFlush[_hashForFlush(cards: cards, suit: flushSuit)]);
     }
+
     return Hand._(forNonFlush[_hashForNonFlush(cards: cards)]);
   }
 
-  /// An id of Cactus Kev's poker hand equivalence enums
-  // http://suffe.cool/poker/7462.html
-  final int id;
+  /// An index of [Cactus Kev's poker hand equivalence enums](http://suffe.cool/poker/7462.html).
+  final int _id;
 
-  int get strongness => 7462 - id;
+  /// An integer representing the hand's strongness. Larger is stronger.
+  int get strongness => 7462 - _id;
 
+  /// The type of the hand.
   get type {
-    if (id > 6185) return HandType.highCard;
-    if (id > 3325) return HandType.pair;
-    if (id > 2467) return HandType.twoPairs;
-    if (id > 1609) return HandType.threeOfAKind;
-    if (id > 1599) return HandType.straight;
-    if (id > 322) return HandType.flush;
-    if (id > 166) return HandType.fullHouse;
-    if (id > 10) return HandType.fourOfAKind;
+    if (_id > 6185) return HandType.highCard;
+    if (_id > 3325) return HandType.pair;
+    if (_id > 2467) return HandType.twoPairs;
+    if (_id > 1609) return HandType.threeOfAKind;
+    if (_id > 1599) return HandType.straight;
+    if (_id > 322) return HandType.flush;
+    if (_id > 166) return HandType.fullHouse;
+    if (_id > 10) return HandType.fourOfAKind;
     return HandType.straightFlush;
   }
 }
 
+/// Type of made hand.
 enum HandType {
   straightFlush,
   fourOfAKind,
