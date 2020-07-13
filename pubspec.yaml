@@ -1,7 +1,7 @@
 name: poker
 version: 0.0.5
 description: >-
-  A Dart implementation of Henry Lee's Poker Hand Evaluator.
+  A Dart implementation of Texas Hold'em matchup simulator based on Henry Lee's Poker Hand Evaluator.
 homepage: https://github.com/axross/poker
 repository: https://github.com/axross/poker
 documentation: https://pub.dev/documentation/poker/latest/
