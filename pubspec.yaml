@@ -1,5 +1,5 @@
 name: poker
-version: 0.0.3
+version: 0.0.4
 description: >-
   A Dart implementation of Henry Lee's Poker Hand Evaluator.
 homepage: https://pub.dev/packages/poker
