@@ -1,4 +1,4 @@
-/// hello man
+/// the main library of this package.
 library poker;
 
 export "src/card.dart";

@@ -198,17 +198,29 @@ mixin CardPairCombinationsGeneratable {
 }
 
 class HoleCards with CardPairCombinationsGeneratable {
-  HoleCards({@required this.cardPair})
-      : assert(cardPair != null),
-        cardPairCombinations = {cardPair};
+  HoleCards(this._a, this._b)
+      : assert(_a != null),
+        assert(_b != null),
+        assert(_a != _b),
+        cardPairCombinations = {CardPair(_a, _b)};
 
-  final CardPair cardPair;
+  final Card _a;
+
+  final Card _b;
 
   final Set<CardPair> cardPairCombinations;
 
-  int get hashCode => cardPair.hashCode;
+  int get hashCode {
+    int result = 17;
 
-  operator ==(Object other) => other is HoleCards && other.cardPair == cardPair;
+    result = 37 * result + _a.hashCode;
+    result = 37 * result + _b.hashCode;
+
+    return result;
+  }
+
+  operator ==(Object other) =>
+      other is HoleCards && other._a == _a && other._b == _b;
 }
 
 class HandRangePart with CardPairCombinationsGeneratable {

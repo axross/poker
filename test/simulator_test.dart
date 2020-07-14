@@ -18,10 +18,8 @@ void main() {
           players: [
             {
               HoleCards(
-                cardPair: CardPair(
-                  Card(rank: Rank.six, suit: Suit.spade),
-                  Card(rank: Rank.seven, suit: Suit.spade),
-                ),
+                Card(rank: Rank.six, suit: Suit.spade),
+                Card(rank: Rank.seven, suit: Suit.spade),
               )
             },
             {HandRangePart(high: Rank.seven, kicker: Rank.six, isSuited: true)},
