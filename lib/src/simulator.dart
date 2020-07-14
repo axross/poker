@@ -225,6 +225,9 @@ class HandRangePart with CardPairCombinationsGeneratable {
   final Rank kicker;
   final bool isSuited;
 
+  /// Whether the hand range part is pocket or not.
+  bool get isPocket => high == kicker;
+
   Set<CardPair> get cardPairCombinations {
     if (!_cache.containsKey(this)) {
       if (isSuited) {
