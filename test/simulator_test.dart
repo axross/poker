@@ -17,7 +17,7 @@ void main() {
           },
           players: [
             {
-              HoleCards(
+              HoleCardPair(
                 Card(rank: Rank.six, suit: Suit.spade),
                 Card(rank: Rank.seven, suit: Suit.spade),
               )

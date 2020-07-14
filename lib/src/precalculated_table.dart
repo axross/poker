@@ -1,4 +1,4 @@
-import "card.dart" show Rank;
+import "./card.dart" show Rank;
 
 const dpReference = {
   1: {

@@ -1,6 +1,8 @@
-import "card.dart" show Card;
+import "package:meta/meta.dart";
+import "./card.dart" show Card;
 
 /// An object representing a pair of playing cards.
+@immutable
 class CardPair {
   /// Creates a card pair that is made of the given two cards.
   const CardPair(this._a, this._b);

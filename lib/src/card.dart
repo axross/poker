@@ -1,6 +1,7 @@
-import 'package:meta/meta.dart';
+import "package:meta/meta.dart";
 
 /// A piece of playing cards.
+@immutable
 class Card {
   /// Creates a card by its rank and suit.
   const Card({@required this.rank, @required this.suit})

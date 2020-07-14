@@ -1,9 +1,11 @@
-import 'card.dart' show Card, Rank, Suit;
-import 'precalculated_table.dart' show dpReference, asFlush, forNonFlush;
+import "package:meta/meta.dart";
+import "./card.dart" show Card, Rank, Suit;
+import "./precalculated_table.dart" show dpReference, asFlush, forNonFlush;
 
 /// An object representing a made hand.
+@immutable
 class Hand {
-  Hand._(this._id);
+  const Hand._(this._id);
 
   /// Creates a hand by the given 7-length card array.
   factory Hand.bestFrom(Iterable<Card> cards) {

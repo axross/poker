@@ -1,10 +1,11 @@
 import "dart:math" show Random;
-import 'package:meta/meta.dart';
-import 'card.dart' show Card, Rank, Suit;
-import 'card_pair.dart' show CardPair;
-import 'hand.dart' show Hand;
+import "package:meta/meta.dart";
+import "./card.dart" show Card, Rank, Suit;
+import "./card_pair.dart" show CardPair;
+import "./hand.dart" show Hand;
 
 ///
+@immutable
 class Simulator {
   /// Creates
   Simulator({
@@ -197,8 +198,9 @@ mixin CardPairCombinationsGeneratable {
   Set<CardPair> get cardPairCombinations;
 }
 
-class HoleCards with CardPairCombinationsGeneratable {
-  HoleCards(this._a, this._b)
+@immutable
+class HoleCardPair with CardPairCombinationsGeneratable {
+  HoleCardPair(this._a, this._b)
       : assert(_a != null),
         assert(_b != null),
         assert(_a != _b),
@@ -220,9 +222,10 @@ class HoleCards with CardPairCombinationsGeneratable {
   }
 
   operator ==(Object other) =>
-      other is HoleCards && other._a == _a && other._b == _b;
+      other is HoleCardPair && other._a == _a && other._b == _b;
 }
 
+@immutable
 class HandRangePart with CardPairCombinationsGeneratable {
   static final _cache = <HandRangePart, Set<CardPair>>{};
 
