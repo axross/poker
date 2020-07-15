@@ -177,9 +177,13 @@ class Matchup {
     for (int index = 0; index < hands.length; ++index) {
       final hand = hands[index];
 
-      if (hand.strongness < bestHandStrongness) {
+      if (hand.strongness > bestHandStrongness) {
         bestHandStrongness = hand.strongness;
         bestHandIndexes = {index};
+      }
+
+      if (hand.strongness == bestHandStrongness) {
+        bestHandIndexes.add(index);
       }
     }
 

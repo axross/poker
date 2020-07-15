@@ -35,9 +35,32 @@ void main() {
     });
   });
 
-  // group("MatchupResult", () {
-  //   group("#wonPlayerIndex", () {
-  //     test("", () {});
-  //   });
-  // });
+  group("MatchupResult", () {
+    group("#wonPlayerIndex", () {
+      test("it always contains either or all player index", () {
+        final matchup = Simulator(
+          communityCards: {},
+          players: [
+            {
+              HoleCardPair(
+                Card(rank: Rank.ace, suit: Suit.spade),
+                Card(rank: Rank.king, suit: Suit.spade),
+              )
+            },
+            {
+              HoleCardPair(
+                Card(rank: Rank.eight, suit: Suit.diamond),
+                Card(rank: Rank.eight, suit: Suit.club),
+              ),
+            },
+          ],
+        );
+
+        expect(
+          matchup.evaluate().bestHandIndexes,
+          anyOf(contains(0), contains(1)),
+        );
+      });
+    });
+  });
 }
