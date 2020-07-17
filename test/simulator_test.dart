@@ -492,27 +492,27 @@ void main() {
 
         expect(
           winCounts[0],
-          allOf(greaterThanOrEqualTo(850), lessThan(1150)),
+          allOf(greaterThanOrEqualTo(1175 - 150), lessThan(1175 + 150)),
         );
         expect(
           winCounts[1],
-          allOf(greaterThanOrEqualTo(850), lessThan(1150)),
+          allOf(greaterThanOrEqualTo(1175 - 150), lessThan(1175 + 150)),
         );
         expect(
           winCounts[2],
-          allOf(greaterThanOrEqualTo(1300), lessThan(1600)),
+          allOf(greaterThanOrEqualTo(1450 - 150), lessThan(1450 + 150)),
         );
         expect(
           winCounts[3],
-          allOf(greaterThanOrEqualTo(1300), lessThan(1600)),
+          allOf(greaterThanOrEqualTo(1450 - 150), lessThan(1450 + 150)),
         );
         expect(
           winCounts[4],
-          allOf(greaterThanOrEqualTo(2400), lessThan(2700)),
+          allOf(greaterThanOrEqualTo(2425 - 150), lessThan(2425 + 150)),
         );
         expect(
           winCounts[5],
-          allOf(greaterThanOrEqualTo(2400), lessThan(2700)),
+          allOf(greaterThanOrEqualTo(2425 - 150), lessThan(2425 + 150)),
         );
       });
     });
