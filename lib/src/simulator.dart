@@ -56,6 +56,8 @@ class Simulator {
 
   /// Returns matchup evaluation result. Card pairs as player hands and community cards are randomly picked.
   Matchup evaluate() {
+    final random = Random();
+
     final deck = {
       const Card(rank: Rank.ace, suit: Suit.spade),
       const Card(rank: Rank.deuce, suit: Suit.spade),
@@ -117,13 +119,18 @@ class Simulator {
     final List<CardPair> playerHoleCards = List(players.length);
 
     for (final playerIndex in orderedPlayerIndexes) {
-      final cardPairCombinations = {...playerCardPairCombinations[playerIndex]};
+      final cardPairCombinations = playerCardPairCombinations[playerIndex];
+      final availableCardPairCombinationIndexes =
+          List.generate(cardPairCombinations.length, (index) => index);
 
-      while (cardPairCombinations.isNotEmpty) {
-        final cardPairIndex = Random().nextInt(cardPairCombinations.length);
-        final cardPair = cardPairCombinations.elementAt(cardPairIndex);
+      while (availableCardPairCombinationIndexes.isNotEmpty) {
+        final indexOfIndexes =
+            random.nextInt(availableCardPairCombinationIndexes.length);
+        final combinationIndex =
+            availableCardPairCombinationIndexes[indexOfIndexes];
+        final cardPair = cardPairCombinations.elementAt(combinationIndex);
 
-        cardPairCombinations.remove(cardPair);
+        availableCardPairCombinationIndexes.removeAt(indexOfIndexes);
 
         if (deck.contains(cardPair[0]) && deck.contains(cardPair[1])) {
           playerHoleCards[playerIndex] = cardPair;
@@ -140,7 +147,7 @@ class Simulator {
     }
 
     while (finalCommunityCards.length < 5) {
-      final i = Random().nextInt(deck.length);
+      final i = random.nextInt(deck.length);
       final card = deck.elementAt(i);
 
       finalCommunityCards.add(card);
