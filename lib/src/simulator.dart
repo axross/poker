@@ -18,22 +18,24 @@ class Simulator {
             .map<Set<CardPair>>((player) => player.fold(<CardPair>{},
                 (combs, player) => combs..addAll(player.cardPairCombinations)))
             .toList(),
-        _orderedPlayerIndexes =
-            List.generate(players.length, (index) => index) {
-    _orderedPlayerIndexes.sort((a, b) {
-      if (playerCardPairCombinations[a].length == 1) {
-        return -2;
-      }
+        orderedPlayerIndexes = List.generate(players.length, (index) => index) {
+    orderedPlayerIndexes.sort((a, b) {
+      final aCombinationLength = playerCardPairCombinations[a].length;
+      final bCombinationLength = playerCardPairCombinations[b].length;
 
-      if (playerCardPairCombinations[b].length == 1) {
-        return -2;
-      }
-
-      if (playerCardPairCombinations[a].length <= players.length) {
+      if (aCombinationLength == 1) {
         return -1;
       }
 
-      if (playerCardPairCombinations[b].length <= players.length) {
+      if (bCombinationLength == 1) {
+        return 1;
+      }
+
+      if (aCombinationLength <= players.length) {
+        return -1;
+      }
+
+      if (bCombinationLength <= players.length) {
         return -1;
       }
 
@@ -50,7 +52,7 @@ class Simulator {
   ///
   final List<Set<CardPair>> playerCardPairCombinations;
 
-  final List<int> _orderedPlayerIndexes;
+  final List<int> orderedPlayerIndexes;
 
   /// Returns matchup evaluation result. Card pairs as player hands and community cards are randomly picked.
   Matchup evaluate() {
@@ -114,7 +116,7 @@ class Simulator {
     final finalCommunityCards = {...this.communityCards};
     final List<CardPair> playerHoleCards = List(players.length);
 
-    for (final playerIndex in _orderedPlayerIndexes) {
+    for (final playerIndex in orderedPlayerIndexes) {
       final cardPairCombinations = {...playerCardPairCombinations[playerIndex]};
 
       while (cardPairCombinations.isNotEmpty) {
