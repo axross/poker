@@ -18,8 +18,8 @@ class CardPair {
   int get hashCode {
     int result = 17;
 
-    result = 37 * result + _a.hashCode;
-    result = 37 * result + _b.hashCode;
+    result = 37 * result + (_a < _b ? _a.hashCode : _b.hashCode);
+    result = 37 * result + (_a < _b ? _b.hashCode : _a.hashCode);
 
     return result;
   }
@@ -34,5 +34,7 @@ class CardPair {
 
   @override
   operator ==(Object other) =>
-      other is CardPair && other._a == _a && other._b == _b;
+      other is CardPair &&
+      ((other._a == _a && other._b == _b) ||
+          (other._a == _b && other._b == _a));
 }

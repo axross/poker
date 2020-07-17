@@ -37,6 +37,9 @@ class Card {
   @override
   bool operator ==(dynamic other) =>
       other is Card && other.rank == rank && other.suit == suit;
+
+  bool operator <(Card other) =>
+      other.rank.index > rank.index || other.suit.index > suit.index;
 }
 
 /// Rank part of playing card.
