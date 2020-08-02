@@ -1,18 +1,27 @@
+import "dart:collection" show IterableMixin;
 import "package:meta/meta.dart";
 import "./card.dart" show Card;
 
 /// An object representing a pair of playing cards.
 @immutable
-class CardPair {
+class CardPair with IterableMixin<Card> {
   /// Creates a card pair that is made of the given two cards.
-  const CardPair(this._a, this._b);
+  CardPair(Card a, Card b)
+      : assert(a != null),
+        assert(b != null),
+        assert(a != b),
+        _a = a.compareTo(b) < 0 ? a : b,
+        _b = a.compareTo(b) < 0 ? b : a;
 
   final Card _a;
 
   final Card _b;
 
   @override
-  String toString() => "${_a}${_b}";
+  Iterator<Card> get iterator => [_a, _b].iterator;
+
+  @override
+  String toString() => "CardPair(${_a.chars}, ${_b.chars})";
 
   @override
   int get hashCode {
@@ -34,7 +43,5 @@ class CardPair {
 
   @override
   operator ==(Object other) =>
-      other is CardPair &&
-      ((other._a == _a && other._b == _b) ||
-          (other._a == _b && other._b == _a));
+      other is CardPair && other._a == _a && other._b == _b;
 }
