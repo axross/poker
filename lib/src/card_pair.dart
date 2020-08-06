@@ -34,11 +34,10 @@ class CardPair with IterableMixin<Card> {
   }
 
   /// Returns one of card by the given index.
-  operator [](int index) {
+  Card operator [](int index) {
     assert(index == 0 || index == 1, "index should 0 or 1.");
 
-    if (index == 0) return _a;
-    if (index == 1) return _b;
+    return index == 0 ? _a : _b;
   }
 
   @override
