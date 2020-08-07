@@ -1,6 +1,8 @@
 import "package:meta/meta.dart";
-import "./card.dart" show Card, Rank, Suit;
-import "./precalculated_table.dart" show dpReference, asFlush, forNonFlush;
+import "card.dart";
+import "precalculated_table.dart";
+import "rank.dart";
+import "suit.dart";
 
 /// An object representing a made hand.
 @immutable
@@ -14,7 +16,7 @@ class Hand {
     final flushSuit = _findFlushSuit(cards);
 
     if (flushSuit != null) {
-      return Hand._(asFlush[_hashForFlush(cards: cards, suit: flushSuit)]);
+      return Hand._(asFlush[_hashForFlush(cards, flushSuit)]);
     }
 
     return Hand._(forNonFlush[_hashForNonFlush(cards: cards)]);
@@ -72,7 +74,7 @@ Suit _findFlushSuit(Iterable<Card> cards) {
   return null;
 }
 
-int _hashForFlush({Iterable<Card> cards, Suit suit}) {
+int _hashForFlush(Iterable<Card> cards, Suit suit) {
   const bitEachRank = {
     Rank.ace: 0x1000,
     Rank.king: 0x800,

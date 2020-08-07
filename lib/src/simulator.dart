@@ -1,8 +1,11 @@
 import "dart:math" show Random;
 import "package:meta/meta.dart";
-import "./card.dart" show Card, Rank, Suit;
-import "./card_pair.dart" show CardPair;
-import "./hand.dart" show Hand;
+import "card.dart";
+import "card_pair.dart";
+import "hand.dart";
+import "hand_range.dart";
+import "rank.dart";
+import "suit.dart";
 
 ///
 @immutable
@@ -10,18 +13,19 @@ class Simulator {
   /// Creates
   Simulator({
     @required this.communityCards,
-    @required this.players,
+    @required this.handRanges,
   })  : assert(communityCards != null),
-        assert(players != null),
+        assert(handRanges != null),
         assert(communityCards.length <= 5),
-        playerCardPairCombinations = players
-            .map<Set<CardPair>>((player) => player.fold(<CardPair>{},
-                (combs, player) => combs..addAll(player.cardPairCombinations)))
-            .toList(),
-        orderedPlayerIndexes = List.generate(players.length, (index) => index) {
-    orderedPlayerIndexes.sort((a, b) {
-      final aCombinationLength = playerCardPairCombinations[a].length;
-      final bCombinationLength = playerCardPairCombinations[b].length;
+        precalculatedCardPairsForEachHandRange =
+            handRanges.map((hr) => hr.toCardPairSet()).toList(),
+        handRangeIndexOrderToPrioritize =
+            List.generate(handRanges.length, (index) => index)..sort() {
+    handRangeIndexOrderToPrioritize.sort((a, b) {
+      final aCombinationLength =
+          precalculatedCardPairsForEachHandRange[a].length;
+      final bCombinationLength =
+          precalculatedCardPairsForEachHandRange[b].length;
 
       if (aCombinationLength == 1) {
         return -1;
@@ -31,11 +35,11 @@ class Simulator {
         return 1;
       }
 
-      if (aCombinationLength <= players.length) {
+      if (aCombinationLength <= handRanges.length) {
         return -1;
       }
 
-      if (bCombinationLength <= players.length) {
+      if (bCombinationLength <= handRanges.length) {
         return -1;
       }
 
@@ -47,12 +51,12 @@ class Simulator {
   final Set<Card> communityCards;
 
   ///
-  final List<Set<CardPairCombinationsGeneratable>> players;
+  final List<HandRange> handRanges;
 
   ///
-  final List<Set<CardPair>> playerCardPairCombinations;
+  final List<Set<CardPair>> precalculatedCardPairsForEachHandRange;
 
-  final List<int> orderedPlayerIndexes;
+  final List<int> handRangeIndexOrderToPrioritize;
 
   /// Returns matchup evaluation result. Card pairs as player hands and community cards are randomly picked.
   Matchup evaluate() {
@@ -116,10 +120,11 @@ class Simulator {
     deck.removeAll(this.communityCards);
 
     final finalCommunityCards = {...this.communityCards};
-    final List<CardPair> playerHoleCards = List(players.length);
+    final List<CardPair> chosenHoleCards = List(handRanges.length);
 
-    for (final playerIndex in orderedPlayerIndexes) {
-      final cardPairCombinations = playerCardPairCombinations[playerIndex];
+    for (final index in handRangeIndexOrderToPrioritize) {
+      final cardPairCombinations =
+          precalculatedCardPairsForEachHandRange[index];
       final availableCardPairCombinationIndexes =
           List.generate(cardPairCombinations.length, (index) => index);
 
@@ -133,7 +138,7 @@ class Simulator {
         availableCardPairCombinationIndexes.removeAt(indexOfIndexes);
 
         if (deck.contains(cardPair[0]) && deck.contains(cardPair[1])) {
-          playerHoleCards[playerIndex] = cardPair;
+          chosenHoleCards[index] = cardPair;
           deck.remove(cardPair[0]);
           deck.remove(cardPair[1]);
 
@@ -141,7 +146,7 @@ class Simulator {
         }
       }
 
-      if (playerHoleCards[playerIndex] == null) {
+      if (chosenHoleCards[index] == null) {
         throw NoPossibleMatchupException();
       }
     }
@@ -156,7 +161,7 @@ class Simulator {
 
     return Matchup._(
       communityCards: finalCommunityCards,
-      holeCards: playerHoleCards,
+      holeCards: chosenHoleCards,
     );
   }
 }
@@ -205,100 +210,4 @@ class NoPossibleMatchupException implements Exception {
 
   @override
   String toString() => "NoPossibleMatchupException";
-}
-
-mixin CardPairCombinationsGeneratable {
-  Set<CardPair> get cardPairCombinations;
-}
-
-@immutable
-class HoleCardPair with CardPairCombinationsGeneratable {
-  HoleCardPair(this._a, this._b)
-      : assert(_a != null),
-        assert(_b != null),
-        assert(_a != _b),
-        cardPairCombinations = {CardPair(_a, _b)};
-
-  final Card _a;
-
-  final Card _b;
-
-  final Set<CardPair> cardPairCombinations;
-
-  int get hashCode {
-    int result = 17;
-
-    result = 37 * result + _a.hashCode;
-    result = 37 * result + _b.hashCode;
-
-    return result;
-  }
-
-  operator ==(Object other) =>
-      other is HoleCardPair && other._a == _a && other._b == _b;
-}
-
-@immutable
-class HandRangePart with CardPairCombinationsGeneratable {
-  static final _cache = <HandRangePart, Set<CardPair>>{};
-
-  HandRangePart({
-    @required this.high,
-    @required this.kicker,
-    this.isSuited = false,
-  })  : assert(high != null),
-        assert(kicker != null);
-
-  final Rank high;
-  final Rank kicker;
-  final bool isSuited;
-
-  /// Whether the hand range part is pocket or not.
-  bool get isPocket => high == kicker;
-
-  Set<CardPair> get cardPairCombinations {
-    if (!_cache.containsKey(this)) {
-      if (isSuited) {
-        _cache[this] = Suit.values
-            .map((suit) => CardPair(
-                  Card(rank: high, suit: suit),
-                  Card(rank: kicker, suit: suit),
-                ))
-            .toSet();
-      } else {
-        final cardPairs = <CardPair>{};
-
-        for (final highSuit in Suit.values) {
-          for (final kickerSuit in Suit.values) {
-            if (kickerSuit == highSuit) continue;
-
-            cardPairs.add(CardPair(
-              Card(rank: high, suit: highSuit),
-              Card(rank: kicker, suit: kickerSuit),
-            ));
-          }
-        }
-
-        _cache[this] = cardPairs;
-      }
-    }
-
-    return _cache[this];
-  }
-
-  int get hashCode {
-    int result = 17;
-
-    result = 37 * result + high.hashCode;
-    result = 37 * result + kicker.hashCode;
-    result = 37 * result + isSuited.hashCode;
-
-    return result;
-  }
-
-  operator ==(Object other) =>
-      other is HandRangePart &&
-      other.high == high &&
-      other.kicker == kicker &&
-      other.isSuited == isSuited;
 }

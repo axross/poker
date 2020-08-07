@@ -1,46 +1,61 @@
-import "dart:collection" show IterableMixin;
 import "package:meta/meta.dart";
-import "./card.dart" show Card;
+import "card.dart";
+import "hand_range.dart";
+import "rank.dart";
+import "suit.dart";
 
-/// An object representing a pair of playing cards.
+/// A pair of [Card]s.
 @immutable
-class CardPair with IterableMixin<Card> {
-  /// Creates a card pair that is made of the given two cards.
-  CardPair(Card a, Card b)
-      : assert(a != null),
-        assert(b != null),
-        assert(a != b),
-        _a = a.compareTo(b) < 0 ? a : b,
-        _b = a.compareTo(b) < 0 ? b : a;
+class CardPair implements HandRangeComponent {
+  /// Creates a [CardPair] by the given two [Card]s.
+  const CardPair(this._a, this._b)
+      : assert(_a != null),
+        assert(_b != null),
+        assert(_a != _b);
+
+  /// Creates a [CardPair] from a string representation such like `"AsKh"`.
+  factory CardPair.fromString(String value) {
+    assert(value.length == 4);
+
+    return CardPair(
+      Card(rank: Rank.fromChar(value[0]), suit: Suit.fromChar(value[1])),
+      Card(rank: Rank.fromChar(value[2]), suit: Suit.fromChar(value[3])),
+    );
+  }
 
   final Card _a;
 
   final Card _b;
 
-  @override
-  Iterator<Card> get iterator => [_a, _b].iterator;
+  Card get first => _a.compareTo(_b) < 0 ? _a : _b;
 
+  Card get last => _a.compareTo(_b) < 0 ? _b : _a;
+
+  /// Returns a string representation such like `"AsKh"`.
   @override
-  String toString() => "CardPair(${_a.chars}, ${_b.chars})";
+  String toString() => "${_a}${_b}";
 
   @override
   int get hashCode {
     int result = 17;
 
-    result = 37 * result + (_a < _b ? _a.hashCode : _b.hashCode);
-    result = 37 * result + (_a < _b ? _b.hashCode : _a.hashCode);
+    result = 37 * result + first.hashCode;
+    result = 37 * result + last.hashCode;
 
     return result;
   }
 
-  /// Returns one of card by the given index.
+  @override
+  toCardPairs() => {this};
+
+  /// Returns one of [Card]s by the given index.
   Card operator [](int index) {
     assert(index == 0 || index == 1, "index should 0 or 1.");
 
-    return index == 0 ? _a : _b;
+    return index == 0 ? first : last;
   }
 
   @override
   operator ==(Object other) =>
-      other is CardPair && other._a == _a && other._b == _b;
+      other is CardPair && other.first == first && other.last == last;
 }
