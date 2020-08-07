@@ -18,7 +18,7 @@ class Simulator {
         assert(handRanges != null),
         assert(communityCards.length <= 5),
         precalculatedCardPairsForEachHandRange =
-            handRanges.map((hr) => hr.toCardPairSet()).toList(),
+            handRanges.map((hr) => hr.cardPairCombinations).toList(),
         handRangeIndexOrderToPrioritize =
             List.generate(handRanges.length, (index) => index)..sort() {
     handRangeIndexOrderToPrioritize.sort((a, b) {
