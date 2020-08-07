@@ -37,7 +37,15 @@ class HandRange {
 
   final Set<HandRangeComponent> _components;
 
-  Set<CardPair> toCardPairSet() => _components.fold(
+  Set<CardPair> get onlyCardPairs => _components.whereType<CardPair>().toSet();
+
+  get hasCardPair => onlyCardPairs.length;
+
+  Set<RankPair> get onlyRankPairs => _components.whereType<RankPair>().toSet();
+
+  get hasRankPair => onlyRankPairs.length;
+
+  Set<CardPair> get cardPairCombinations => _components.fold(
         <CardPair>{},
         (set, component) => set..addAll(component.toCardPairs()),
       );
