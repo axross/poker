@@ -1,4 +1,5 @@
-import 'package:poker/poker.dart';
+import "package:poker/poker.dart";
+import "package:poker/src/card_pair.dart";
 import "package:test/test.dart";
 
 void main() {
