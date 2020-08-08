@@ -6,7 +6,7 @@ import "rank.dart";
 import "suit.dart";
 
 @immutable
-class RankPair with HandRangeComponent {
+class RankPair implements HandRangeComponent {
   const RankPair.suited({@required this.high, @required this.kicker})
       : assert(high != null),
         assert(kicker != null),
@@ -108,6 +108,33 @@ class RankPair with HandRangeComponent {
         Card(rank: kicker, suit: Suit.club),
       ),
     };
+  }
+
+  @override
+  int compareTo(other) {
+    assert(other is HandRangeComponent);
+
+    if (other is CardPair) {
+      return -1;
+    }
+
+    if (other is RankPair) {
+      if (!other.isSuited && isSuited) {
+        return -1;
+      }
+
+      if (other.isSuited && !isSuited) {
+        return 1;
+      }
+
+      if (high.compareTo(other.high) != 0) {
+        return high.compareTo(other.high);
+      }
+
+      return kicker.compareTo(other.kicker);
+    }
+
+    throw UnimplementedError();
   }
 
   @override

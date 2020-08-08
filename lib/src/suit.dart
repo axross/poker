@@ -51,9 +51,9 @@ class _Suit implements Suit {
   @override
   int compareTo(other) {
     if (other is Suit) {
-      return other.index - index;
+      return index - other.index;
     }
 
-    return -1;
+    return 0;
   }
 }
