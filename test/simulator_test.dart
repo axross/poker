@@ -156,35 +156,90 @@ void main() {
     });
 
     group("#evaluate()", () {
+      test("it chooses card pairs as much as possible", () {
+        expect(
+          () => Simulator(
+            communityCards: {
+              Card(rank: Rank.ace, suit: Suit.spade),
+              Card(rank: Rank.king, suit: Suit.spade),
+              Card(rank: Rank.eight, suit: Suit.spade),
+              Card(rank: Rank.seven, suit: Suit.heart),
+              Card(rank: Rank.six, suit: Suit.diamond),
+            },
+            handRanges: [
+              HandRange({
+                CardPair(
+                  Card(rank: Rank.ace, suit: Suit.heart),
+                  Card(rank: Rank.ace, suit: Suit.diamond),
+                ),
+              }),
+              HandRange({
+                RankPair.suited(high: Rank.ace, kicker: Rank.king),
+                RankPair.ofsuit(high: Rank.king, kicker: Rank.king),
+              }),
+              HandRange({
+                RankPair.suited(high: Rank.ace, kicker: Rank.king),
+              }),
+            ],
+          ).evaluate(),
+          isNot(throwsA(isA<NoPossibleMatchupException>())),
+        );
+      });
+
       test(
           "it throws NoPossibleMatchupException when there's no possible card combination",
           () {
-        final simulator = Simulator(
-          communityCards: {
-            Card(rank: Rank.ten, suit: Suit.spade),
-            Card(rank: Rank.nine, suit: Suit.spade),
-            Card(rank: Rank.eight, suit: Suit.spade),
-            Card(rank: Rank.seven, suit: Suit.heart),
-            Card(rank: Rank.six, suit: Suit.diamond),
-          },
-          handRanges: [
-            HandRange({
-              CardPair(
-                Card(rank: Rank.six, suit: Suit.spade),
-                Card(rank: Rank.seven, suit: Suit.spade),
-              )
-            }),
-            HandRange({
-              RankPair.suited(high: Rank.seven, kicker: Rank.six),
-            }),
-            HandRange({
-              RankPair.suited(high: Rank.seven, kicker: Rank.six),
-            }),
-          ],
+        expect(
+          () => Simulator(
+            communityCards: {
+              Card(rank: Rank.ace, suit: Suit.spade),
+              Card(rank: Rank.king, suit: Suit.spade),
+              Card(rank: Rank.eight, suit: Suit.spade),
+              Card(rank: Rank.seven, suit: Suit.heart),
+              Card(rank: Rank.six, suit: Suit.diamond),
+            },
+            handRanges: [
+              HandRange({
+                CardPair(
+                  Card(rank: Rank.ace, suit: Suit.heart),
+                  Card(rank: Rank.ace, suit: Suit.diamond),
+                ),
+              }),
+              HandRange({
+                RankPair.suited(high: Rank.ace, kicker: Rank.king),
+              }),
+              HandRange({
+                RankPair.suited(high: Rank.ace, kicker: Rank.king),
+              }),
+            ],
+          ).evaluate(),
+          throwsA(isA<NoPossibleMatchupException>()),
         );
 
         expect(
-          () => simulator.evaluate(),
+          () => Simulator(
+            communityCards: {
+              Card(rank: Rank.ten, suit: Suit.spade),
+              Card(rank: Rank.nine, suit: Suit.spade),
+              Card(rank: Rank.eight, suit: Suit.spade),
+              Card(rank: Rank.seven, suit: Suit.heart),
+              Card(rank: Rank.six, suit: Suit.diamond),
+            },
+            handRanges: [
+              HandRange({
+                CardPair(
+                  Card(rank: Rank.six, suit: Suit.spade),
+                  Card(rank: Rank.seven, suit: Suit.spade),
+                )
+              }),
+              HandRange({
+                RankPair.suited(high: Rank.seven, kicker: Rank.six),
+              }),
+              HandRange({
+                RankPair.suited(high: Rank.seven, kicker: Rank.six),
+              }),
+            ],
+          ).evaluate(),
           throwsA(isA<NoPossibleMatchupException>()),
         );
       });
