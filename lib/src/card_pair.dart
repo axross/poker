@@ -2,6 +2,7 @@ import "package:meta/meta.dart";
 import "card.dart";
 import "hand_range.dart";
 import "rank.dart";
+import "rank_pair.dart";
 import "suit.dart";
 
 /// A pair of [Card]s.
@@ -33,7 +34,7 @@ class CardPair implements HandRangeComponent {
 
   /// Returns a string representation such like `"AsKh"`.
   @override
-  String toString() => "${_a}${_b}";
+  String toString() => "${first}${last}";
 
   @override
   int get hashCode {
@@ -47,6 +48,25 @@ class CardPair implements HandRangeComponent {
 
   @override
   toCardPairs() => {this};
+
+  @override
+  int compareTo(other) {
+    assert(other is HandRangeComponent);
+
+    if (other is RankPair) {
+      return 1;
+    }
+
+    if (other is CardPair) {
+      if (first.compareTo(other.first) != 0) {
+        return first.compareTo(other.first);
+      }
+
+      return last.compareTo(other.last);
+    }
+
+    throw UnimplementedError();
+  }
 
   /// Returns one of [Card]s by the given index.
   Card operator [](int index) {

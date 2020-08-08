@@ -53,8 +53,16 @@ class HandRange {
   bool get isEmpty => _components.length == 0;
 
   bool get isNotEmpty => _components.length != 0;
+
+  @override
+  String toString() => (_components.toList()..sort((a, b) => a.compareTo(b)))
+      .map((c) => c.toString())
+      .join("");
 }
 
-mixin HandRangeComponent {
+mixin HandRangeComponent implements Comparable {
   Set<CardPair> toCardPairs();
+
+  @override
+  int compareTo(other);
 }

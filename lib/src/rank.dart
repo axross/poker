@@ -2,44 +2,44 @@
 abstract class Rank implements Comparable {
   static const ace = _Rank(0, "A");
 
-  static const deuce = _Rank(1, "2");
+  static const deuce = _Rank(12, "2");
 
-  static const three = _Rank(2, "3");
+  static const three = _Rank(11, "3");
 
-  static const four = _Rank(3, "4");
+  static const four = _Rank(10, "4");
 
-  static const five = _Rank(4, "5");
+  static const five = _Rank(9, "5");
 
-  static const six = _Rank(5, "6");
+  static const six = _Rank(8, "6");
 
-  static const seven = _Rank(6, "7");
+  static const seven = _Rank(7, "7");
 
-  static const eight = _Rank(7, "8");
+  static const eight = _Rank(6, "8");
 
-  static const nine = _Rank(8, "9");
+  static const nine = _Rank(5, "9");
 
-  static const ten = _Rank(9, "T");
+  static const ten = _Rank(4, "T");
 
-  static const jack = _Rank(10, "J");
+  static const jack = _Rank(3, "J");
 
-  static const queen = _Rank(11, "Q");
+  static const queen = _Rank(2, "Q");
 
-  static const king = _Rank(12, "K");
+  static const king = _Rank(1, "K");
 
   static const values = [
     Rank.ace,
-    Rank.deuce,
-    Rank.three,
-    Rank.four,
-    Rank.five,
-    Rank.six,
-    Rank.seven,
-    Rank.eight,
-    Rank.nine,
-    Rank.ten,
-    Rank.jack,
-    Rank.queen,
     Rank.king,
+    Rank.queen,
+    Rank.jack,
+    Rank.ten,
+    Rank.nine,
+    Rank.eight,
+    Rank.seven,
+    Rank.six,
+    Rank.five,
+    Rank.four,
+    Rank.three,
+    Rank.deuce,
   ];
 
   factory Rank.fromChar(String char) {
@@ -96,9 +96,9 @@ class _Rank implements Rank {
   @override
   int compareTo(other) {
     if (other is Rank) {
-      return other.index - index;
+      return index - other.index;
     }
 
-    return -1;
+    return 0;
   }
 }
