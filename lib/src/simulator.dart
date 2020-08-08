@@ -35,12 +35,17 @@ class Simulator {
         return 1;
       }
 
-      if (aCombinationLength <= handRanges.length) {
+      if (aCombinationLength <= handRanges.length * 2 &&
+          bCombinationLength <= handRanges.length * 2) {
+        return aCombinationLength - bCombinationLength;
+      }
+
+      if (aCombinationLength <= handRanges.length * 2) {
         return -1;
       }
 
-      if (bCombinationLength <= handRanges.length) {
-        return -1;
+      if (bCombinationLength <= handRanges.length * 2) {
+        return 1;
       }
 
       return 0;
@@ -53,9 +58,10 @@ class Simulator {
   ///
   final List<HandRange> handRanges;
 
-  ///
+  @visibleForTesting
   final List<Set<CardPair>> precalculatedCardPairsForEachHandRange;
 
+  @visibleForTesting
   final List<int> handRangeIndexOrderToPrioritize;
 
   /// Returns matchup evaluation result. Card pairs as player hands and community cards are randomly picked.
