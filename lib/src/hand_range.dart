@@ -39,11 +39,11 @@ class HandRange {
 
   Set<CardPair> get onlyCardPairs => _components.whereType<CardPair>().toSet();
 
-  get hasCardPair => onlyCardPairs.length;
+  bool get hasCardPair => onlyCardPairs.length >= 1;
 
   Set<RankPair> get onlyRankPairs => _components.whereType<RankPair>().toSet();
 
-  get hasRankPair => onlyRankPairs.length;
+  bool get hasRankPair => onlyRankPairs.length >= 1;
 
   Set<CardPair> get cardPairCombinations => _components.fold(
         <CardPair>{},
