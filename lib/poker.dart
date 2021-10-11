@@ -1,11 +1,6 @@
-/// the main library of this package.
-library poker;
-
-export "src/card.dart";
-export "src/card_pair.dart";
-export "src/hand.dart";
-export "src/hand_range.dart";
-export "src/simulator.dart";
-export "src/rank.dart";
-export "src/rank_pair.dart";
-export "src/suit.dart";
+export "src/models/card.dart";
+export "src/models/card_set.dart";
+export "src/models/hand_range.dart";
+export "src/models/made_hand.dart";
+export "src/models/rank.dart" hide RankPower, RankToChar, rankFromChar;
+export "src/models/suit.dart" hide SuitChar;
