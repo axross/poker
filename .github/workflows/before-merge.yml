@@ -1,0 +1,28 @@
+name: Before Merge
+on:
+  - pull_request
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.5.3'
+      - name: Install npm packages
+        run: dart pub get
+      - name: Dart Analyze
+        run: dart analyze
+  unit-test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.5.3'
+      - name: Install npm packages
+        run: dart pub get
+      - name: Run Unit Tests
+        run: dart run test
