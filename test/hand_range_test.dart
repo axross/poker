@@ -42,7 +42,7 @@ void main() {
     });
 
     test(
-        "HandRange.fromString(\"AJo+\") returns HandRange<AA, AKo, AQo, AJo, AKs, AQs, AJs, ATs, KQs, QQ, JJ>",
+        "HandRange.fromString(\"JJ+, ATs+, KQs, AJo+\") returns HandRange<AA, AKo, AQo, AJo, AKs, AQs, AJs, ATs, KQs, QQ, JJ>",
         () {
       expect(checkIfInRange("AhAd", "JJ+, ATs+, KQs, AJo+"), true);
       expect(checkIfInRange("AsTs", "JJ+, ATs+, KQs, AJo+"), true);
