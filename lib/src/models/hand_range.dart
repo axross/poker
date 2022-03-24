@@ -113,12 +113,11 @@ class HandRange with IterableMixin<CardPair> {
             i <= _ranks.indexOf(kicker);
             ++i) {
           if (token[2] == "s") {
-            components.add(RankPair.suited(high, kicker));
+            components.add(RankPair.suited(high, _ranks[i]));
           } else {
-            components.add(RankPair.ofsuit(high, kicker));
+            components.add(RankPair.ofsuit(high, _ranks[i]));
           }
         }
-
         continue;
       }
 
