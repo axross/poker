@@ -1,53 +1,84 @@
 import "dart:collection";
-import "../models/card.dart";
-import "../models/card_set.dart";
-import "../models/evaluation_result.dart";
+import '../models/immutable_card_set.dart';
 import "../models/hand_range.dart";
-import "../models/matchup.dart";
 import "./evaluator.dart";
 
-class ExhaustiveEvaluator
-    with IterableMixin<EvaluationResult>
-    implements Evaluator {
+/// An iterable object that evaluates pot equity for each player in the given situation. It iterates with evaluating every possible situation one by one. Which is great when you want to get the 100% accurate result.
+///
+/// ```dart
+/// final evaluator = ExhaustiveEvaluator(
+///   communityCards: ImmutableCardSet.parse("3c6dTs"),
+///   players = [
+///     HandRange.parse("As3h"),
+///     HandRange.parse("8d8h"),
+///     HandRange.parse("AQs-ATsAKo-AJo44+"),
+///   ],
+/// );
+///
+/// let wons = [0, 0, 0];
+///
+/// for (final matchup in evaluator) {
+///   for (final i in matchup.wonPlayerIndexes) {
+///     wons[i] += 1;
+///   }
+/// }
+///
+/// print(wins);  // => [25412, 71028, 63894]
+/// ```
+class ExhaustiveEvaluator with IterableMixin<Matchup> implements Evaluator {
   ExhaustiveEvaluator({
-    required Set<Card> communityCards,
+    required this.communityCards,
     required this.players,
-  }) : communityCards = communityCards is CardSet
-            ? communityCards
-            : CardSet(communityCards);
+  })  : assert(communityCards.length <= 5),
+        assert(players.length >= 2);
 
-  final CardSet communityCards;
+  @override
+  final ImmutableCardSet communityCards;
 
+  @override
   final List<HandRange> players;
 
-  Iterator<EvaluationResult> get iterator =>
-      _ExhaustiveEvaluationIterator(original: this);
+  @override
+  Iterator<Matchup> get iterator => _ExhaustiveEvaluationIterator(
+        communityCards: communityCards,
+        players: players,
+      );
 }
 
-class _ExhaustiveEvaluationIterator implements Iterator<EvaluationResult> {
-  _ExhaustiveEvaluationIterator({required ExhaustiveEvaluator original})
-      : _playerCardPairs = original.players.map((p) => p.toList()).toList(),
+class _ExhaustiveEvaluationIterator implements Iterator<Matchup> {
+  _ExhaustiveEvaluationIterator({
+    required ImmutableCardSet communityCards,
+    required List<HandRange> players,
+  })  : _playerCardPairs = players.map((p) => p.toList()).toList(),
         _stack = [
           _ExhaustiveEvaluationNode(
-            deck: CardSet.full..removeAll(original.communityCards),
+            deck: ImmutableCardSet.full().removedAll(communityCards),
             playerCardPairs: [],
-            communityCards: original.communityCards,
+            communityCards: communityCards,
           ),
         ],
-        _lastResult = null;
+        _lastMatchup = null;
 
   final List<List<CardPair>> _playerCardPairs;
 
   final List<_ExhaustiveEvaluationNode> _stack;
 
-  EvaluationResult? _lastResult;
+  Matchup? _lastMatchup;
 
   @override
-  EvaluationResult get current => _lastResult!;
+  Matchup get current => _lastMatchup!;
 
   @override
   bool moveNext() {
-    if (_stack.isEmpty) return false;
+    if (_stack.isEmpty) {
+      if (_lastMatchup == null) {
+        throw NoPossibleCombinationException();
+      }
+
+      _lastMatchup = null;
+
+      return false;
+    }
 
     final node = _stack.removeLast();
 
@@ -58,37 +89,33 @@ class _ExhaustiveEvaluationIterator implements Iterator<EvaluationResult> {
         if (!node.deck.containsAll(playerCardPair)) continue;
 
         _stack.add(_ExhaustiveEvaluationNode(
-          deck: node.deck.toSet()..removeAll(playerCardPair),
-          playerCardPairs: [...node.playerCardPairs, CardSet(playerCardPair)],
+          deck: node.deck.removedAll(playerCardPair),
+          playerCardPairs: node.playerCardPairs.toList()..add(playerCardPair),
           communityCards: node.communityCards,
         ));
       }
 
-      // continue;
       return moveNext();
     }
 
     if (node.communityCards.length < 5) {
       for (final card in node.deck) {
         _stack.add(_ExhaustiveEvaluationNode(
-          deck: node.deck.difference(CardSet.single(card)),
+          deck: node.deck.removed(card),
           playerCardPairs: node.playerCardPairs,
-          communityCards: node.communityCards.toSet()..add(card),
+          communityCards: node.communityCards.added(card),
         ));
       }
 
-      // continue;
       return moveNext();
     }
 
-    final matchup = Matchup.showdown(
-      communityCards: node.communityCards,
+    _lastMatchup = Matchup.showdown(
       playerCardPairs: node.playerCardPairs,
+      communityCards: node.communityCards,
     );
 
-    _lastResult = EvaluationResult.fromMatchup(matchup);
-
-    return _lastResult != null;
+    return true;
   }
 }
 
@@ -99,7 +126,7 @@ class _ExhaustiveEvaluationNode {
     required this.communityCards,
   });
 
-  final Set<Card> deck;
-  final List<Set<Card>> playerCardPairs;
-  final Set<Card> communityCards;
+  final ImmutableCardSet deck;
+  final List<CardPair> playerCardPairs;
+  final ImmutableCardSet communityCards;
 }

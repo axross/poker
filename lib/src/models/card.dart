@@ -8,10 +8,10 @@ import "./suit.dart";
 /// ```
 /// final card = Card(Rank.ace, Suit.spade);
 ///
-/// card.rank;  // => Rank.ace
-/// card.suit;  // => Suit.spade
+/// assert(card.rank == Rank.ace);
+/// assert(card.suit == Suit.spade);
 ///
-/// card.toString();  // => "As"
+/// assert(card.toString() == "As");
 /// ```
 ///
 /// Since Card implements [Comparable], you can sort a list of Cards in order.
@@ -26,12 +26,12 @@ import "./suit.dart";
 ///
 /// cards.sort();
 ///
-/// cards;  // [
-///         //   Card(Rank.ace, Suit.spade),
-///         //   Card(Rank.queen, Suit.heart),
-///         //   Card(Rank.jack, Suit.diamond),
-///         //   Card(Rank.king, Suit.club)
-///         // ]
+/// print(cards);  // [
+///                //   Card(Rank.ace, Suit.spade),
+///                //   Card(Rank.queen, Suit.heart),
+///                //   Card(Rank.jack, Suit.diamond),
+///                //   Card(Rank.king, Suit.club)
+///                // ]
 /// ```
 @immutable
 class Card implements Comparable {
@@ -43,15 +43,15 @@ class Card implements Comparable {
   /// final TreyOfDiamond = Card(Rank.trey, Suit.diamond);
   /// final kingOfClub = Card(Rank.king, Suit.club);
   /// ```
-  Card(this.rank, this.suit)
-      : _intValue = pow(2, rank.index + suit.index * 13).toInt();
+  Card({required this.rank, required this.suit})
+      : index = pow(2, rank.index + suit.index * 13).toInt();
 
   /// Creates a [Card] from a hash int value.
   @protected
-  Card.fromInt(int value)
-      : rank = Rank.values[(log(value) / log(2)).floor() % 13],
-        suit = Suit.values[((log(value) / log(2)) / 13).floor()],
-        _intValue = value;
+  Card.fromIndex(int index)
+      : rank = Rank.fromIndex((log(index) / log(2)).floor() % 13),
+        suit = Suit.fromIndex(((log(index) / log(2)) / 13).floor()),
+        index = index;
 
   /// Creates a [Card] by a 2-character-length [String].
   ///
@@ -61,12 +61,12 @@ class Card implements Comparable {
   /// Card.fromString("3d");  // => Card(Rank.trey, Suit.diamond)
   /// Card.fromString("Kc");  // => Card(Rank.king, Suit.club)
   /// ```
-  factory Card.fromString(String value) {
+  factory Card.parse(String value) {
     if (!RegExp(r"^[A23456789TJQK][shdc]$").hasMatch(value)) {
       throw CardParseFailure(value);
     }
 
-    return Card(_rankByString[value[0]]!, _suitByString[value[1]]!);
+    return Card(rank: Rank.parse(value[0]), suit: Suit.parse(value[1]));
   }
 
   /// The [Rank] of this card.
@@ -75,10 +75,8 @@ class Card implements Comparable {
   /// The [Suit] of this card.
   final Suit suit;
 
-  final int _intValue;
-
-  /// Returns the hash int value of this Card.
-  int toInt() => _intValue;
+  /// Returns the hash integer value of this card.
+  final int index;
 
   @override
   int compareTo(dynamic other) {
@@ -91,18 +89,18 @@ class Card implements Comparable {
     return rank.index - other.rank.index;
   }
 
-  /// Returns a string representation. Ace of spade is `"As"`, 10 of heart is `"Th"` and 2 of diamond is `"2d"`.
+  /// Returns a string representation. Ace of spade is `"As"`, 10 of heart is `"Th"` and deuce of diamond is `"2d"`.
   @override
-  String toString() => "${rank.char}${suit.char}";
+  String toString() => "${rank}${suit}";
 
   @override
-  int get hashCode => toInt();
+  int get hashCode => index;
 
   @override
-  bool operator ==(Object other) =>
-      other is Card && other.rank == rank && other.suit == suit;
+  bool operator ==(Object other) => other is Card && other.index == index;
 }
 
+/// An exception that expresses `Card.parse()` failed due to the given String was invalid.
 class CardParseFailure implements Exception {
   CardParseFailure(this.value);
 
@@ -113,26 +111,3 @@ class CardParseFailure implements Exception {
     return "CardParseFailure: $value is not a valid string.";
   }
 }
-
-const _rankByString = {
-  "A": Rank.ace,
-  "K": Rank.king,
-  "Q": Rank.queen,
-  "J": Rank.jack,
-  "T": Rank.ten,
-  "9": Rank.nine,
-  "8": Rank.eight,
-  "7": Rank.seven,
-  "6": Rank.six,
-  "5": Rank.five,
-  "4": Rank.four,
-  "3": Rank.trey,
-  "2": Rank.deuce,
-};
-
-const _suitByString = {
-  "s": Suit.spade,
-  "h": Suit.heart,
-  "d": Suit.diamond,
-  "c": Suit.club,
-};

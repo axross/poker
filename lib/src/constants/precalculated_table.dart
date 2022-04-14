@@ -1,4 +1,4 @@
-import "package:poker/poker.dart";
+import "../models/rank.dart";
 
 const dpReference = {
   1: {
