@@ -1,8 +1,8 @@
 import "package:meta/meta.dart";
-import "./card.dart";
+import "../constants/precalculated_table.dart";
+import './immutable_card_set.dart';
 import "./rank.dart";
 import "./suit.dart";
-import "../constants/precalculated_table.dart";
 
 /**
  * An index of [Cactus Kev's poker hand equivalence enums](http://suffe.cool/poker/7462.html).
@@ -11,7 +11,7 @@ import "../constants/precalculated_table.dart";
 class MadeHand {
   const MadeHand.fromIndex(this._value);
 
-  factory MadeHand.best(Set<Card> cards) {
+  factory MadeHand.best(ImmutableCardSet cards) {
     final flushSuit = _findFlushSuit(cards);
 
     if (flushSuit != null) {
@@ -61,7 +61,7 @@ enum MadeHandType {
   straightFlush
 }
 
-Suit? _findFlushSuit(Set<Card> cards) {
+Suit? _findFlushSuit(ImmutableCardSet cards) {
   final suitCount = {
     Suit.spade: 0,
     Suit.heart: 0,
@@ -80,8 +80,8 @@ Suit? _findFlushSuit(Set<Card> cards) {
   return null;
 }
 
-int _hashForFlush({required Set<Card> cards, required Suit suit}) {
-  final bitEachRank = {
+int _hashForFlush({required ImmutableCardSet cards, required Suit suit}) {
+  const bitEachRank = {
     Rank.ace: 0x1000,
     Rank.deuce: 0x1,
     Rank.trey: 0x2,
@@ -107,7 +107,7 @@ int _hashForFlush({required Set<Card> cards, required Suit suit}) {
   return hash;
 }
 
-int _hashForRainbow(Set<Card> cards) {
+int _hashForRainbow(ImmutableCardSet cards) {
   final cardLengthEachRank = {
     Rank.ace: 0,
     Rank.deuce: 0,

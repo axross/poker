@@ -1,175 +1,237 @@
 import "dart:collection";
-import "package:meta/meta.dart";
+import 'package:meta/meta.dart';
 import "./card.dart";
+import './immutable_card_set.dart';
 import "./rank.dart";
 import "./suit.dart";
 
-/// A set expression of [CardPair]s that a player possibly has.
-///
-/// On realistic poker table, people guess what other players possibly have.
-///
-/// TBD
+/// An immutable set of [CardPair]s that expresses a player hand range.
+@immutable
 class HandRange with IterableMixin<CardPair> {
-  /// Creates a HandRange from a `Set<CardPairConvertable>`.
-  ///
-  /// [CardPair]s and [RankPair]s implement [CardPairConvertable]. You can use either or both of them to construct a HandRange.
-  ///
-  /// ```dart
-  /// final handRange = HandRange({
-  ///   // use CardPair for a specific pair of cards
-  ///   CardPair(Card(Rank.ace, Suit.spade), Card(Rank.ace, Suit.heart)),
-  ///   // use RankPair for suited or ofsuit group of card pairs.
-  ///   RankPair.suited(Rank.ace, Rank.king),
-  ///   RankPair.ofsuit(Rank.ace, Rank.queen),
-  /// });
-  /// ```
-  ///
-  /// HandRange is an iterable object of CardPairs. You can iterate a HandRange to get a combination set of CardPairs inside.
-  ///
-  /// ```dart
-  /// final handRange = HandRange({
-  ///   CardPair(Card(Rank.ace, Suit.spade), Card(Rank.ace, Suit.heart)),
-  ///   RankPair.suited(Rank.ace, Rank.king),
-  ///   RankPair.ofsuit(Rank.ace, Rank.queen),
-  /// });
-  ///
-  /// // Iterable<CardPair> that either or both card has heart
-  /// final cardPairsOfHeart = handRange
-  ///   .where((cardPair) => cardPair.first.suit == Suit.heart || cardPair.last.suit == heart);
-  /// ```
-  HandRange(Set<CardPairConvertable> components) : _components = components;
+  /// Creates a [HandRange] from a [Set] of [CardPair].
+  HandRange(Set<CardPair> cardPairs) : _cardPairs = cardPairs;
 
-  /// Parses a [String] to create a HandRange.
+  /// Creates a [HandRange] from a [String].
   ///
   /// ```dart
-  /// final handRange = HandRange.fromString("AhKdAKsT9o55ATs+88+");
+  /// final handRange = HandRange.parse("AhKdAKsT9o55ATs+88+");
   /// ```
   ///
-  /// This method expects a String that forms a sequence of following parts:
-  /// - `AhKd` - Specific pair of cards. It will turn into a [CardPair].
-  /// - `AKs` - All suited combinations from two different ranks.
-  /// - `T9o` - All ofsuit combinations from two different ranks.
-  /// - `66` - All ofsuit combinations from a specific rank (pocket pair).
-  /// - `ATs+` - All suited combinations above and equal than two specific ranks. `ATs+` turn into equivalent of `ATs`, `AJs`, `AQs` and `AKs`.
+  /// This method expects a [String] that consists of following parts:
+  /// - `AhKd` - Specific pair of cards. It will literally turn into a [CardPair].
+  /// - `AKs` - All suited combination of [CardPair]s from two different ranks.
+  /// - `T9o` - All ofsuit combination of [CardPair]s from two different ranks.
+  /// - `66` - All pocket pair combination of [CardPair]s for a specific rank.
+  /// - `ATs+` - All suited combination of [CardPair]s from a specific high rank and the kicker rank that is above than or equal. `ATs+` turn into equivalent of `ATs`, `AJs`, `AQs` and `AKs`.
+  /// - `ATo+` - All ofsuit combination of [CardPair]s from a specific high rank and the kicker rank that is above than or equal. `ATo+` turn into equivalent of `ATo`, `AJo`, `AQo` and `AKo`.
   /// - `JJ+` - All pocket pairs above and equal than a specific rank. `JJ+` will turn into equivalent of `JJ`, `QQ`, `KK` and `AA`.
   ///
   /// Available characters for rank are `A`, `K`, `Q`, `J`, `T`, `9`, `8`, `7`, `6`, `5`, `4`, `3` and `2`.
-  factory HandRange.fromString(String value) {
-    final components = Set<CardPairConvertable>();
-    final matches = RegExp(
-            r"[AKQJT98765432][shdc]?[AKQJT98765432](\+|[so]\+?|[shdc])?(-[AKQJT98765432][AKQJT98765432][so]?)?")
-        .allMatches(value);
+  factory HandRange.parse(String value) {
+    final cardPairs = Set<CardPair>();
+    final regex = RegExp(
+        r'[AKQJT98765432]{2}[so]?(-[AKQJT98765432]{2}[so]?|\+)?|([AKQJT98765432][shdc]){2}');
+    int scanned = 0;
 
-    for (final match in matches) {
-      final token = match.group(0)!;
+    while (true) {
+      final match = regex.firstMatch(value.substring(scanned));
 
-      // parse range parts like AKs-ATs
-      if (token.length == 7) {
-        final high = rankFromChar(token[0]);
-        final kickerTop = rankFromChar(token[1]);
-        final kickerBottom = rankFromChar(token[5]);
+      if (match == null) {
+        if (scanned < value.length) {
+          if (scanned == 0) {
+            throw HandRangeParseFailureException(whole: value);
+          }
 
-        for (int i = _ranks.indexOf(kickerTop);
-            i <= _ranks.indexOf(kickerBottom);
-            ++i) {
-          if (token[2] == "s") {
-            components.add(RankPair.suited(high, _ranks[i]));
-          } else {
-            components.add(RankPair.ofsuit(high, _ranks[i]));
+          throw HandRangeParseFailureException(
+            whole: value,
+            part: value.substring(scanned),
+          );
+        }
+
+        break;
+      }
+
+      final part = match[0]!;
+      scanned += part.length;
+
+      if (RegExp(r'^[AKQJT98765432]{2}-[AKQJT98765432]{2}$').hasMatch(part) &&
+          part[0] == part[1] &&
+          part[3] == part[4]) {
+        final top = Rank.parse(part[0]);
+        final bottom = Rank.parse(part[3]);
+
+        for (int i = _ranks.indexOf(top); i <= _ranks.indexOf(bottom); ++i) {
+          for (final cardPair in _pocketCardPairs(_ranks[i])) {
+            cardPairs.add(cardPair);
           }
         }
 
         continue;
       }
 
-      // parse range parts like QQ-55
-      if (token.length == 5 && token[0] == token[1] && token[3] == token[4]) {
-        final top = rankFromChar(token[0]);
-        final bottom = rankFromChar(token[3]);
+      if (RegExp(r'^[AKQJT98765432]{2}[so]-[AKQJT98765432]{2}[so]$')
+              .hasMatch(part) &&
+          part[0] == part[4] &&
+          part[1] != part[5] &&
+          part[2] == part[6]) {
+        final high = Rank.parse(part[0]);
+        final kickerTop = Rank.parse(part[1]);
+        final kickerBottom = Rank.parse(part[5]);
 
-        for (int i = _ranks.indexOf(top); i <= _ranks.indexOf(bottom); ++i) {
-          components.add(RankPair.ofsuit(_ranks[i], _ranks[i]));
+        if (high.powerIndex < kickerTop.powerIndex &&
+            kickerTop.powerIndex < kickerBottom.powerIndex) {
+          for (int i = _ranks.indexOf(kickerTop);
+              i <= _ranks.indexOf(kickerBottom);
+              ++i) {
+            if (part[2] == "s") {
+              for (final cardPair in _suitedCardPairs(high, _ranks[i])) {
+                cardPairs.add(cardPair);
+              }
+            } else {
+              for (final cardPair in _ofsuitCardPairs(high, _ranks[i])) {
+                cardPairs.add(cardPair);
+              }
+            }
+          }
+
+          continue;
+        }
+      }
+
+      if (RegExp(r'^[AKQJT98765432]{2}\+$').hasMatch(part) &&
+          part[0] == part[1]) {
+        for (int i = 0; i <= _ranks.indexOf(Rank.parse(part[0])); ++i) {
+          for (final cardPair in _pocketCardPairs(_ranks[i])) {
+            cardPairs.add(cardPair);
+          }
         }
 
         continue;
       }
 
-      // parse pocket range parts like 55+
-      if (token.length == 3 && token[2] == "+" && token[0] == token[1]) {
-        for (int i = 0; i <= _ranks.indexOf(rankFromChar(token[0])); ++i) {
-          components.add(RankPair.ofsuit(_ranks[i], _ranks[i]));
-        }
-
-        continue;
-      }
-
-      // parse range parts like AJs+, AJ+
-      if ((token.length == 3 && token[2] == "+" && token[0] != token[1]) ||
-          (token.length == 4 && token[3] == "+")) {
-        final high = rankFromChar(token[0]);
-        final kicker = rankFromChar(token[1]);
+      if (RegExp(r'^[AKQJT98765432]{2}[so]\+$').hasMatch(part) &&
+          part[0] != part[1]) {
+        final high = Rank.parse(part[0]);
+        final kicker = Rank.parse(part[1]);
 
         for (int i = _ranks.indexOf(high) + 1;
             i <= _ranks.indexOf(kicker);
             ++i) {
-          if (token[2] == "s") {
-            components.add(RankPair.suited(high, kicker));
+          if (part[2] == "s") {
+            for (final cardPair in _suitedCardPairs(high, _ranks[i])) {
+              cardPairs.add(cardPair);
+            }
           } else {
-            components.add(RankPair.ofsuit(high, kicker));
+            for (final cardPair in _ofsuitCardPairs(high, _ranks[i])) {
+              cardPairs.add(cardPair);
+            }
           }
         }
 
         continue;
       }
 
-      // example: AhKc
-      if (token.length == 4 && token[3] != "+") {
-        components.add(CardPair(
-          Card.fromString(token.substring(0, 2)),
-          Card.fromString(token.substring(2, 4)),
-        ));
+      if (RegExp(r'^[AKQJT98765432]{2}$').hasMatch(part) &&
+          part[0] == part[1]) {
+        final rank = Rank.parse(part[0]);
+
+        for (final cardPair in _pocketCardPairs(rank)) {
+          cardPairs.add(cardPair);
+        }
 
         continue;
       }
 
-      final high = rankFromChar(token[0]);
-      final kicker = rankFromChar(token[1]);
+      if (RegExp(r'^[AKQJT98765432]{2}[so]$').hasMatch(part) &&
+          part[0] != part[1]) {
+        final high = Rank.parse(part[0]);
+        final kicker = Rank.parse(part[1]);
 
-      // example: AJ, AJo
-      if (token[2] == "s") {
-        components.add(RankPair.suited(high, kicker));
-      } else {
-        if (high == kicker) {
-          components.add(RankPair.ofsuit(high, kicker));
+        if (part[2] == "s") {
+          for (final cardPair in _suitedCardPairs(high, kicker)) {
+            cardPairs.add(cardPair);
+          }
         } else {
-          components.add(RankPair.ofsuit(high, kicker));
+          for (final cardPair in _ofsuitCardPairs(high, kicker)) {
+            cardPairs.add(cardPair);
+          }
+        }
+
+        continue;
+      }
+
+      if (RegExp(r'^([AKQJT98765432][shdc]){2}$').hasMatch(part)) {
+        cardPairs.add(CardPair.parse(part));
+
+        continue;
+      }
+
+      throw HandRangeParseFailureException(whole: value, part: part);
+    }
+
+    return HandRange(cardPairs);
+  }
+
+  final Set<CardPair> _cardPairs;
+
+  @override
+  Iterator<CardPair> get iterator => _cardPairs.iterator;
+
+  @override
+  bool get isEmpty => _cardPairs.length == 0;
+
+  @override
+  String toString() {
+    final cardPairs = _cardPairs.toSet();
+    final pocketParts = <String>{};
+    final suitedParts = <String>{};
+    final ofsuitParts = <String>{};
+    final individualParts = <String>{};
+
+    for (final rank in _ranks) {
+      if ([..._pocketCardPairs(rank)].every((cp) => cardPairs.contains(cp))) {
+        cardPairs.removeAll(_pocketCardPairs(rank));
+
+        pocketParts.add("$rank$rank");
+      }
+    }
+
+    for (int i = 0; i < _ranks.length; ++i) {
+      final hr = _ranks[i];
+
+      for (final kr in _ranks.sublist(i + 1)) {
+        if ([..._suitedCardPairs(hr, kr)]
+            .every((cp) => cardPairs.contains(cp))) {
+          cardPairs.removeAll(_suitedCardPairs(hr, kr));
+
+          suitedParts.add("$hr${kr}s");
+        }
+
+        if ([..._ofsuitCardPairs(hr, kr)]
+            .every((cp) => cardPairs.contains(cp))) {
+          cardPairs.removeAll(_ofsuitCardPairs(hr, kr));
+
+          ofsuitParts.add("$hr${kr}o");
+        }
+
+        for (final hs in _suits) {
+          for (final ks in _suits) {
+            final cardPair =
+                CardPair(Card(rank: hr, suit: hs), Card(rank: kr, suit: ks));
+
+            if (cardPairs.contains(cardPair)) {
+              individualParts.add(cardPair.toSortedString());
+            }
+          }
         }
       }
     }
 
-    return HandRange(components);
-  }
-
-  final Set<CardPairConvertable> _components;
-
-  @override
-  Iterator<CardPair> get iterator => _components
-      .fold<Set<CardPair>>(
-        LinkedHashSet(),
-        (set, component) => set..addAll(component.toCardPairs()),
-      )
-      .iterator;
-
-  @override
-  bool get isEmpty => _components.length == 0;
-
-  @override
-  String toString() {
     String result = "";
 
     int start = -1;
     for (int i = 0; i < _ranks.length; ++i) {
-      if (_components.contains(RankPair.ofsuit(_ranks[i], _ranks[i]))) {
+      if (pocketParts.contains("${_ranks[i]}${_ranks[i]}")) {
         if (start == -1) {
           start = i;
         }
@@ -177,15 +239,13 @@ class HandRange with IterableMixin<CardPair> {
 
       if (start != -1 &&
           (i == _ranks.length - 1 ||
-              !_components
-                  .contains(RankPair.ofsuit(_ranks[i + 1], _ranks[i + 1])))) {
+              !pocketParts.contains("${_ranks[i + 1]}${_ranks[i + 1]}"))) {
         if (start == i) {
-          result += "${_ranks[i].char}${_ranks[i].char}";
+          result += "${_ranks[i]}${_ranks[i]}";
         } else if (start == 0) {
-          result += "${_ranks[i].char}${_ranks[i].char}+";
+          result += "${_ranks[i]}${_ranks[i]}+";
         } else {
-          result +=
-              "${_ranks[start].char}${_ranks[start].char}-${_ranks[i].char}${_ranks[i].char}";
+          result += "${_ranks[start]}${_ranks[start]}-${_ranks[i]}${_ranks[i]}";
         }
 
         start = -1;
@@ -197,23 +257,21 @@ class HandRange with IterableMixin<CardPair> {
       int ofsuitStart = -1;
 
       for (int k = h + 1; k < _ranks.length; ++k) {
-        if (_components.contains(RankPair.suited(_ranks[h], _ranks[k]))) {
-          if (suitedStart == -1) {
-            suitedStart = k;
-          }
+        if (suitedParts.contains("${_ranks[h]}${_ranks[k]}s") &&
+            suitedStart == -1) {
+          suitedStart = k;
         }
 
         if (suitedStart != -1 &&
             (k == _ranks.length - 1 ||
-                !_components
-                    .contains(RankPair.suited(_ranks[h], _ranks[k + 1])))) {
+                !suitedParts.contains("${_ranks[h]}${_ranks[k + 1]}s"))) {
           if (suitedStart == k) {
-            result += "${_ranks[h].char}${_ranks[k].char}s";
+            result += "${_ranks[h]}${_ranks[k]}s";
           } else if (suitedStart == h + 1) {
-            result += "${_ranks[h].char}${_ranks[k].char}s+";
+            result += "${_ranks[h]}${_ranks[k]}s+";
           } else {
             result +=
-                "${_ranks[h].char}${_ranks[suitedStart].char}s-${_ranks[h].char}${_ranks[k].char}s";
+                "${_ranks[h]}${_ranks[suitedStart]}s-${_ranks[h]}${_ranks[k]}s";
           }
 
           suitedStart = -1;
@@ -221,23 +279,21 @@ class HandRange with IterableMixin<CardPair> {
       }
 
       for (int k = h + 1; k < _ranks.length; ++k) {
-        if (_components.contains(RankPair.ofsuit(_ranks[h], _ranks[k]))) {
-          if (ofsuitStart == -1) {
-            ofsuitStart = k;
-          }
+        if (ofsuitParts.contains("${_ranks[h]}${_ranks[k]}o") &&
+            ofsuitStart == -1) {
+          ofsuitStart = k;
         }
 
         if (ofsuitStart != -1 &&
             (k == _ranks.length - 1 ||
-                !_components
-                    .contains(RankPair.ofsuit(_ranks[h], _ranks[k + 1])))) {
+                !ofsuitParts.contains("${_ranks[h]}${_ranks[k + 1]}o"))) {
           if (ofsuitStart == k) {
-            result += "${_ranks[h].char}${_ranks[k].char}o";
+            result += "${_ranks[h]}${_ranks[k]}o";
           } else if (ofsuitStart == h + 1) {
-            result += "${_ranks[h].char}${_ranks[k].char}o+";
+            result += "${_ranks[h]}${_ranks[k]}o+";
           } else {
             result +=
-                "${_ranks[h].char}${_ranks[ofsuitStart].char}o-${_ranks[h].char}${_ranks[k].char}o";
+                "${_ranks[h]}${_ranks[ofsuitStart]}o-${_ranks[h]}${_ranks[k]}o";
           }
 
           ofsuitStart = -1;
@@ -245,274 +301,81 @@ class HandRange with IterableMixin<CardPair> {
       }
     }
 
-    for (final cardPair in _components.whereType<CardPair>()) {
-      result += "${cardPair._cardA}${cardPair._cardB}";
+    for (final part in individualParts) {
+      result += part;
     }
 
     return result;
   }
 }
 
-/// An expression of a part composes [HandRange].
-mixin CardPairConvertable implements Comparable {
-  Set<CardPair> toCardPairs();
+class HandRangeParseFailureException implements Exception {
+  HandRangeParseFailureException({required this.whole, this.part});
 
-  @override
-  int compareTo(dynamic other) {
-    if (other is! CardPairConvertable) {
-      return 0;
-    }
+  final String whole;
 
-    if (runtimeType != other.runtimeType) {
-      return this is RankPair ? -1 : 1;
-    }
+  final String? part;
 
-    if (this is RankPair && other is RankPair) {
-      final self = this as RankPair;
+  String get message => part == null
+      ? "There's no valid hand range string expression in \"$whole\"."
+      : "${part} is invalid part of hand range string expression (whole: \"$whole\").";
+}
 
-      if (self.high != other.high) {
-        return self.high.powerIndex - other.high.powerIndex;
-      }
+Iterable<CardPair> _pocketCardPairs(Rank rank) sync* {
+  yield CardPair(
+    Card(rank: rank, suit: Suit.spade),
+    Card(rank: rank, suit: Suit.heart),
+  );
 
-      if (self.kicker != other.kicker) {
-        return self.kicker.powerIndex - other.kicker.powerIndex;
-      }
+  yield CardPair(
+    Card(rank: rank, suit: Suit.spade),
+    Card(rank: rank, suit: Suit.diamond),
+  );
 
-      if (self.isSuited && !other.isSuited) {
-        return -1;
-      }
+  yield CardPair(
+    Card(rank: rank, suit: Suit.spade),
+    Card(rank: rank, suit: Suit.club),
+  );
 
-      if (!self.isSuited && other.isSuited) {
-        return 1;
-      }
+  yield CardPair(
+    Card(rank: rank, suit: Suit.heart),
+    Card(rank: rank, suit: Suit.diamond),
+  );
 
-      return 0;
-    }
+  yield CardPair(
+    Card(rank: rank, suit: Suit.heart),
+    Card(rank: rank, suit: Suit.club),
+  );
 
-    if (this is CardPair && other is CardPair) {
-      final self = this as CardPair;
+  yield CardPair(
+    Card(rank: rank, suit: Suit.diamond),
+    Card(rank: rank, suit: Suit.club),
+  );
+}
 
-      if (self._cardA.rank != other._cardA.rank) {
-        return self._cardA.rank.powerIndex - other._cardA.rank.powerIndex;
-      }
-
-      if (self._cardB.rank != other._cardB.rank) {
-        return self._cardB.rank.powerIndex - other._cardB.rank.powerIndex;
-      }
-
-      if (self._cardA.suit != other._cardA.suit) {
-        return self._cardA.suit.index - other._cardA.suit.index;
-      }
-
-      return self._cardB.suit.index - other._cardB.suit.index;
-    }
-
-    return 0;
+Iterable<CardPair> _suitedCardPairs(
+  Rank high,
+  Rank kicker,
+) sync* {
+  for (final suit in _suits) {
+    yield CardPair(
+      Card(rank: high, suit: suit),
+      Card(rank: kicker, suit: suit),
+    );
   }
 }
 
-/// An expression of a part composes [HandRange]. It indicates a pair of [Card]s, "ace of spade and king of heart" for example.
-///
-/// ```dart
-/// final cardPair = CardPair(Card(Rank.ace, Suit.spade), Card(Rank.king, heart));
-///
-/// cardPair.first;  // => Card(Rank.ace, Suit.spade)
-/// cardPair.last;   // => Card(Rank.king, heart)
-/// ```
-///
-/// You can use a CardPair to construct a HandRange.
-///
-/// ```dart
-/// HandRange([
-///   CardPair(Card(Rank.ace, Suit.spade), Card(Rank.king, heart)),
-///   CardPair(Card(Rank.ace, Suit.spade), Card(Rank.queen, heart)),
-/// ]);
-/// ```
-class CardPair with CardPairConvertable, IterableMixin<Card> {
-  /// Creates a CardPair.
-  CardPair(Card cardA, Card cardB)
-      : _cardA = cardA.rank.powerIndex <= cardB.rank.powerIndex ? cardA : cardB,
-        _cardB = cardA.rank.powerIndex <= cardB.rank.powerIndex ? cardB : cardA;
+Iterable<CardPair> _ofsuitCardPairs(Rank high, Rank kicker) sync* {
+  for (final highSuit in _suits) {
+    for (final kickerSuit in _suits) {
+      if (highSuit == kickerSuit) continue;
 
-  final Card _cardA;
-
-  final Card _cardB;
-
-  @override
-  Set<CardPair> toCardPairs() => {this};
-
-  @override
-  Iterator<Card> get iterator => [_cardA, _cardB].iterator;
-
-  @override
-  String toString() => "${_cardA}${_cardB}";
-
-  operator ==(Object other) =>
-      other is CardPair && _cardA == other._cardA && _cardB == other._cardB;
-
-  @override
-  int get hashCode {
-    int result = 17;
-
-    result = 37 * result + _cardA.hashCode;
-    result = 37 * result + _cardB.hashCode;
-
-    return result;
+      yield CardPair(
+        Card(rank: high, suit: highSuit),
+        Card(rank: kicker, suit: kickerSuit),
+      );
+    }
   }
-}
-
-/// An expression of a part composes [HandRange]. It indicates an abstract combination of [Card]s, things like "suited ace and king" or "pocket pair of jacks" for example.
-///
-/// ```dart
-/// RankPair.suited(Rank.ace, Rank.king);
-/// RankPair.ofsuit(Rank.jack, Rank.jack);
-/// ```
-///
-/// You can use a RankPair to construct a HandRange.
-///
-/// ```dart
-/// HandRange([
-///   RankPair.suited(Rank.ace, Rank.king);
-///   RankPair.ofsuit(Rank.jack, Rank.jack);
-/// ]);
-/// ```
-@immutable
-class RankPair with CardPairConvertable {
-  /// Creates a suited RankPair.
-  const RankPair.suited(this.high, this.kicker)
-      : assert(high != kicker),
-        isSuited = true;
-
-  /// Creates a ofsuit RankPair.
-  const RankPair.ofsuit(this.high, this.kicker) : isSuited = false;
-
-  final Rank high;
-
-  final Rank kicker;
-
-  final bool isSuited;
-
-  bool get isPocketPair => high == kicker;
-
-  @override
-  Set<CardPair> toCardPairs() => high == kicker
-      ? {
-          CardPair(
-            Card(high, Suit.spade),
-            Card(kicker, Suit.heart),
-          ),
-          CardPair(
-            Card(high, Suit.spade),
-            Card(kicker, Suit.diamond),
-          ),
-          CardPair(
-            Card(high, Suit.spade),
-            Card(kicker, Suit.club),
-          ),
-          CardPair(
-            Card(high, Suit.heart),
-            Card(kicker, Suit.diamond),
-          ),
-          CardPair(
-            Card(high, Suit.heart),
-            Card(kicker, Suit.club),
-          ),
-          CardPair(
-            Card(high, Suit.diamond),
-            Card(kicker, Suit.club),
-          ),
-        }
-      : isSuited
-          ? {
-              CardPair(
-                Card(high, Suit.spade),
-                Card(kicker, Suit.spade),
-              ),
-              CardPair(
-                Card(high, Suit.heart),
-                Card(kicker, Suit.heart),
-              ),
-              CardPair(
-                Card(high, Suit.diamond),
-                Card(kicker, Suit.diamond),
-              ),
-              CardPair(
-                Card(high, Suit.club),
-                Card(kicker, Suit.club),
-              ),
-            }
-          : {
-              CardPair(
-                Card(high, Suit.spade),
-                Card(kicker, Suit.heart),
-              ),
-              CardPair(
-                Card(high, Suit.spade),
-                Card(kicker, Suit.diamond),
-              ),
-              CardPair(
-                Card(high, Suit.spade),
-                Card(kicker, Suit.club),
-              ),
-              CardPair(
-                Card(high, Suit.heart),
-                Card(kicker, Suit.spade),
-              ),
-              CardPair(
-                Card(high, Suit.heart),
-                Card(kicker, Suit.diamond),
-              ),
-              CardPair(
-                Card(high, Suit.heart),
-                Card(kicker, Suit.club),
-              ),
-              CardPair(
-                Card(high, Suit.diamond),
-                Card(kicker, Suit.spade),
-              ),
-              CardPair(
-                Card(high, Suit.diamond),
-                Card(kicker, Suit.heart),
-              ),
-              CardPair(
-                Card(high, Suit.diamond),
-                Card(kicker, Suit.club),
-              ),
-              CardPair(
-                Card(high, Suit.club),
-                Card(kicker, Suit.spade),
-              ),
-              CardPair(
-                Card(high, Suit.club),
-                Card(kicker, Suit.heart),
-              ),
-              CardPair(
-                Card(high, Suit.club),
-                Card(kicker, Suit.diamond),
-              ),
-            };
-
-  @override
-  String toString() =>
-      "${high.char}${kicker.char}${isPocketPair ? "" : isSuited ? "s" : "o"}";
-
-  @override
-  int get hashCode {
-    int result = 17;
-
-    result = 37 * result + high.hashCode;
-    result = 37 * result + kicker.hashCode;
-    result = 37 * result + isSuited.hashCode;
-
-    return result;
-  }
-
-  @override
-  operator ==(Object other) =>
-      other is RankPair &&
-      other.high == high &&
-      other.kicker == kicker &&
-      other.isSuited == isSuited;
 }
 
 const List<Rank> _ranks = [
@@ -529,4 +392,11 @@ const List<Rank> _ranks = [
   Rank.four,
   Rank.trey,
   Rank.deuce,
+];
+
+const List<Suit> _suits = [
+  Suit.spade,
+  Suit.heart,
+  Suit.diamond,
+  Suit.club,
 ];

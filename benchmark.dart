@@ -1,82 +1,65 @@
-import "package:benchmark_harness/benchmark_harness.dart";
 import "package:poker/poker.dart";
-import "package:poker/evaluator.dart";
 
-class ExhaustiveBenchmark extends BenchmarkBase {
-  ExhaustiveBenchmark() : super('Exhaustive');
-
-  late Evaluator evaluator;
-
-  late Iterable<EvaluationResult> iterable;
-
-  late EvaluationResult result;
-
-  @override
-  void run() {
-    for (final r in iterable) {
-      result += r;
-    }
-  }
-
-  @override
-  void setup() {
-    evaluator = ExhaustiveEvaluator(
-      communityCards: CardSet.fromString("3c6dTs4d"),
-      players: [
-        HandRange.fromString("As3h"),
-        HandRange.fromString("8d8h"),
-        HandRange.fromString("AQs-ATsAKo-AJo44+"),
-        HandRange.fromString("AQs-ATsAKo-AJo44+"),
-      ],
-    );
-    iterable = evaluator.take(10000);
-    result = EvaluationResult.empty(playerLength: 4);
-  }
-
-  @override
-  void teardown() {
-    print(result);
-  }
-}
-
-class MontecarloBenchmark extends BenchmarkBase {
-  MontecarloBenchmark() : super('Montecarlo');
-
-  late Evaluator evaluator;
-
-  late Iterable<EvaluationResult> iterable;
-
-  late EvaluationResult result;
-
-  @override
-  void run() {
-    for (final r in iterable) {
-      result += r;
-    }
-  }
-
-  @override
-  void setup() {
-    evaluator = MontecarloEvaluator(
-      communityCards: CardSet.fromString("3c6dTs4d"),
-      players: [
-        HandRange.fromString("As3h"),
-        HandRange.fromString("8d8h"),
-        HandRange.fromString("AQs-ATsAKo-AJo44+"),
-        HandRange.fromString("AQs-ATsAKo-AJo44+"),
-      ],
-    );
-    iterable = evaluator.take(10000);
-    result = EvaluationResult.empty(playerLength: 4);
-  }
-
-  @override
-  void teardown() {
-    print(result);
-  }
-}
+final communityCards = ImmutableCardSet.parse("3c6dTs");
+final players = [
+  HandRange.parse("As3h"),
+  HandRange.parse("8d8h"),
+  HandRange.parse("AQs-ATsAKo-AJo44+"),
+];
 
 void main() {
-  ExhaustiveBenchmark().report();
-  MontecarloBenchmark().report();
+  benchmarkExhaustiveEvaluator();
+  benchmarkMontecarloEvaluator();
+}
+
+void benchmarkExhaustiveEvaluator() {
+  print("exhaustive evaluator");
+
+  final wins = List.filled(players.length, 0);
+
+  final initializationStarted = DateTime.now();
+  final evaluator = ExhaustiveEvaluator(
+    communityCards: communityCards,
+    players: players,
+  );
+
+  print("initialization: ${DateTime.now().difference(initializationStarted)}");
+
+  final evaluationStarted = DateTime.now();
+
+  for (final matchup in evaluator) {
+    for (final i in matchup.wonPlayerIndexes) {
+      wins[i] += 1;
+    }
+  }
+
+  print("evaluation: ${DateTime.now().difference(evaluationStarted)}");
+
+  print(wins);
+}
+
+void benchmarkMontecarloEvaluator() {
+  print("montecarlo evaluator");
+
+  final wins = List.filled(players.length, 0);
+
+  final initializationStarted = DateTime.now();
+  final evaluator = MontecarloEvaluator(
+    communityCards: communityCards,
+    players: players,
+  );
+
+  print("initialization: ${DateTime.now().difference(initializationStarted)}");
+
+  final evaluationStarted = DateTime.now();
+
+  for (final matchup in evaluator.take(158928)) {
+    for (final i in matchup.wonPlayerIndexes) {
+      wins[i] += 1;
+    }
+  }
+
+  print("evaluation: ${DateTime.now().difference(evaluationStarted)}");
+
+  print(wins);
 }
