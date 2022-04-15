@@ -23,7 +23,7 @@ import "./evaluator.dart";
 ///   }
 /// }
 ///
-/// print(wins);  // => [25412, 71028, 63894]
+/// print(wons);  // => [25412, 71028, 63894]
 /// ```
 class ExhaustiveEvaluator with IterableMixin<Matchup> implements Evaluator {
   ExhaustiveEvaluator({
