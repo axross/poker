@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.5.3'
+          flutter-version: "3.0.1"
       - name: Install npm packages
         run: dart pub get
       - name: Dart Analyze
@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.5.3'
+          flutter-version: "3.0.1"
       - name: Install npm packages
         run: dart pub get
       - name: Run Unit Tests
