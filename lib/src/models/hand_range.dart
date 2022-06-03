@@ -1,9 +1,11 @@
-import "dart:collection";
+// ignore_for_file: prefer_single_quotes
+
+import 'dart:collection';
 import 'package:meta/meta.dart';
-import "./card.dart";
+import './card.dart';
 import './immutable_card_set.dart';
-import "./rank.dart";
-import "./suit.dart";
+import './rank.dart';
+import './suit.dart';
 
 /// An immutable set of [CardPair]s that expresses a player hand range.
 @immutable
@@ -28,7 +30,7 @@ class HandRange with IterableMixin<CardPair> {
   ///
   /// Available characters for rank are `A`, `K`, `Q`, `J`, `T`, `9`, `8`, `7`, `6`, `5`, `4`, `3` and `2`.
   factory HandRange.parse(String value) {
-    final cardPairs = Set<CardPair>();
+    final cardPairs = <CardPair>{};
     final regex = RegExp(
         r'[AKQJT98765432]{2}[so]?(-[AKQJT98765432]{2}[so]?|\+)?|([AKQJT98765432][shdc]){2}');
     int scanned = 0;
@@ -83,7 +85,7 @@ class HandRange with IterableMixin<CardPair> {
           for (int i = _ranks.indexOf(kickerTop);
               i <= _ranks.indexOf(kickerBottom);
               ++i) {
-            if (part[2] == "s") {
+            if (part[2] == 's') {
               for (final cardPair in _suitedCardPairs(high, _ranks[i])) {
                 cardPairs.add(cardPair);
               }
@@ -117,7 +119,7 @@ class HandRange with IterableMixin<CardPair> {
         for (int i = _ranks.indexOf(high) + 1;
             i <= _ranks.indexOf(kicker);
             ++i) {
-          if (part[2] == "s") {
+          if (part[2] == 's') {
             for (final cardPair in _suitedCardPairs(high, _ranks[i])) {
               cardPairs.add(cardPair);
             }
@@ -147,7 +149,7 @@ class HandRange with IterableMixin<CardPair> {
         final high = Rank.parse(part[0]);
         final kicker = Rank.parse(part[1]);
 
-        if (part[2] == "s") {
+        if (part[2] == 's') {
           for (final cardPair in _suitedCardPairs(high, kicker)) {
             cardPairs.add(cardPair);
           }
@@ -178,7 +180,7 @@ class HandRange with IterableMixin<CardPair> {
   Iterator<CardPair> get iterator => _cardPairs.iterator;
 
   @override
-  bool get isEmpty => _cardPairs.length == 0;
+  bool get isEmpty => _cardPairs.isEmpty;
 
   @override
   String toString() {
@@ -227,7 +229,7 @@ class HandRange with IterableMixin<CardPair> {
       }
     }
 
-    String result = "";
+    String result = '';
 
     int start = -1;
     for (int i = 0; i < _ranks.length; ++i) {
@@ -317,8 +319,8 @@ class HandRangeParseFailureException implements Exception {
   final String? part;
 
   String get message => part == null
-      ? "There's no valid hand range string expression in \"$whole\"."
-      : "${part} is invalid part of hand range string expression (whole: \"$whole\").";
+      ? 'There\'s no valid hand range string expression in "$whole".'
+      : '$part is invalid part of hand range string expression (whole: "$whole").';
 }
 
 Iterable<CardPair> _pocketCardPairs(Rank rank) sync* {

@@ -1,7 +1,7 @@
-import "dart:math";
-import "package:meta/meta.dart";
-import "./rank.dart";
-import "./suit.dart";
+import 'dart:math';
+import 'package:meta/meta.dart';
+import './rank.dart';
+import './suit.dart';
 
 /// A piece of playing cards.
 ///
@@ -48,10 +48,9 @@ class Card implements Comparable {
 
   /// Creates a [Card] from a hash int value.
   @protected
-  Card.fromIndex(int index)
+  Card.fromIndex(this.index)
       : rank = Rank.fromIndex((log(index) / log(2)).floor() % 13),
-        suit = Suit.fromIndex(((log(index) / log(2)) / 13).floor()),
-        index = index;
+        suit = Suit.fromIndex(((log(index) / log(2)) / 13).floor());
 
   /// Creates a [Card] by a 2-character-length [String].
   ///
@@ -62,7 +61,7 @@ class Card implements Comparable {
   /// Card.parse("Kc");  // => Card(Rank.king, Suit.club)
   /// ```
   factory Card.parse(String value) {
-    if (!RegExp(r"^[A23456789TJQK][shdc]$").hasMatch(value)) {
+    if (!RegExp(r'^[A23456789TJQK][shdc]$').hasMatch(value)) {
       throw CardParseFailure(value);
     }
 
@@ -82,7 +81,7 @@ class Card implements Comparable {
   int compareTo(dynamic other) {
     if (other is! Card) return 0;
 
-    if (suit.index != other.suit) {
+    if (suit != other.suit) {
       return suit.index - other.suit.index;
     }
 
@@ -91,7 +90,7 @@ class Card implements Comparable {
 
   /// Returns a string representation. Ace of spade is `"As"`, 10 of heart is `"Th"` and deuce of diamond is `"2d"`.
   @override
-  String toString() => "${rank}${suit}";
+  String toString() => '$rank$suit';
 
   @override
   int get hashCode => index;
@@ -108,6 +107,6 @@ class CardParseFailure implements Exception {
 
   @override
   String toString() {
-    return "CardParseFailure: $value is not a valid string.";
+    return 'CardParseFailure: $value is not a valid string.';
   }
 }

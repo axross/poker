@@ -1,10 +1,10 @@
-import "package:poker/poker.dart";
+import 'package:poker/poker.dart';
 
-final communityCards = ImmutableCardSet.parse("3c6dTs");
+final communityCards = ImmutableCardSet.parse('3c6dTs');
 final players = [
-  HandRange.parse("As3h"),
-  HandRange.parse("8d8h"),
-  HandRange.parse("AQs-ATsAKo-AJo44+"),
+  HandRange.parse('As3h'),
+  HandRange.parse('8d8h'),
+  HandRange.parse('AQs-ATsAKo-AJo44+'),
 ];
 
 void main() {
@@ -13,7 +13,7 @@ void main() {
 }
 
 void benchmarkExhaustiveEvaluator() {
-  print("exhaustive evaluator");
+  print('exhaustive evaluator');
 
   final wins = List.filled(players.length, 0);
 
@@ -23,7 +23,7 @@ void benchmarkExhaustiveEvaluator() {
     players: players,
   );
 
-  print("initialization: ${DateTime.now().difference(initializationStarted)}");
+  print('initialization: ${DateTime.now().difference(initializationStarted)}');
 
   final evaluationStarted = DateTime.now();
 
@@ -33,13 +33,13 @@ void benchmarkExhaustiveEvaluator() {
     }
   }
 
-  print("evaluation: ${DateTime.now().difference(evaluationStarted)}");
+  print('evaluation: ${DateTime.now().difference(evaluationStarted)}');
 
   print(wins);
 }
 
 void benchmarkMontecarloEvaluator() {
-  print("montecarlo evaluator");
+  print('montecarlo evaluator');
 
   final wins = List.filled(players.length, 0);
 
@@ -49,7 +49,7 @@ void benchmarkMontecarloEvaluator() {
     players: players,
   );
 
-  print("initialization: ${DateTime.now().difference(initializationStarted)}");
+  print('initialization: ${DateTime.now().difference(initializationStarted)}');
 
   final evaluationStarted = DateTime.now();
 
@@ -59,7 +59,7 @@ void benchmarkMontecarloEvaluator() {
     }
   }
 
-  print("evaluation: ${DateTime.now().difference(evaluationStarted)}");
+  print('evaluation: ${DateTime.now().difference(evaluationStarted)}');
 
   print(wins);
 }

@@ -1,12 +1,10 @@
-import "package:meta/meta.dart";
-import "../constants/precalculated_table.dart";
+import 'package:meta/meta.dart';
+import '../constants/precalculated_table.dart';
 import './immutable_card_set.dart';
-import "./rank.dart";
-import "./suit.dart";
+import './rank.dart';
+import './suit.dart';
 
-/**
- * An index of [Cactus Kev's poker hand equivalence enums](http://suffe.cool/poker/7462.html).
- */
+/// An index of [Cactus Kev's poker hand equivalence enums](http://suffe.cool/poker/7462.html).
 @immutable
 class MadeHand {
   const MadeHand.fromIndex(this._value);
@@ -40,7 +38,7 @@ class MadeHand {
   int get power => 7462 - _value;
 
   @override
-  String toString() => "MadeHand<$_value>";
+  String toString() => 'MadeHand<$_value>';
 
   @override
   int get hashCode => _value;

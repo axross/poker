@@ -1,7 +1,7 @@
-import "dart:collection";
+import 'dart:collection';
 import '../models/immutable_card_set.dart';
-import "../models/hand_range.dart";
-import "./evaluator.dart";
+import '../models/hand_range.dart';
+import './evaluator.dart';
 
 /// An iterable object that evaluates pot equity for each player in the given situation. It iterates with evaluating every possible situation one by one. Which is great when you want to get the 100% accurate result.
 ///

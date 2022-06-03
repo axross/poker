@@ -1,6 +1,6 @@
 import '../models/immutable_card_set.dart';
-import "../models/hand_range.dart";
-import "../models/made_hand.dart";
+import '../models/hand_range.dart';
+import '../models/made_hand.dart';
 
 /// An iterable object that evaluates pot equity for each player in the given situation.
 ///
@@ -25,7 +25,7 @@ abstract class Evaluator implements Iterable<Matchup> {
 class NoPossibleCombinationException implements Exception {
   NoPossibleCombinationException();
 
-  final String message = "There is no possible combination.";
+  final String message = 'There is no possible combination.';
 }
 
 /// A result of evaluating a situation.
@@ -46,7 +46,7 @@ class Matchup {
     required List<CardPair> playerCardPairs,
     required ImmutableCardSet communityCards,
   }) {
-    assert(playerCardPairs.length >= 1);
+    assert(playerCardPairs.isNotEmpty);
     assert(communityCards.length == 5);
 
     final hands = <MadeHand>[];
