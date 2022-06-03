@@ -136,6 +136,9 @@ class ImmutableCardSetParseFailure implements Exception {
 class CardPair extends ImmutableCardSet {
   CardPair(this.a, this.b) : super(a.index | b.index);
 
+  /// ```dart
+  /// CardPair.parse("5s5h");  // => CardPair(Card(rank: Rank.five, suit: Suit.spade), Card(rank: Rank.five, suit: Suit.heart))
+  /// ```
   factory CardPair.parse(String value) {
     assert(value.length == 4);
 

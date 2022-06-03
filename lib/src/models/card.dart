@@ -38,10 +38,10 @@ class Card implements Comparable {
   /// Creates a [Card] from Rank and Suit.
   ///
   /// ```dart
-  /// final aceOfSpade = Card(Rank.ace, Suit.spade);
-  /// final deuceOfHeart = Card(Rank.deuce, Suit.heart);
-  /// final TreyOfDiamond = Card(Rank.trey, Suit.diamond);
-  /// final kingOfClub = Card(Rank.king, Suit.club);
+  /// final aceOfSpade = Card(rank: Rank.ace, suit: Suit.spade);
+  /// final deuceOfHeart = Card(rank: Rank.deuce, suit: Suit.heart);
+  /// final TreyOfDiamond = Card(rank: Rank.trey, suit: Suit.diamond);
+  /// final kingOfClub = Card(rank: Rank.king, suit: Suit.club);
   /// ```
   Card({required this.rank, required this.suit})
       : index = pow(2, rank.index + suit.index * 13).toInt();
@@ -55,10 +55,10 @@ class Card implements Comparable {
   /// Creates a [Card] by a 2-character-length [String].
   ///
   /// ```dart
-  /// Card.fromString("As");  // => Card(Rank.ace, Suit.spade)
-  /// Card.fromString("2h");  // => Card(Rank.deuce, Suit.heart)
-  /// Card.fromString("3d");  // => Card(Rank.trey, Suit.diamond)
-  /// Card.fromString("Kc");  // => Card(Rank.king, Suit.club)
+  /// Card.parse("As");  // => Card(Rank.ace, Suit.spade)
+  /// Card.parse("2h");  // => Card(Rank.deuce, Suit.heart)
+  /// Card.parse("3d");  // => Card(Rank.trey, Suit.diamond)
+  /// Card.parse("Kc");  // => Card(Rank.king, Suit.club)
   /// ```
   factory Card.parse(String value) {
     if (!RegExp(r'^[A23456789TJQK][shdc]$').hasMatch(value)) {

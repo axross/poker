@@ -27,7 +27,7 @@ import './evaluator.dart';
 ///   }
 /// }
 ///
-/// print(wins);  // => [15928, 44819, 40103]
+/// print(wons);  // => [15928, 44819, 40103]
 /// ```
 class MontecarloEvaluator with IterableMixin<Matchup> implements Evaluator {
   MontecarloEvaluator({
