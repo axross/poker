@@ -1,16 +1,18 @@
-import "package:test/test.dart";
-import "../../lib/src/models/card.dart";
+// ignore_for_file: avoid_relative_lib_imports
+
+import 'package:test/test.dart';
+import '../../lib/src/models/card.dart';
 import '../../lib/src/models/immutable_card_set.dart';
-import "../../lib/src/models/hand_range.dart";
-import "../../lib/src/models/rank.dart";
-import "../../lib/src/models/suit.dart";
+import '../../lib/src/models/hand_range.dart';
+import '../../lib/src/models/rank.dart';
+import '../../lib/src/models/suit.dart';
 
 void main() {
-  group("HandRange.parse()", () {
+  group('HandRange.parse()', () {
     test(
-        "HandRange.parse(\"AQs-ATsAKo-AJo44+\") returns HandRange<AQs-ATsAKo-AJo44+>",
+        'HandRange.parse("AQs-ATsAKo-AJo44+") returns HandRange<AQs-ATsAKo-AJo44+>',
         () {
-      final handRange = HandRange.parse("AQs-ATsAKo-AJo44+");
+      final handRange = HandRange.parse('AQs-ATsAKo-AJo44+');
 
       expect(
         handRange,
@@ -37,7 +39,7 @@ void main() {
 
     test('HandRange.parse("88-66") returns HandRange<88-66>', () {
       expect(
-        HandRange.parse("88-66"),
+        HandRange.parse('88-66'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.eight, suit: Suit.spade),
@@ -117,7 +119,7 @@ void main() {
 
     test('HandRange.parse("JJ+") returns HandRange<JJ+>', () {
       expect(
-        HandRange.parse("JJ+"),
+        HandRange.parse('JJ+'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.ace, suit: Suit.spade),
@@ -221,7 +223,7 @@ void main() {
 
     test('HandRange.parse("AQs-A9s") returns HandRange<AQs-A9s>', () {
       expect(
-        HandRange.parse("AQs-A9s"),
+        HandRange.parse('AQs-A9s'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.ace, suit: Suit.spade),
@@ -293,7 +295,7 @@ void main() {
 
     test('HandRange.parse("98o-96o") returns HandRange<98o-96o>', () {
       expect(
-        HandRange.parse("98o-96o"),
+        HandRange.parse('98o-96o'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.nine, suit: Suit.spade),
@@ -445,7 +447,7 @@ void main() {
 
     test('HandRange.parse("K8s+") returns HandRange<K8s+>', () {
       expect(
-        HandRange.parse("K8s+"),
+        HandRange.parse('K8s+'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.king, suit: Suit.spade),
@@ -533,7 +535,7 @@ void main() {
 
     test('HandRange.parse("ATo+") returns HandRange<ATo+>', () {
       expect(
-        HandRange.parse("ATo+"),
+        HandRange.parse('ATo+'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.ace, suit: Suit.spade),
@@ -733,7 +735,7 @@ void main() {
 
     test('HandRange.parse("44") returns HandRange<44>', () {
       expect(
-        HandRange.parse("44"),
+        HandRange.parse('44'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.four, suit: Suit.spade),
@@ -765,7 +767,7 @@ void main() {
 
     test('HandRange.parse("JTs") returns HandRange<JTs>', () {
       expect(
-        HandRange.parse("JTs"),
+        HandRange.parse('JTs'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.jack, suit: Suit.spade),
@@ -789,7 +791,7 @@ void main() {
 
     test('HandRange.parse("72o") returns HandRange<72o>', () {
       expect(
-        HandRange.parse("72o"),
+        HandRange.parse('72o'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.seven, suit: Suit.spade),
@@ -845,7 +847,7 @@ void main() {
 
     test('HandRange.parse("AsKs") returns HandRange<AsKs>', () {
       expect(
-        HandRange.parse("AsKs"),
+        HandRange.parse('AsKs'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.ace, suit: Suit.spade),
@@ -857,7 +859,7 @@ void main() {
 
     test('HandRange.parse("7d6h") returns HandRange<7d6h>', () {
       expect(
-        HandRange.parse("7d6h"),
+        HandRange.parse('7d6h'),
         equals(HandRange({
           CardPair(
             Card(rank: Rank.seven, suit: Suit.diamond),
@@ -871,7 +873,7 @@ void main() {
         'HandRange.parse("88-66JJ+44AQs-A9s98o-96oK8s+ATo+JTs72oAsKs7d6h") returns HandRange<JJ+88-6644AQs-A9s98o-96oK8s+ATo+JTs72oAsKs7d6h>',
         () {
       final handRange =
-          HandRange.parse("88-66JJ+44AQs-A9s98o-96oK8s+ATo+JTs72oAsKs7d6h");
+          HandRange.parse('88-66JJ+44AQs-A9s98o-96oK8s+ATo+JTs72oAsKs7d6h');
 
       expect(handRange, hasLength(186));
       expect(
@@ -1627,7 +1629,7 @@ void main() {
 
     test('HandRange.parse("") returns an empty hand range', () {
       expect(
-        HandRange.parse(""),
+        HandRange.parse(''),
         equals(HandRange({})),
       );
     });
@@ -1635,25 +1637,25 @@ void main() {
     test('throws an error because "qwe" doesn\'t have any valid expression',
         () {
       expect(() {
-        HandRange.parse("qwe");
+        HandRange.parse('qwe');
       }, throwsA(isA<HandRangeParseFailureException>()));
     });
 
     test('throws an error because "AKTo+" contains an invalid expression', () {
       expect(() {
-        HandRange.parse("AKTo+");
+        HandRange.parse('AKTo+');
       }, throwsA(isA<HandRangeParseFailureException>()));
     });
 
     test('throws an error because "JJ++" contains an invalid expression', () {
       expect(() {
-        HandRange.parse("JJ++");
+        HandRange.parse('JJ++');
       }, throwsA(isA<HandRangeParseFailureException>()));
     });
   });
 
-  group("HandRange()", () {
-    test("it creates a HandRange from the given sequence of ImmutableCardSet",
+  group('HandRange()', () {
+    test('it creates a HandRange from the given sequence of ImmutableCardSet',
         () {
       final cardSets = {
         CardPair(
@@ -1700,7 +1702,7 @@ void main() {
     });
   });
 
-  group("HandRange#toString()", () {
+  group('HandRange#toString()', () {
     test('HandRange<88-66>.toString() returns "88-66"', () {
       expect(
         HandRange({
@@ -1777,7 +1779,7 @@ void main() {
             Card(rank: Rank.six, suit: Suit.club),
           ),
         }).toString(),
-        equals("88-66"),
+        equals('88-66'),
       );
     });
 
@@ -1881,7 +1883,7 @@ void main() {
             Card(rank: Rank.jack, suit: Suit.club),
           ),
         }).toString(),
-        equals("JJ+"),
+        equals('JJ+'),
       );
     });
 
@@ -1913,7 +1915,7 @@ void main() {
               Card(rank: Rank.four, suit: Suit.club),
             ),
           }).toString(),
-          equals("44"));
+          equals('44'));
     });
 
     test('HandRange<AQs-A9s>.toString() returns "AQs-A9s"', () {
@@ -1984,7 +1986,7 @@ void main() {
             Card(rank: Rank.nine, suit: Suit.club),
           ),
         }).toString(),
-        equals("AQs-A9s"),
+        equals('AQs-A9s'),
       );
     });
 
@@ -2184,7 +2186,7 @@ void main() {
             Card(rank: Rank.six, suit: Suit.diamond),
           ),
         }).toString(),
-        equals("J9o-J6o"),
+        equals('J9o-J6o'),
       );
     });
 
@@ -2336,7 +2338,7 @@ void main() {
             Card(rank: Rank.six, suit: Suit.diamond),
           ),
         }).toString(),
-        equals("96o+"),
+        equals('96o+'),
       );
     });
 
@@ -2424,7 +2426,7 @@ void main() {
             Card(rank: Rank.eight, suit: Suit.club),
           ),
         }).toString(),
-        equals("K8s+"),
+        equals('K8s+'),
       );
     });
 
@@ -2624,7 +2626,7 @@ void main() {
             Card(rank: Rank.ten, suit: Suit.diamond),
           ),
         }).toString(),
-        equals("ATo+"),
+        equals('ATo+'),
       );
     });
 
@@ -2648,7 +2650,7 @@ void main() {
             Card(rank: Rank.ten, suit: Suit.club),
           ),
         }).toString(),
-        equals("JTs"),
+        equals('JTs'),
       );
     });
 
@@ -2704,7 +2706,7 @@ void main() {
               Card(rank: Rank.deuce, suit: Suit.diamond),
             ),
           }).toString(),
-          equals("72o"));
+          equals('72o'));
     });
 
     test('HandRange<AsKs>.toString() returns "AsKs"', () {
@@ -2715,7 +2717,7 @@ void main() {
               Card(rank: Rank.king, suit: Suit.spade),
             )
           }).toString(),
-          equals("AsKs"));
+          equals('AsKs'));
     });
 
     test('HandRange<7d6h>.toString() returns "7d6h"', () {
@@ -2726,7 +2728,7 @@ void main() {
               Card(rank: Rank.six, suit: Suit.heart),
             )
           }).toString(),
-          equals("7d6h"));
+          equals('7d6h'));
     });
 
     test(
@@ -3479,12 +3481,12 @@ void main() {
             Card(rank: Rank.deuce, suit: Suit.spade),
           ),
         }).toString(),
-        equals("JJ+88-6644AQs-A9sATo+K8s+JTs96o+72oAsKs7d6h"),
+        equals('JJ+88-6644AQs-A9sATo+K8s+JTs96o+72oAsKs7d6h'),
       );
     });
 
     test('HandRange<>.toString() returns ""', () {
-      expect(HandRange({}).toString(), equals(""));
+      expect(HandRange({}).toString(), equals(''));
     });
   });
 }

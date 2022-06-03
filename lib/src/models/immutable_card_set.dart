@@ -1,6 +1,7 @@
-import "dart:collection";
+import 'dart:collection';
+import 'package:bitcount/bitcount.dart';
 import 'package:meta/meta.dart';
-import "./card.dart";
+import './card.dart';
 
 /// An efficient equivalent expression to `Set<Card>`.
 ///
@@ -55,18 +56,7 @@ class ImmutableCardSet with IterableMixin<Card> {
   final int indexUnion;
 
   @override
-  int get length {
-    int v = indexUnion;
-
-    v = v - ((v >> 1) & 0x5555555555555555);
-    v = (v & 0x3333333333333333) + ((v >> 2) & 0x3333333333333333);
-    v = (v + (v >> 4)) & 0x0f0f0f0f0f0f0f0f;
-    v = v + (v >> 8);
-    v = v + (v >> 16);
-    v = v + (v >> 32);
-
-    return v & 0x0000007f;
-  }
+  int get length => indexUnion.bitCount();
 
   @override
   bool contains(Object? element) {
@@ -78,7 +68,7 @@ class ImmutableCardSet with IterableMixin<Card> {
       return (indexUnion & element.index == element.index);
     }
 
-    throw UnsupportedError("");
+    throw UnsupportedError('');
   }
 
   bool containsAll(ImmutableCardSet other) =>
@@ -139,7 +129,7 @@ class ImmutableCardSetParseFailure implements Exception {
 
   @override
   String toString() {
-    return "CardSetParseFailure: $value is not a valid string.";
+    return 'CardSetParseFailure: $value is not a valid string.';
   }
 }
 
@@ -161,17 +151,17 @@ class CardPair extends ImmutableCardSet {
 
   String toSortedString() {
     if (a.rank.powerIndex < b.rank.powerIndex) {
-      return "$a$b";
+      return '$a$b';
     }
 
     if (a.rank.powerIndex > b.rank.powerIndex) {
-      return "$b$a";
+      return '$b$a';
     }
 
     if (b.suit.index < a.suit.index) {
-      return "$b$a";
+      return '$b$a';
     }
 
-    return "$a$b";
+    return '$a$b';
   }
 }

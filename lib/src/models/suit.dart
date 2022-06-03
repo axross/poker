@@ -41,13 +41,13 @@ class Suit {
   /// ```
   factory Suit.parse(String value) {
     switch (value) {
-      case "s":
+      case 's':
         return Suit.spade;
-      case "h":
+      case 'h':
         return Suit.heart;
-      case "d":
+      case 'd':
         return Suit.diamond;
-      case "c":
+      case 'c':
         return Suit.club;
       default:
         throw SuitParseFailureException(value: value);
@@ -67,13 +67,13 @@ class Suit {
   String toString() {
     switch (this) {
       case Suit.spade:
-        return "s";
+        return 's';
       case Suit.heart:
-        return "h";
+        return 'h';
       case Suit.diamond:
-        return "d";
+        return 'd';
       default:
-        return "c";
+        return 'c';
     }
   }
 }
@@ -83,5 +83,5 @@ class SuitParseFailureException implements Exception {
 
   final String value;
 
-  String get message => "$value is not a valid string as a rank.";
+  String get message => '$value is not a valid string as a rank.';
 }

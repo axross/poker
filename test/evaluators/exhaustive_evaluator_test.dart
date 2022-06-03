@@ -1,18 +1,20 @@
+// ignore_for_file: avoid_relative_lib_imports
+
 import 'package:test/test.dart';
 import '../../lib/src/evaluators/evaluator.dart';
-import "../../lib/src/evaluators/exhaustive_evaluator.dart";
+import '../../lib/src/evaluators/exhaustive_evaluator.dart';
 import '../../lib/src/models/immutable_card_set.dart';
-import "../../lib/src/models/hand_range.dart";
+import '../../lib/src/models/hand_range.dart';
 
 void main() {
-  group("ExhaustiveEvaluator", () {
-    test("ExhaustiveEvaluator iterates Matchups", () {
+  group('ExhaustiveEvaluator', () {
+    test('ExhaustiveEvaluator iterates Matchups', () {
       final evaluator = ExhaustiveEvaluator(
-        communityCards: ImmutableCardSet.parse("3c6dTs"),
+        communityCards: ImmutableCardSet.parse('3c6dTs'),
         players: [
-          HandRange.parse("As3h"),
-          HandRange.parse("8d8h"),
-          HandRange.parse("AQs-ATsAKo-AJo44+"),
+          HandRange.parse('As3h'),
+          HandRange.parse('8d8h'),
+          HandRange.parse('AQs-ATsAKo-AJo44+'),
         ],
       );
 
@@ -34,11 +36,11 @@ void main() {
         "ExhaustiveEvaluator throws NoPossibleCombinationException when it found there's no possible combination while it iterates",
         () {
       final evaluator = ExhaustiveEvaluator(
-        communityCards: ImmutableCardSet.parse("3c6dAs"),
+        communityCards: ImmutableCardSet.parse('3c6dAs'),
         players: [
-          HandRange.parse("AA"),
-          HandRange.parse("AKs"),
-          HandRange.parse("AJo+"),
+          HandRange.parse('AA'),
+          HandRange.parse('AKs'),
+          HandRange.parse('AJo+'),
         ],
       );
 

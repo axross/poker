@@ -1,9 +1,9 @@
-export "src/evaluators/evaluator.dart";
-export "src/evaluators/exhaustive_evaluator.dart";
-export "src/evaluators/montecarlo_evaluator.dart";
-export "src/models/card.dart";
-export "src/models/hand_range.dart";
+export 'src/evaluators/evaluator.dart';
+export 'src/evaluators/exhaustive_evaluator.dart';
+export 'src/evaluators/montecarlo_evaluator.dart';
+export 'src/models/card.dart';
+export 'src/models/hand_range.dart';
 export 'src/models/immutable_card_set.dart';
-export "src/models/made_hand.dart";
-export "src/models/rank.dart";
-export "src/models/suit.dart";
+export 'src/models/made_hand.dart';
+export 'src/models/rank.dart';
+export 'src/models/suit.dart';

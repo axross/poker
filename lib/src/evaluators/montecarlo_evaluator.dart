@@ -1,9 +1,9 @@
-import "dart:collection";
-import "dart:math";
-import "../models/card.dart";
+import 'dart:collection';
+import 'dart:math';
+import '../models/card.dart';
 import '../models/immutable_card_set.dart';
-import "../models/hand_range.dart";
-import "./evaluator.dart";
+import '../models/hand_range.dart';
+import './evaluator.dart';
 
 /// An iterable object that evaluates pot equity for each player in the given situation. It iterates with evaluating situations by montecarlo simulation.
 ///
@@ -36,10 +36,13 @@ class MontecarloEvaluator with IterableMixin<Matchup> implements Evaluator {
   })  : assert(communityCards.length <= 5),
         assert(players.length >= 2);
 
+  @override
   final ImmutableCardSet communityCards;
 
+  @override
   final List<HandRange> players;
 
+  @override
   Iterator<Matchup> get iterator => _MontecarloEvaluationIterator(
         communityCards: communityCards,
         players: players,

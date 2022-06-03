@@ -68,31 +68,31 @@ class Rank {
   /// ```
   factory Rank.parse(String value) {
     switch (value) {
-      case "A":
+      case 'A':
         return Rank.ace;
-      case "2":
+      case '2':
         return Rank.deuce;
-      case "3":
+      case '3':
         return Rank.trey;
-      case "4":
+      case '4':
         return Rank.four;
-      case "5":
+      case '5':
         return Rank.five;
-      case "6":
+      case '6':
         return Rank.six;
-      case "7":
+      case '7':
         return Rank.seven;
-      case "8":
+      case '8':
         return Rank.eight;
-      case "9":
+      case '9':
         return Rank.nine;
-      case "T":
+      case 'T':
         return Rank.ten;
-      case "J":
+      case 'J':
         return Rank.jack;
-      case "Q":
+      case 'Q':
         return Rank.queen;
-      case "K":
+      case 'K':
         return Rank.king;
       default:
         throw RankParseFailureException(value);
@@ -109,31 +109,31 @@ class Rank {
   String toString() {
     switch (this) {
       case Rank.ace:
-        return "A";
+        return 'A';
       case Rank.deuce:
-        return "2";
+        return '2';
       case Rank.trey:
-        return "3";
+        return '3';
       case Rank.four:
-        return "4";
+        return '4';
       case Rank.five:
-        return "5";
+        return '5';
       case Rank.six:
-        return "6";
+        return '6';
       case Rank.seven:
-        return "7";
+        return '7';
       case Rank.eight:
-        return "8";
+        return '8';
       case Rank.nine:
-        return "9";
+        return '9';
       case Rank.ten:
-        return "T";
+        return 'T';
       case Rank.jack:
-        return "J";
+        return 'J';
       case Rank.queen:
-        return "Q";
+        return 'Q';
       default:
-        return "K";
+        return 'K';
     }
   }
 }
@@ -143,5 +143,5 @@ class RankParseFailureException implements Exception {
 
   final String value;
 
-  String get message => "$value is not a valid string as a rank.";
+  String get message => '$value is not a valid string as a rank.';
 }
