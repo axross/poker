@@ -25,4 +25,12 @@ jobs:
       - name: Install npm packages
         run: dart pub get
       - name: Run Unit Tests
-        run: dart run test
+        run: dart run test --coverage=coverage
+      - name: Extract lcov file
+        run: |
+          dart pub global activate coverage
+          dart pub global run coverage:format_coverage --lcov --report-on=lib --in=coverage --out=coverage/lcov.info
+      - name: Send coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          directory: coverage
