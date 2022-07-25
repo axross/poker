@@ -1,14 +1,9 @@
-import 'package:meta/meta.dart';
-
-/// An enum-like class that expresses a suit of [Card].
-@immutable
-class Suit {
-  static const Suit spade = Suit._(0);
-  static const Suit heart = Suit._(1);
-  static const Suit diamond = Suit._(2);
-  static const Suit club = Suit._(3);
-
-  const Suit._(this.index);
+/// An enum that expresses a suit of [Card].
+enum Suit {
+  spade,
+  heart,
+  diamond,
+  club;
 
   /// Returns a [Suit] from an integer value. The value must be 0 <= value <= 3.
   factory Suit.fromIndex(int index) {
@@ -53,9 +48,6 @@ class Suit {
         throw SuitParseFailureException(value: value);
     }
   }
-
-  /// Returns int expression of the suit.
-  final int index;
 
   /// Returns 1-char length string.
   ///

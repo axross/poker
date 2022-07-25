@@ -80,8 +80,8 @@ class HandRange with IterableMixin<CardPair> {
         final kickerTop = Rank.parse(part[1]);
         final kickerBottom = Rank.parse(part[5]);
 
-        if (high.powerIndex < kickerTop.powerIndex &&
-            kickerTop.powerIndex < kickerBottom.powerIndex) {
+        if (high.power > kickerTop.power &&
+            kickerTop.power > kickerBottom.power) {
           for (int i = _ranks.indexOf(kickerTop);
               i <= _ranks.indexOf(kickerBottom);
               ++i) {
@@ -167,6 +167,8 @@ class HandRange with IterableMixin<CardPair> {
 
         continue;
       }
+
+      print(part);
 
       throw HandRangeParseFailureException(whole: value, part: part);
     }

@@ -1,23 +1,20 @@
-import 'package:meta/meta.dart';
+/// An enum that expresses a rank of [Card].
+enum Rank {
+  ace(12),
+  deuce(0),
+  trey(1),
+  four(2),
+  five(3),
+  six(4),
+  seven(5),
+  eight(6),
+  nine(7),
+  ten(8),
+  jack(9),
+  queen(10),
+  king(11);
 
-/// An enum-like class that expresses a rank of [Card].
-@immutable
-class Rank {
-  static const Rank ace = Rank._(0);
-  static const Rank deuce = Rank._(1);
-  static const Rank trey = Rank._(2);
-  static const Rank four = Rank._(3);
-  static const Rank five = Rank._(4);
-  static const Rank six = Rank._(5);
-  static const Rank seven = Rank._(6);
-  static const Rank eight = Rank._(7);
-  static const Rank nine = Rank._(8);
-  static const Rank ten = Rank._(9);
-  static const Rank jack = Rank._(10);
-  static const Rank queen = Rank._(11);
-  static const Rank king = Rank._(12);
-
-  const Rank._(this.index);
+  const Rank(this.power);
 
   /// Returns a [Suit] from an integer value. The value must be 0 <= value <= 12.
   factory Rank.fromIndex(int index) {
@@ -99,10 +96,8 @@ class Rank {
     }
   }
 
-  /// Returns int expression of the rank.
-  final int index;
-
-  int get powerIndex => this == Rank.ace ? 0 : 13 - index;
+  /// Returns power of the rank.
+  final int power;
 
   /// Returns 1-char length string represents the rank.
   @override
