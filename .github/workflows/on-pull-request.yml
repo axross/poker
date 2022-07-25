@@ -1,0 +1,36 @@
+name: on Pull Request
+on:
+  - pull_request
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.0.1"
+      - name: Install npm packages
+        run: dart pub get
+      - name: Dart Analyze
+        run: dart analyze
+  unit-test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.0.1"
+      - name: Install npm packages
+        run: dart pub get
+      - name: Run Unit Tests
+        run: dart run test --coverage=coverage
+      - name: Extract lcov file
+        run: |
+          dart pub global activate coverage
+          dart pub global run coverage:format_coverage --lcov --report-on=lib --in=coverage --out=coverage/lcov.info
+      - name: Send coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          directory: coverage
