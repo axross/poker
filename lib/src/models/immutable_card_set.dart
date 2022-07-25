@@ -153,11 +153,11 @@ class CardPair extends ImmutableCardSet {
   final Card b;
 
   String toSortedString() {
-    if (a.rank.powerIndex < b.rank.powerIndex) {
+    if (a.rank.power > b.rank.power) {
       return '$a$b';
     }
 
-    if (a.rank.powerIndex > b.rank.powerIndex) {
+    if (a.rank.power < b.rank.power) {
       return '$b$a';
     }
 
