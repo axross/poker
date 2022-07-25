@@ -1,5 +1,5 @@
 name: poker
-version: 0.5.0
+version: 0.6.0
 description: >-
   A Dart implementation of Texas Hold'em matchup simulator based on Henry Lee's Poker Hand Evaluator.
 homepage: https://github.com/axross/poker
