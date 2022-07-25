@@ -1,19 +1,9 @@
-name: Before Merge
+name: on Push Main
 on:
-  - pull_request
+  push:
+    branches:
+      - main
 jobs:
-  analyze:
-    name: Analyze
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: "3.0.1"
-      - name: Install npm packages
-        run: dart pub get
-      - name: Dart Analyze
-        run: dart analyze
   unit-test:
     name: Unit Test
     runs-on: ubuntu-latest
