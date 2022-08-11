@@ -9,6 +9,6 @@ environment:
 dependencies:
   bitcount: ^0.3.0
   lints: ^2.0.0
-  meta: ^1.8.0
+  meta: ^1.7.0
 dev_dependencies:
   test: ^1.21.4
