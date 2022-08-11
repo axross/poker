@@ -24,17 +24,17 @@ import './card.dart';
 @immutable
 class ImmutableCardSet with IterableMixin<Card> {
   /// Creates a ImmutableCardSet from a hash [int] value.
-  const ImmutableCardSet(this.indexUnion);
+  const ImmutableCardSet._(this._indexUnion);
 
   /// An empty ImmutableCardSet.
-  ImmutableCardSet.empty() : indexUnion = 0;
+  ImmutableCardSet.empty() : _indexUnion = 0;
 
   /// A full-deck ImmutableCardSet.
-  ImmutableCardSet.full() : indexUnion = 4503599627370495;
+  ImmutableCardSet.full() : _indexUnion = 4503599627370495;
 
   /// Creates a ImmutableCardSet from a `Iterable<Card>`.
   ImmutableCardSet.from(Iterable<Card> cards)
-      : indexUnion = cards.fold<int>(0, (s, card) => s | card.index);
+      : _indexUnion = cards.fold<int>(0, (s, card) => s | card.index);
 
   /// Parses a [String] to create a ImmutableCardSet.
   ///
@@ -50,51 +50,51 @@ class ImmutableCardSet with IterableMixin<Card> {
       }
     }
 
-    return ImmutableCardSet(indexUnion);
+    return ImmutableCardSet._(indexUnion);
   }
 
-  final int indexUnion;
+  final int _indexUnion;
 
   @override
-  int get length => indexUnion.bitCount();
+  int get length => _indexUnion.bitCount();
 
   @override
   bool contains(Object? element) {
     if (element is ImmutableCardSet) {
-      return (indexUnion & element.indexUnion == element.indexUnion);
+      return (_indexUnion & element._indexUnion == element._indexUnion);
     }
 
     if (element is Card) {
-      return (indexUnion & element.index == element.index);
+      return (_indexUnion & element.index == element.index);
     }
 
     throw UnsupportedError('');
   }
 
   bool containsAll(ImmutableCardSet other) =>
-      (indexUnion & other.indexUnion == other.indexUnion);
+      (_indexUnion & other._indexUnion == other._indexUnion);
 
   ImmutableCardSet addedAll(ImmutableCardSet other) =>
-      ImmutableCardSet(indexUnion | other.indexUnion);
+      ImmutableCardSet._(_indexUnion | other._indexUnion);
 
   ImmutableCardSet added(Card card) =>
-      ImmutableCardSet(indexUnion | card.index);
+      ImmutableCardSet._(_indexUnion | card.index);
 
   ImmutableCardSet removedAll(ImmutableCardSet other) =>
-      ImmutableCardSet(indexUnion & ~other.indexUnion);
+      ImmutableCardSet._(_indexUnion & ~other._indexUnion);
 
   ImmutableCardSet removed(Card card) =>
-      ImmutableCardSet(indexUnion & ~card.index);
+      ImmutableCardSet._(_indexUnion & ~card.index);
 
   @override
-  Iterator<Card> get iterator => _CardSetIterator(indexUnion);
+  Iterator<Card> get iterator => _CardSetIterator(_indexUnion);
 
   @override
-  int get hashCode => indexUnion;
+  int get hashCode => _indexUnion;
 
   @override
   operator ==(Object other) =>
-      other is ImmutableCardSet && indexUnion == other.indexUnion;
+      other is ImmutableCardSet && _indexUnion == other._indexUnion;
 }
 
 ///
@@ -134,7 +134,7 @@ class ImmutableCardSetParseFailure implements Exception {
 }
 
 class CardPair extends ImmutableCardSet {
-  CardPair(this.a, this.b) : super(a.index | b.index);
+  CardPair(this.a, this.b) : super._(a.index | b.index);
 
   /// ```dart
   /// CardPair.parse("5s5h");  // => CardPair(Card(rank: Rank.five, suit: Suit.spade), Card(rank: Rank.five, suit: Suit.heart))
