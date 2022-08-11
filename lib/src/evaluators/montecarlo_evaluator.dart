@@ -56,7 +56,7 @@ class _MontecarloEvaluationIterator implements Iterator<Matchup> {
   _MontecarloEvaluationIterator({
     required ImmutableCardSet communityCards,
     required List<HandRange> players,
-  })  : _playerCardPairs = players.map((p) => p.toList()).toList(),
+  })  : _playerCardPairs = players.map((p) => p.cardPairs.toList()).toList(),
         _initialDeck = ImmutableCardSet.full().removedAll(communityCards),
         _initialCommunityCards = communityCards;
 

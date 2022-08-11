@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_single_quotes
-
 import 'dart:collection';
 import 'package:meta/meta.dart';
+
 import './card.dart';
 import './immutable_card_set.dart';
 import './rank.dart';
@@ -9,9 +8,81 @@ import './suit.dart';
 
 /// An immutable set of [CardPair]s that expresses a player hand range.
 @immutable
-class HandRange with IterableMixin<CardPair> {
-  /// Creates a [HandRange] from a [Set] of [CardPair].
-  HandRange(Set<CardPair> cardPairs) : _cardPairs = cardPairs;
+class HandRange {
+  HandRange._({
+    required Set<RankPair> pocketRankPairs,
+    required Set<RankPair> suitedRankPairs,
+    required Set<RankPair> ofsuitRankPairs,
+    required Set<CardPair> individualCardPairs,
+  })  : _pocketRankPairs = pocketRankPairs,
+        _suitedRankPairs = suitedRankPairs,
+        _ofsuitRankPairs = ofsuitRankPairs,
+        _individualCardPairs = individualCardPairs;
+
+  /// Created an empty [HandRange].
+  const HandRange.empty()
+      : _pocketRankPairs = const {},
+        _suitedRankPairs = const {},
+        _ofsuitRankPairs = const {},
+        _individualCardPairs = const {};
+
+  /// Creates a [HandRange] from an iterable of [CardPair].
+  factory HandRange.fromCardPairs(Iterable<CardPair> cardPairs) {
+    final cardPairSet = cardPairs.toSet();
+    final pocketRankPairs = <RankPair>{};
+    final suitedRankPairs = <RankPair>{};
+    final ofsuitRankPairs = <RankPair>{};
+    final individualCardPairs = <CardPair>{};
+
+    for (final rank in _ranks) {
+      final pocketCardPairs = RankPair.pocket(rank).toSet();
+
+      if (pocketCardPairs.every((cp) => cardPairSet.contains(cp))) {
+        cardPairSet.removeAll(pocketCardPairs);
+
+        pocketRankPairs.add(RankPair.pocket(rank));
+      }
+    }
+
+    for (int i = 0; i < _ranks.length; ++i) {
+      final hr = _ranks[i];
+
+      for (final kr in _ranks.sublist(i + 1)) {
+        final suitedCardPairs = RankPair.suited(hr, kr).toSet();
+        final ofsuitCardPairs = RankPair.ofsuit(hr, kr).toSet();
+
+        if (suitedCardPairs.every((cp) => cardPairSet.contains(cp))) {
+          cardPairSet.removeAll(suitedCardPairs);
+
+          suitedRankPairs.add(RankPair.suited(hr, kr));
+        }
+
+        if (ofsuitCardPairs.every((cp) => cardPairSet.contains(cp))) {
+          cardPairSet.removeAll(ofsuitCardPairs);
+
+          ofsuitRankPairs.add(RankPair.ofsuit(hr, kr));
+        }
+
+        for (final hs in _suits) {
+          for (final ks in _suits) {
+            final cardPair =
+                CardPair(Card(rank: hr, suit: hs), Card(rank: kr, suit: ks));
+
+            if (cardPairSet.contains(cardPair)) {
+              individualCardPairs.add(cardPair);
+            }
+          }
+        }
+      }
+    }
+
+    return HandRange._(
+      pocketRankPairs: pocketRankPairs,
+      suitedRankPairs: suitedRankPairs,
+      ofsuitRankPairs: ofsuitRankPairs,
+      individualCardPairs: individualCardPairs,
+    );
+  }
 
   /// Creates a [HandRange] from a [String].
   ///
@@ -30,7 +101,11 @@ class HandRange with IterableMixin<CardPair> {
   ///
   /// Available characters for rank are `A`, `K`, `Q`, `J`, `T`, `9`, `8`, `7`, `6`, `5`, `4`, `3` and `2`.
   factory HandRange.parse(String value) {
-    final cardPairs = <CardPair>{};
+    final pocketRankPairs = <RankPair>{};
+    final suitedRankPairs = <RankPair>{};
+    final ofsuitRankPairs = <RankPair>{};
+    final individualCardPairs = <CardPair>{};
+
     final regex = RegExp(
         r'[AKQJT98765432]{2}[so]?(-[AKQJT98765432]{2}[so]?|\+)?|([AKQJT98765432][shdc]){2}');
     int scanned = 0;
@@ -63,9 +138,7 @@ class HandRange with IterableMixin<CardPair> {
         final bottom = Rank.parse(part[3]);
 
         for (int i = _ranks.indexOf(top); i <= _ranks.indexOf(bottom); ++i) {
-          for (final cardPair in _pocketCardPairs(_ranks[i])) {
-            cardPairs.add(cardPair);
-          }
+          pocketRankPairs.add(RankPair.pocket(_ranks[i]));
         }
 
         continue;
@@ -86,13 +159,9 @@ class HandRange with IterableMixin<CardPair> {
               i <= _ranks.indexOf(kickerBottom);
               ++i) {
             if (part[2] == 's') {
-              for (final cardPair in _suitedCardPairs(high, _ranks[i])) {
-                cardPairs.add(cardPair);
-              }
+              suitedRankPairs.add(RankPair.suited(high, _ranks[i]));
             } else {
-              for (final cardPair in _ofsuitCardPairs(high, _ranks[i])) {
-                cardPairs.add(cardPair);
-              }
+              ofsuitRankPairs.add(RankPair.ofsuit(high, _ranks[i]));
             }
           }
 
@@ -103,9 +172,7 @@ class HandRange with IterableMixin<CardPair> {
       if (RegExp(r'^[AKQJT98765432]{2}\+$').hasMatch(part) &&
           part[0] == part[1]) {
         for (int i = 0; i <= _ranks.indexOf(Rank.parse(part[0])); ++i) {
-          for (final cardPair in _pocketCardPairs(_ranks[i])) {
-            cardPairs.add(cardPair);
-          }
+          pocketRankPairs.add(RankPair.pocket(_ranks[i]));
         }
 
         continue;
@@ -120,13 +187,9 @@ class HandRange with IterableMixin<CardPair> {
             i <= _ranks.indexOf(kicker);
             ++i) {
           if (part[2] == 's') {
-            for (final cardPair in _suitedCardPairs(high, _ranks[i])) {
-              cardPairs.add(cardPair);
-            }
+            suitedRankPairs.add(RankPair.suited(high, _ranks[i]));
           } else {
-            for (final cardPair in _ofsuitCardPairs(high, _ranks[i])) {
-              cardPairs.add(cardPair);
-            }
+            ofsuitRankPairs.add(RankPair.ofsuit(high, _ranks[i]));
           }
         }
 
@@ -135,11 +198,7 @@ class HandRange with IterableMixin<CardPair> {
 
       if (RegExp(r'^[AKQJT98765432]{2}$').hasMatch(part) &&
           part[0] == part[1]) {
-        final rank = Rank.parse(part[0]);
-
-        for (final cardPair in _pocketCardPairs(rank)) {
-          cardPairs.add(cardPair);
-        }
+        pocketRankPairs.add(RankPair.pocket(Rank.parse(part[0])));
 
         continue;
       }
@@ -150,92 +209,84 @@ class HandRange with IterableMixin<CardPair> {
         final kicker = Rank.parse(part[1]);
 
         if (part[2] == 's') {
-          for (final cardPair in _suitedCardPairs(high, kicker)) {
-            cardPairs.add(cardPair);
-          }
+          suitedRankPairs.add(RankPair.suited(high, kicker));
         } else {
-          for (final cardPair in _ofsuitCardPairs(high, kicker)) {
-            cardPairs.add(cardPair);
-          }
+          ofsuitRankPairs.add(RankPair.ofsuit(high, kicker));
         }
 
         continue;
       }
 
       if (RegExp(r'^([AKQJT98765432][shdc]){2}$').hasMatch(part)) {
-        cardPairs.add(CardPair.parse(part));
+        individualCardPairs.add(CardPair.parse(part));
 
         continue;
       }
 
-      print(part);
-
       throw HandRangeParseFailureException(whole: value, part: part);
     }
 
-    return HandRange(cardPairs);
+    return HandRange._(
+      pocketRankPairs: pocketRankPairs,
+      suitedRankPairs: suitedRankPairs,
+      ofsuitRankPairs: ofsuitRankPairs,
+      individualCardPairs: individualCardPairs,
+    );
   }
 
-  final Set<CardPair> _cardPairs;
+  final Set<RankPair> _pocketRankPairs;
 
-  @override
-  Iterator<CardPair> get iterator => _cardPairs.iterator;
+  final Set<RankPair> _suitedRankPairs;
 
-  @override
-  bool get isEmpty => _cardPairs.isEmpty;
+  final Set<RankPair> _ofsuitRankPairs;
+
+  final Set<CardPair> _individualCardPairs;
+
+  Iterable<RankPair> get rankPairs sync* {
+    for (final rankPair in _pocketRankPairs) {
+      yield rankPair;
+    }
+
+    for (final rankPair in _suitedRankPairs) {
+      yield rankPair;
+    }
+
+    for (final rankPair in _ofsuitRankPairs) {
+      yield rankPair;
+    }
+  }
+
+  Iterable<CardPair> get cardPairs sync* {
+    for (final rankPair in _pocketRankPairs) {
+      for (final cardPair in rankPair) {
+        yield cardPair;
+      }
+    }
+
+    for (final rankPair in _suitedRankPairs) {
+      for (final cardPair in rankPair) {
+        yield cardPair;
+      }
+    }
+
+    for (final rankPair in _ofsuitRankPairs) {
+      for (final cardPair in rankPair) {
+        yield cardPair;
+      }
+    }
+
+    for (final cardPair in _individualCardPairs) {
+      yield cardPair;
+    }
+  }
 
   @override
   String toString() {
-    final cardPairs = _cardPairs.toSet();
-    final pocketParts = <String>{};
-    final suitedParts = <String>{};
-    final ofsuitParts = <String>{};
-    final individualParts = <String>{};
-
-    for (final rank in _ranks) {
-      if ([..._pocketCardPairs(rank)].every((cp) => cardPairs.contains(cp))) {
-        cardPairs.removeAll(_pocketCardPairs(rank));
-
-        pocketParts.add("$rank$rank");
-      }
-    }
-
-    for (int i = 0; i < _ranks.length; ++i) {
-      final hr = _ranks[i];
-
-      for (final kr in _ranks.sublist(i + 1)) {
-        if ([..._suitedCardPairs(hr, kr)]
-            .every((cp) => cardPairs.contains(cp))) {
-          cardPairs.removeAll(_suitedCardPairs(hr, kr));
-
-          suitedParts.add("$hr${kr}s");
-        }
-
-        if ([..._ofsuitCardPairs(hr, kr)]
-            .every((cp) => cardPairs.contains(cp))) {
-          cardPairs.removeAll(_ofsuitCardPairs(hr, kr));
-
-          ofsuitParts.add("$hr${kr}o");
-        }
-
-        for (final hs in _suits) {
-          for (final ks in _suits) {
-            final cardPair =
-                CardPair(Card(rank: hr, suit: hs), Card(rank: kr, suit: ks));
-
-            if (cardPairs.contains(cardPair)) {
-              individualParts.add(cardPair.toSortedString());
-            }
-          }
-        }
-      }
-    }
-
     String result = '';
 
     int start = -1;
     for (int i = 0; i < _ranks.length; ++i) {
-      if (pocketParts.contains("${_ranks[i]}${_ranks[i]}")) {
+      if (_pocketRankPairs.contains(RankPair.pocket(_ranks[i]))) {
         if (start == -1) {
           start = i;
         }
@@ -243,13 +294,13 @@ class HandRange with IterableMixin<CardPair> {
 
       if (start != -1 &&
           (i == _ranks.length - 1 ||
-              !pocketParts.contains("${_ranks[i + 1]}${_ranks[i + 1]}"))) {
+              !_pocketRankPairs.contains(RankPair.pocket(_ranks[i + 1])))) {
         if (start == i) {
-          result += "${_ranks[i]}${_ranks[i]}";
+          result += '${_ranks[i]}${_ranks[i]}';
         } else if (start == 0) {
-          result += "${_ranks[i]}${_ranks[i]}+";
+          result += '${_ranks[i]}${_ranks[i]}+';
         } else {
-          result += "${_ranks[start]}${_ranks[start]}-${_ranks[i]}${_ranks[i]}";
+          result += '${_ranks[start]}${_ranks[start]}-${_ranks[i]}${_ranks[i]}';
         }
 
         start = -1;
@@ -261,21 +312,22 @@ class HandRange with IterableMixin<CardPair> {
       int ofsuitStart = -1;
 
       for (int k = h + 1; k < _ranks.length; ++k) {
-        if (suitedParts.contains("${_ranks[h]}${_ranks[k]}s") &&
+        if (_suitedRankPairs.contains(RankPair.suited(_ranks[h], _ranks[k])) &&
             suitedStart == -1) {
           suitedStart = k;
         }
 
         if (suitedStart != -1 &&
             (k == _ranks.length - 1 ||
-                !suitedParts.contains("${_ranks[h]}${_ranks[k + 1]}s"))) {
+                !_suitedRankPairs
+                    .contains(RankPair.suited(_ranks[h], _ranks[k + 1])))) {
           if (suitedStart == k) {
-            result += "${_ranks[h]}${_ranks[k]}s";
+            result += '${_ranks[h]}${_ranks[k]}s';
           } else if (suitedStart == h + 1) {
-            result += "${_ranks[h]}${_ranks[k]}s+";
+            result += '${_ranks[h]}${_ranks[k]}s+';
           } else {
             result +=
-                "${_ranks[h]}${_ranks[suitedStart]}s-${_ranks[h]}${_ranks[k]}s";
+                '${_ranks[h]}${_ranks[suitedStart]}s-${_ranks[h]}${_ranks[k]}s';
           }
 
           suitedStart = -1;
@@ -283,21 +335,22 @@ class HandRange with IterableMixin<CardPair> {
       }
 
       for (int k = h + 1; k < _ranks.length; ++k) {
-        if (ofsuitParts.contains("${_ranks[h]}${_ranks[k]}o") &&
+        if (_ofsuitRankPairs.contains(RankPair.ofsuit(_ranks[h], _ranks[k])) &&
             ofsuitStart == -1) {
           ofsuitStart = k;
         }
 
         if (ofsuitStart != -1 &&
             (k == _ranks.length - 1 ||
-                !ofsuitParts.contains("${_ranks[h]}${_ranks[k + 1]}o"))) {
+                !_ofsuitRankPairs
+                    .contains(RankPair.ofsuit(_ranks[h], _ranks[k + 1])))) {
           if (ofsuitStart == k) {
-            result += "${_ranks[h]}${_ranks[k]}o";
+            result += '${_ranks[h]}${_ranks[k]}o';
           } else if (ofsuitStart == h + 1) {
-            result += "${_ranks[h]}${_ranks[k]}o+";
+            result += '${_ranks[h]}${_ranks[k]}o+';
           } else {
             result +=
-                "${_ranks[h]}${_ranks[ofsuitStart]}o-${_ranks[h]}${_ranks[k]}o";
+                '${_ranks[h]}${_ranks[ofsuitStart]}o-${_ranks[h]}${_ranks[k]}o';
           }
 
           ofsuitStart = -1;
@@ -305,9 +358,106 @@ class HandRange with IterableMixin<CardPair> {
       }
     }
 
-    for (final part in individualParts) {
-      result += part;
+    for (final cardPair in _individualCardPairs) {
+      result += cardPair.toSortedString();
     }
+
+    return result;
+  }
+}
+
+/// A representation of combination of [CardPair]s.
+@immutable
+class RankPair with IterableMixin<CardPair> {
+  /// Creates a pocket pairs of [RankPair].
+  const RankPair.pocket(Rank rank)
+      : high = rank,
+        kicker = rank,
+        isSuited = false;
+
+  /// Creates a suited cards of [RankPair].
+  const RankPair.suited(this.high, this.kicker) : isSuited = true;
+
+  /// Creates a ofsuit cards of [RankPair].
+  const RankPair.ofsuit(this.high, this.kicker) : isSuited = false;
+
+  final Rank high;
+
+  final Rank kicker;
+
+  final bool isSuited;
+
+  @override
+  Iterator<CardPair> get iterator => toSet().iterator;
+
+  @override
+  Set<CardPair> toSet() {
+    if (high == kicker) {
+      return {
+        CardPair(
+          Card(rank: kicker, suit: Suit.spade),
+          Card(rank: kicker, suit: Suit.heart),
+        ),
+        CardPair(
+          Card(rank: kicker, suit: Suit.spade),
+          Card(rank: kicker, suit: Suit.diamond),
+        ),
+        CardPair(
+          Card(rank: kicker, suit: Suit.spade),
+          Card(rank: kicker, suit: Suit.club),
+        ),
+        CardPair(
+          Card(rank: kicker, suit: Suit.heart),
+          Card(rank: kicker, suit: Suit.diamond),
+        ),
+        CardPair(
+          Card(rank: kicker, suit: Suit.heart),
+          Card(rank: kicker, suit: Suit.club),
+        ),
+        CardPair(
+          Card(rank: kicker, suit: Suit.diamond),
+          Card(rank: kicker, suit: Suit.club),
+        ),
+      };
+    }
+
+    if (isSuited) {
+      return _suits
+          .map((suit) => CardPair(
+                Card(rank: high, suit: suit),
+                Card(rank: kicker, suit: suit),
+              ))
+          .toSet();
+    }
+
+    return _suits.fold({}, (cardPairs, highSuit) {
+      for (final kickerSuit in _suits) {
+        if (highSuit == kickerSuit) continue;
+
+        cardPairs.add(CardPair(
+          Card(rank: high, suit: highSuit),
+          Card(rank: kicker, suit: kickerSuit),
+        ));
+      }
+
+      return cardPairs;
+    });
+  }
+
+  @override
+  bool operator ==(Object? other) =>
+      other is RankPair &&
+      other.high == high &&
+      other.kicker == kicker &&
+      other.isSuited == isSuited;
+
+  @override
+  int get hashCode {
+    int result = 17;
+
+    result = 37 * result + high.hashCode;
+    result = 37 * result + kicker.hashCode;
+    result = 37 * result + isSuited.hashCode;
 
     return result;
   }
@@ -323,63 +473,6 @@ class HandRangeParseFailureException implements Exception {
   String get message => part == null
       ? 'There\'s no valid hand range string expression in "$whole".'
       : '$part is invalid part of hand range string expression (whole: "$whole").';
-}
-
-Iterable<CardPair> _pocketCardPairs(Rank rank) sync* {
-  yield CardPair(
-    Card(rank: rank, suit: Suit.spade),
-    Card(rank: rank, suit: Suit.heart),
-  );
-
-  yield CardPair(
-    Card(rank: rank, suit: Suit.spade),
-    Card(rank: rank, suit: Suit.diamond),
-  );
-
-  yield CardPair(
-    Card(rank: rank, suit: Suit.spade),
-    Card(rank: rank, suit: Suit.club),
-  );
-
-  yield CardPair(
-    Card(rank: rank, suit: Suit.heart),
-    Card(rank: rank, suit: Suit.diamond),
-  );
-
-  yield CardPair(
-    Card(rank: rank, suit: Suit.heart),
-    Card(rank: rank, suit: Suit.club),
-  );
-
-  yield CardPair(
-    Card(rank: rank, suit: Suit.diamond),
-    Card(rank: rank, suit: Suit.club),
-  );
-}
-
-Iterable<CardPair> _suitedCardPairs(
-  Rank high,
-  Rank kicker,
-) sync* {
-  for (final suit in _suits) {
-    yield CardPair(
-      Card(rank: high, suit: suit),
-      Card(rank: kicker, suit: suit),
-    );
-  }
-}
-
-Iterable<CardPair> _ofsuitCardPairs(Rank high, Rank kicker) sync* {
-  for (final highSuit in _suits) {
-    for (final kickerSuit in _suits) {
-      if (highSuit == kickerSuit) continue;
-
-      yield CardPair(
-        Card(rank: high, suit: highSuit),
-        Card(rank: kicker, suit: kickerSuit),
-      );
-    }
-  }
 }
 
 const List<Rank> _ranks = [

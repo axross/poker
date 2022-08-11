@@ -49,7 +49,7 @@ class _ExhaustiveEvaluationIterator implements Iterator<Matchup> {
   _ExhaustiveEvaluationIterator({
     required ImmutableCardSet communityCards,
     required List<HandRange> players,
-  })  : _playerCardPairs = players.map((p) => p.toList()).toList(),
+  })  : _playerCardPairs = players.map((p) => p.cardPairs.toList()).toList(),
         _stack = [
           _ExhaustiveEvaluationNode(
             deck: ImmutableCardSet.full().removedAll(communityCards),
