@@ -84,6 +84,36 @@ class HandRange {
     );
   }
 
+  /// Creates a [HandRange] from an iterable of [RankPair].
+  factory HandRange.fromRankPairs(Iterable<RankPair> rankPairs) {
+    final pocketRankPairs = <RankPair>{};
+    final suitedRankPairs = <RankPair>{};
+    final ofsuitRankPairs = <RankPair>{};
+
+    for (final rankPair in rankPairs) {
+      if (rankPair.isPocket) {
+        pocketRankPairs.add(rankPair);
+
+        continue;
+      }
+
+      if (rankPair.isSuited) {
+        suitedRankPairs.add(rankPair);
+
+        continue;
+      }
+
+      ofsuitRankPairs.add(rankPair);
+    }
+
+    return HandRange._(
+      pocketRankPairs: pocketRankPairs,
+      suitedRankPairs: suitedRankPairs,
+      ofsuitRankPairs: ofsuitRankPairs,
+      individualCardPairs: {},
+    );
+  }
+
   /// Creates a [HandRange] from a [String].
   ///
   /// ```dart
@@ -280,6 +310,13 @@ class HandRange {
     }
   }
 
+  /// Whether it contains all [CardPair]s in the given [HandRange].
+  bool contains(HandRange handRange) =>
+      _pocketRankPairs.containsAll(handRange._pocketRankPairs) &&
+      _suitedRankPairs.containsAll(handRange._suitedRankPairs) &&
+      _ofsuitRankPairs.containsAll(handRange._ofsuitRankPairs) &&
+      _individualCardPairs.containsAll(handRange._individualCardPairs);
+
   @override
   String toString() {
     String result = '';
@@ -386,6 +423,8 @@ class RankPair with IterableMixin<CardPair> {
   final Rank kicker;
 
   final bool isSuited;
+
+  bool get isPocket => high == kicker;
 
   @override
   Iterator<CardPair> get iterator => toSet().iterator;

@@ -1034,6 +1034,41 @@ void main() {
       });
     });
 
+    group('HandRange#contains()', () {
+      test(
+        'returns true when it contains all card pairs that the given hand range has',
+        () {
+          final handRange =
+              HandRange.parse('JJ+88-6644AQs-A9sATo+K8s+JTs96o+72oAsKs7d6h');
+
+          expect(handRange.contains(HandRange.parse('88-66')), isTrue);
+          expect(handRange.contains(HandRange.parse('JJ+')), isTrue);
+          expect(handRange.contains(HandRange.parse('44')), isTrue);
+          expect(handRange.contains(HandRange.parse('AQs-ATs')), isTrue);
+          expect(handRange.contains(HandRange.parse('KTs+')), isTrue);
+          expect(handRange.contains(HandRange.parse('72o')), isTrue);
+          expect(handRange.contains(HandRange.parse('AsKs')), isTrue);
+          expect(handRange.contains(HandRange.parse('7d6h')), isTrue);
+        },
+      );
+
+      test(
+        'returns false when it doesn\'t contain any card pairs that the given hand range has',
+        () {
+          final handRange =
+              HandRange.parse('JJ+88-6644AQs-A9sATo+K8s+JTs96o+72oAsKs7d6h');
+
+          expect(handRange.contains(HandRange.parse('55')), isFalse);
+          expect(handRange.contains(HandRange.parse('33')), isFalse);
+          expect(handRange.contains(HandRange.parse('AQs-A8s')), isFalse);
+          expect(handRange.contains(HandRange.parse('KTo+')), isFalse);
+          expect(handRange.contains(HandRange.parse('72s')), isFalse);
+          expect(handRange.contains(HandRange.parse('AsQs')), isFalse);
+          expect(handRange.contains(HandRange.parse('AsKd')), isFalse);
+        },
+      );
+    });
+
     group('HandRange#toString()', () {
       test('HandRange<88-66>.toString() returns "88-66"', () {
         expect(

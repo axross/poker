@@ -43,14 +43,12 @@ class Card implements Comparable {
   /// final TreyOfDiamond = Card(rank: Rank.trey, suit: Suit.diamond);
   /// final kingOfClub = Card(rank: Rank.king, suit: Suit.club);
   /// ```
-  Card({required this.rank, required this.suit})
+  Card({required Rank rank, required Suit suit})
       : index = pow(2, rank.index + suit.index * 13).toInt();
 
   /// Creates a [Card] from a hash int value.
   @protected
-  Card.fromIndex(this.index)
-      : rank = Rank.fromIndex((log(index) / log(2)).floor() % 13),
-        suit = Suit.fromIndex(((log(index) / log(2)) / 13).floor());
+  const Card.fromIndex(this.index);
 
   /// Creates a [Card] by a 2-character-length [String].
   ///
@@ -68,14 +66,14 @@ class Card implements Comparable {
     return Card(rank: Rank.parse(value[0]), suit: Suit.parse(value[1]));
   }
 
-  /// The [Rank] of this card.
-  final Rank rank;
-
-  /// The [Suit] of this card.
-  final Suit suit;
-
   /// Returns the hash integer value of this card.
   final int index;
+
+  /// The [Rank] of this card.
+  Rank get rank => Rank.fromIndex((log(index) / log(2)).floor() % 13);
+
+  /// The [Suit] of this card.
+  Suit get suit => Suit.fromIndex(((log(index) / log(2)) / 13).floor());
 
   @override
   int compareTo(dynamic other) {

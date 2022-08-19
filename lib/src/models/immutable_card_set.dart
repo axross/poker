@@ -27,13 +27,13 @@ class ImmutableCardSet with IterableMixin<Card> {
   const ImmutableCardSet._(this._indexUnion);
 
   /// An empty ImmutableCardSet.
-  ImmutableCardSet.empty() : _indexUnion = 0;
+  const ImmutableCardSet.empty() : _indexUnion = 0;
 
   /// A full-deck ImmutableCardSet.
-  ImmutableCardSet.full() : _indexUnion = 4503599627370495;
+  const ImmutableCardSet.full() : _indexUnion = 4503599627370495;
 
   /// Creates a ImmutableCardSet from a `Iterable<Card>`.
-  ImmutableCardSet.from(Iterable<Card> cards)
+  ImmutableCardSet.of(Iterable<Card> cards)
       : _indexUnion = cards.fold<int>(0, (s, card) => s | card.index);
 
   /// Parses a [String] to create a ImmutableCardSet.
