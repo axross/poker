@@ -65,8 +65,7 @@ class HandRange {
 
         for (final hs in _suits) {
           for (final ks in _suits) {
-            final cardPair =
-                CardPair(Card(rank: hr, suit: hs), Card(rank: kr, suit: ks));
+            final cardPair = CardPair(Card(hr, hs), Card(kr, ks));
 
             if (cardPairSet.contains(cardPair)) {
               individualCardPairs.add(cardPair);
@@ -434,28 +433,28 @@ class RankPair with IterableMixin<CardPair> {
     if (high == kicker) {
       return {
         CardPair(
-          Card(rank: kicker, suit: Suit.spade),
-          Card(rank: kicker, suit: Suit.heart),
+          Card(kicker, Suit.spade),
+          Card(kicker, Suit.heart),
         ),
         CardPair(
-          Card(rank: kicker, suit: Suit.spade),
-          Card(rank: kicker, suit: Suit.diamond),
+          Card(kicker, Suit.spade),
+          Card(kicker, Suit.diamond),
         ),
         CardPair(
-          Card(rank: kicker, suit: Suit.spade),
-          Card(rank: kicker, suit: Suit.club),
+          Card(kicker, Suit.spade),
+          Card(kicker, Suit.club),
         ),
         CardPair(
-          Card(rank: kicker, suit: Suit.heart),
-          Card(rank: kicker, suit: Suit.diamond),
+          Card(kicker, Suit.heart),
+          Card(kicker, Suit.diamond),
         ),
         CardPair(
-          Card(rank: kicker, suit: Suit.heart),
-          Card(rank: kicker, suit: Suit.club),
+          Card(kicker, Suit.heart),
+          Card(kicker, Suit.club),
         ),
         CardPair(
-          Card(rank: kicker, suit: Suit.diamond),
-          Card(rank: kicker, suit: Suit.club),
+          Card(kicker, Suit.diamond),
+          Card(kicker, Suit.club),
         ),
       };
     }
@@ -463,8 +462,8 @@ class RankPair with IterableMixin<CardPair> {
     if (isSuited) {
       return _suits
           .map((suit) => CardPair(
-                Card(rank: high, suit: suit),
-                Card(rank: kicker, suit: suit),
+                Card(high, suit),
+                Card(kicker, suit),
               ))
           .toSet();
     }
@@ -474,8 +473,8 @@ class RankPair with IterableMixin<CardPair> {
         if (highSuit == kickerSuit) continue;
 
         cardPairs.add(CardPair(
-          Card(rank: high, suit: highSuit),
-          Card(rank: kicker, suit: kickerSuit),
+          Card(high, highSuit),
+          Card(kicker, kickerSuit),
         ));
       }
 

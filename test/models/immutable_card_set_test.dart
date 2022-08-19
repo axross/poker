@@ -27,10 +27,10 @@ void main() {
         expect(
           ImmutableCardSet.parse('AsKcQhJd'),
           equals(ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-            Card(rank: Rank.king, suit: Suit.club),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
+            Card(Rank.king, Suit.club),
           })),
         );
       });
@@ -91,10 +91,10 @@ void main() {
       test('ImmutableCardSet<{ As, Qh, Jd, Kc }>.length returns 4', () {
         expect(
           ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-            Card(rank: Rank.king, suit: Suit.club),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
+            Card(Rank.king, Suit.club),
           }).length,
           equals(4),
         );
@@ -102,7 +102,7 @@ void main() {
 
       test('ImmutableCardSet<{ As }>.length returns 1', () {
         expect(
-          ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)}).length,
+          ImmutableCardSet.of({Card(Rank.ace, Suit.spade)}).length,
           equals(1),
         );
       });
@@ -120,11 +120,11 @@ void main() {
       test('ImmutableCardSet<AsQhJdKh>.contains(Card<Jd>) returns true', () {
         expect(
           ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-            Card(rank: Rank.king, suit: Suit.club),
-          }).contains(Card(rank: Rank.jack, suit: Suit.diamond)),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
+            Card(Rank.king, Suit.club),
+          }).contains(Card(Rank.jack, Suit.diamond)),
           isTrue,
         );
       });
@@ -132,9 +132,7 @@ void main() {
       test(
           'ImmutableCardSet.empty().contains(ImmutableCardSet<2c>) returns false',
           () {
-        expect(
-            ImmutableCardSet.empty()
-                .contains(Card(rank: Rank.deuce, suit: Suit.club)),
+        expect(ImmutableCardSet.empty().contains(Card(Rank.deuce, Suit.club)),
             isFalse);
       });
     });
@@ -144,7 +142,7 @@ void main() {
           'ImmutableCardSet<2c>.containsAll(ImmutableCardSet.empty()) returns true',
           () {
         expect(
-          ImmutableCardSet.of({Card(rank: Rank.deuce, suit: Suit.club)})
+          ImmutableCardSet.of({Card(Rank.deuce, Suit.club)})
               .containsAll(ImmutableCardSet.empty()),
           isTrue,
         );
@@ -170,22 +168,22 @@ void main() {
           () {
         expect(
           ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-          }).added(Card(rank: Rank.queen, suit: Suit.heart)),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.jack, Suit.diamond),
+          }).added(Card(Rank.queen, Suit.heart)),
           equals(ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
           })),
         );
       });
 
       test('ImmutableCardSet<As>.added(As) returns ImmutableCardSet<As>', () {
         expect(
-          ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})
-              .added(Card(rank: Rank.ace, suit: Suit.spade)),
-          equals(ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})),
+          ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})
+              .added(Card(Rank.ace, Suit.spade)),
+          equals(ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})),
         );
       });
 
@@ -193,9 +191,8 @@ void main() {
           'ImmutableCardSet.empty().added(ImmutableCardSet<As>) returns ImmutableCardSet<As>',
           () {
         expect(
-          ImmutableCardSet.empty()
-              .added(Card(rank: Rank.ace, suit: Suit.spade)),
-          equals(ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})),
+          ImmutableCardSet.empty().added(Card(Rank.ace, Suit.spade)),
+          equals(ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})),
         );
       });
     });
@@ -205,9 +202,9 @@ void main() {
           'ImmutableCardSet<As>.addedAll(ImmutableCardSet.empty()) returns ImmutableCardSet<As>',
           () {
         expect(
-          ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})
+          ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})
               .addedAll(ImmutableCardSet.empty()),
-          equals(ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})),
+          equals(ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})),
         );
       });
 
@@ -234,17 +231,17 @@ void main() {
           () {
         expect(
           ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-            Card(rank: Rank.king, suit: Suit.club),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
+            Card(Rank.king, Suit.club),
           }).removedAll(ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.jack, suit: Suit.diamond),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.jack, Suit.diamond),
           })),
           equals(ImmutableCardSet.of({
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.king, suit: Suit.club),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.king, Suit.club),
           })),
         );
       });
@@ -253,9 +250,9 @@ void main() {
           'ImmutableCardSet<As>.removedAll(ImmutableCardSet.empty()) returns ImmutableCardSet<As>',
           () {
         expect(
-          ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})
+          ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})
               .removedAll(ImmutableCardSet.empty()),
-          equals(ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})),
+          equals(ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})),
         );
       });
 
@@ -263,8 +260,8 @@ void main() {
           'ImmutableCardSet.empty().removedAll(ImmutableCardSet<As>) returns ImmutableCardSet.empty()',
           () {
         expect(
-          ImmutableCardSet.empty().removedAll(
-              ImmutableCardSet.of({Card(rank: Rank.ace, suit: Suit.spade)})),
+          ImmutableCardSet.empty()
+              .removedAll(ImmutableCardSet.of({Card(Rank.ace, Suit.spade)})),
           equals(ImmutableCardSet.empty()),
         );
       });
@@ -294,16 +291,16 @@ void main() {
           () {
         expect(
           List.from(ImmutableCardSet.of({
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-            Card(rank: Rank.king, suit: Suit.club),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
+            Card(Rank.king, Suit.club),
           })),
           equals([
-            Card(rank: Rank.ace, suit: Suit.spade),
-            Card(rank: Rank.queen, suit: Suit.heart),
-            Card(rank: Rank.jack, suit: Suit.diamond),
-            Card(rank: Rank.king, suit: Suit.club),
+            Card(Rank.ace, Suit.spade),
+            Card(Rank.queen, Suit.heart),
+            Card(Rank.jack, Suit.diamond),
+            Card(Rank.king, Suit.club),
           ]),
         );
       });
