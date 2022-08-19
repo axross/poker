@@ -133,8 +133,8 @@ class ImmutableCardSetParseFailure implements Exception {
   }
 }
 
-class CardPair extends ImmutableCardSet {
-  CardPair(this.a, this.b) : super._(a.index | b.index);
+class CardPair with IterableMixin<Card> implements ImmutableCardSet {
+  const CardPair(this.a, this.b);
 
   /// ```dart
   /// CardPair.parse("5s5h");  // => CardPair(Card(rank: Rank.five, suit: Suit.spade), Card(rank: Rank.five, suit: Suit.heart))
@@ -152,6 +152,46 @@ class CardPair extends ImmutableCardSet {
 
   final Card b;
 
+  @override
+  int get _indexUnion => a.index | b.index;
+
+  @override
+  int get length => _indexUnion.bitCount();
+
+  @override
+  bool contains(Object? element) {
+    if (element is ImmutableCardSet) {
+      return (_indexUnion & element._indexUnion == element._indexUnion);
+    }
+
+    if (element is Card) {
+      return (_indexUnion & element.index == element.index);
+    }
+
+    throw UnsupportedError('');
+  }
+
+  @override
+  bool containsAll(ImmutableCardSet other) =>
+      (_indexUnion & other._indexUnion == other._indexUnion);
+
+  @override
+  ImmutableCardSet addedAll(ImmutableCardSet other) =>
+      ImmutableCardSet._(_indexUnion | other._indexUnion);
+
+  @override
+  ImmutableCardSet added(Card card) =>
+      ImmutableCardSet._(_indexUnion | card.index);
+
+  @override
+  ImmutableCardSet removedAll(ImmutableCardSet other) =>
+      ImmutableCardSet._(_indexUnion & ~other._indexUnion);
+
+  @override
+  ImmutableCardSet removed(Card card) =>
+      ImmutableCardSet._(_indexUnion & ~card.index);
+
+  /// Returns a string expression.
   String toSortedString() {
     if (a.rank.power > b.rank.power) {
       return '$a$b';
@@ -167,4 +207,14 @@ class CardPair extends ImmutableCardSet {
 
     return '$a$b';
   }
+
+  @override
+  Iterator<Card> get iterator => _CardSetIterator(_indexUnion);
+
+  @override
+  int get hashCode => _indexUnion;
+
+  @override
+  operator ==(Object other) =>
+      other is CardPair && other._indexUnion == _indexUnion;
 }
