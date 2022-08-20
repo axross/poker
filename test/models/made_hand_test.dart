@@ -14,13 +14,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5581)),
       );
@@ -31,13 +31,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5850)),
       );
@@ -48,13 +48,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3177)),
       );
@@ -65,13 +65,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4894)),
       );
@@ -82,13 +82,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3173)),
       );
@@ -99,13 +99,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(504)),
       );
@@ -116,13 +116,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3464)),
       );
@@ -133,13 +133,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6315)),
       );
@@ -150,13 +150,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4225)),
       );
@@ -167,13 +167,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2177)),
       );
@@ -184,13 +184,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2842)),
       );
@@ -201,13 +201,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3263)),
       );
@@ -218,13 +218,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3574)),
       );
@@ -235,13 +235,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4704)),
       );
@@ -252,13 +252,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6420)),
       );
@@ -269,13 +269,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4869)),
       );
@@ -286,13 +286,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(244)),
       );
@@ -303,13 +303,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2835)),
       );
@@ -320,13 +320,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1611)),
       );
@@ -337,13 +337,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2769)),
       );
@@ -354,13 +354,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5336)),
       );
@@ -371,13 +371,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7112)),
       );
@@ -388,13 +388,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(318)),
       );
@@ -405,13 +405,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6195)),
       );
@@ -422,13 +422,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6680)),
       );
@@ -439,13 +439,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6483)),
       );
@@ -456,13 +456,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6727)),
       );
@@ -473,13 +473,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6885)),
       );
@@ -490,13 +490,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6912)),
       );
@@ -507,13 +507,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7036)),
       );
@@ -524,13 +524,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3293)),
       );
@@ -541,13 +541,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4673)),
       );
@@ -558,13 +558,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5143)),
       );
@@ -575,13 +575,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3834)),
       );
@@ -592,13 +592,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4596)),
       );
@@ -609,13 +609,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6919)),
       );
@@ -626,13 +626,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2833)),
       );
@@ -643,13 +643,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5966)),
       );
@@ -660,13 +660,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6295)),
       );
@@ -677,13 +677,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6736)),
       );
@@ -694,13 +694,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2804)),
       );
@@ -711,13 +711,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2350)),
       );
@@ -728,13 +728,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3614)),
       );
@@ -745,13 +745,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5410)),
       );
@@ -762,13 +762,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5406)),
       );
@@ -779,13 +779,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3684)),
       );
@@ -796,13 +796,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6104)),
       );
@@ -813,13 +813,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5096)),
       );
@@ -830,13 +830,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5549)),
       );
@@ -847,13 +847,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(186)),
       );
@@ -864,13 +864,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3556)),
       );
@@ -881,13 +881,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6371)),
       );
@@ -898,13 +898,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5765)),
       );
@@ -915,13 +915,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3611)),
       );
@@ -932,13 +932,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3199)),
       );
@@ -949,13 +949,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6130)),
       );
@@ -966,13 +966,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7291)),
       );
@@ -983,13 +983,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4216)),
       );
@@ -1000,13 +1000,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2864)),
       );
@@ -1017,13 +1017,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2512)),
       );
@@ -1034,13 +1034,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4866)),
       );
@@ -1051,13 +1051,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2846)),
       );
@@ -1068,13 +1068,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6478)),
       );
@@ -1085,13 +1085,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1605)),
       );
@@ -1102,13 +1102,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3769)),
       );
@@ -1119,13 +1119,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5848)),
       );
@@ -1136,13 +1136,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4507)),
       );
@@ -1153,13 +1153,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5415)),
       );
@@ -1170,13 +1170,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5765)),
       );
@@ -1187,13 +1187,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3346)),
       );
@@ -1204,13 +1204,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3110)),
       );
@@ -1221,13 +1221,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3866)),
       );
@@ -1238,13 +1238,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6499)),
       );
@@ -1255,13 +1255,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6350)),
       );
@@ -1272,13 +1272,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6203)),
       );
@@ -1289,13 +1289,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1600)),
       );
@@ -1306,13 +1306,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5172)),
       );
@@ -1323,13 +1323,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4006)),
       );
@@ -1340,13 +1340,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2845)),
       );
@@ -1357,13 +1357,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2572)),
       );
@@ -1374,13 +1374,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3845)),
       );
@@ -1391,13 +1391,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4041)),
       );
@@ -1408,13 +1408,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2779)),
       );
@@ -1425,13 +1425,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4043)),
       );
@@ -1442,13 +1442,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5553)),
       );
@@ -1459,13 +1459,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6389)),
       );
@@ -1476,13 +1476,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6084)),
       );
@@ -1493,13 +1493,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4940)),
       );
@@ -1510,13 +1510,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4501)),
       );
@@ -1527,13 +1527,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5391)),
       );
@@ -1544,13 +1544,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4314)),
       );
@@ -1561,13 +1561,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2854)),
       );
@@ -1578,13 +1578,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2568)),
       );
@@ -1595,13 +1595,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3339)),
       );
@@ -1612,13 +1612,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5757)),
       );
@@ -1629,13 +1629,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3188)),
       );
@@ -1646,13 +1646,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6749)),
       );
@@ -1663,13 +1663,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5538)),
       );
@@ -1680,13 +1680,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2848)),
       );
@@ -1697,13 +1697,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6352)),
       );
@@ -1714,13 +1714,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3151)),
       );
@@ -1731,13 +1731,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2831)),
       );
@@ -1748,13 +1748,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3062)),
       );
@@ -1765,13 +1765,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4453)),
       );
@@ -1782,13 +1782,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5746)),
       );
@@ -1799,13 +1799,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2820)),
       );
@@ -1816,13 +1816,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3426)),
       );
@@ -1833,13 +1833,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3293)),
       );
@@ -1850,13 +1850,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6686)),
       );
@@ -1867,13 +1867,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3361)),
       );
@@ -1884,13 +1884,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2858)),
       );
@@ -1901,13 +1901,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6186)),
       );
@@ -1918,13 +1918,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3867)),
       );
@@ -1935,13 +1935,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(181)),
       );
@@ -1952,13 +1952,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5442)),
       );
@@ -1969,13 +1969,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7346)),
       );
@@ -1986,13 +1986,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6273)),
       );
@@ -2003,13 +2003,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1886)),
       );
@@ -2020,13 +2020,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3261)),
       );
@@ -2037,13 +2037,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4646)),
       );
@@ -2054,13 +2054,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3610)),
       );
@@ -2071,13 +2071,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1607)),
       );
@@ -2088,13 +2088,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5825)),
       );
@@ -2105,13 +2105,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6888)),
       );
@@ -2122,13 +2122,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3062)),
       );
@@ -2139,13 +2139,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2848)),
       );
@@ -2156,13 +2156,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1603)),
       );
@@ -2173,13 +2173,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2936)),
       );
@@ -2190,13 +2190,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6580)),
       );
@@ -2207,13 +2207,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5862)),
       );
@@ -2224,13 +2224,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4360)),
       );
@@ -2241,13 +2241,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3110)),
       );
@@ -2258,13 +2258,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2723)),
       );
@@ -2275,13 +2275,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2673)),
       );
@@ -2292,13 +2292,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5271)),
       );
@@ -2309,13 +2309,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(415)),
       );
@@ -2326,13 +2326,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3987)),
       );
@@ -2343,13 +2343,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2855)),
       );
@@ -2360,13 +2360,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7237)),
       );
@@ -2377,13 +2377,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6420)),
       );
@@ -2394,13 +2394,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(201)),
       );
@@ -2411,13 +2411,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6753)),
       );
@@ -2428,13 +2428,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1603)),
       );
@@ -2445,13 +2445,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3426)),
       );
@@ -2462,13 +2462,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6315)),
       );
@@ -2479,13 +2479,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2579)),
       );
@@ -2496,13 +2496,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6436)),
       );
@@ -2513,13 +2513,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5203)),
       );
@@ -2530,13 +2530,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4541)),
       );
@@ -2547,13 +2547,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5105)),
       );
@@ -2564,13 +2564,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2892)),
       );
@@ -2581,13 +2581,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4227)),
       );
@@ -2598,13 +2598,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3851)),
       );
@@ -2615,13 +2615,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3084)),
       );
@@ -2632,13 +2632,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6359)),
       );
@@ -2649,13 +2649,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3786)),
       );
@@ -2666,13 +2666,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2780)),
       );
@@ -2683,13 +2683,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6744)),
       );
@@ -2700,13 +2700,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1606)),
       );
@@ -2717,13 +2717,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1389)),
       );
@@ -2734,13 +2734,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7097)),
       );
@@ -2751,13 +2751,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2558)),
       );
@@ -2768,13 +2768,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3272)),
       );
@@ -2785,13 +2785,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1608)),
       );
@@ -2802,13 +2802,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2336)),
       );
@@ -2819,13 +2819,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2832)),
       );
@@ -2836,13 +2836,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5626)),
       );
@@ -2853,13 +2853,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3573)),
       );
@@ -2870,13 +2870,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3320)),
       );
@@ -2887,13 +2887,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1625)),
       );
@@ -2904,13 +2904,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3098)),
       );
@@ -2921,13 +2921,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5528)),
       );
@@ -2938,13 +2938,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6421)),
       );
@@ -2955,13 +2955,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2963)),
       );
@@ -2972,13 +2972,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2525)),
       );
@@ -2989,13 +2989,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4612)),
       );
@@ -3006,13 +3006,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2945)),
       );
@@ -3023,13 +3023,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6699)),
       );
@@ -3040,13 +3040,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3716)),
       );
@@ -3057,13 +3057,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2612)),
       );
@@ -3074,13 +3074,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4676)),
       );
@@ -3091,13 +3091,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3051)),
       );
@@ -3108,13 +3108,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1764)),
       );
@@ -3125,13 +3125,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5160)),
       );
@@ -3142,13 +3142,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5545)),
       );
@@ -3159,13 +3159,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3821)),
       );
@@ -3176,13 +3176,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5086)),
       );
@@ -3193,13 +3193,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6763)),
       );
@@ -3210,13 +3210,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3043)),
       );
@@ -3227,13 +3227,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6022)),
       );
@@ -3244,13 +3244,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1285)),
       );
@@ -3261,13 +3261,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4534)),
       );
@@ -3278,13 +3278,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(198)),
       );
@@ -3295,13 +3295,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5087)),
       );
@@ -3312,13 +3312,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5100)),
       );
@@ -3329,13 +3329,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3766)),
       );
@@ -3346,13 +3346,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4233)),
       );
@@ -3363,13 +3363,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5966)),
       );
@@ -3380,13 +3380,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4886)),
       );
@@ -3397,13 +3397,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5895)),
       );
@@ -3414,13 +3414,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3793)),
       );
@@ -3431,13 +3431,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6358)),
       );
@@ -3448,13 +3448,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6279)),
       );
@@ -3465,13 +3465,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6723)),
       );
@@ -3482,13 +3482,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5222)),
       );
@@ -3499,13 +3499,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4217)),
       );
@@ -3516,13 +3516,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5696)),
       );
@@ -3533,13 +3533,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5545)),
       );
@@ -3550,13 +3550,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3398)),
       );
@@ -3567,13 +3567,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7009)),
       );
@@ -3584,13 +3584,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2716)),
       );
@@ -3601,13 +3601,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3496)),
       );
@@ -3618,13 +3618,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7009)),
       );
@@ -3635,13 +3635,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2486)),
       );
@@ -3652,13 +3652,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7253)),
       );
@@ -3669,13 +3669,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1605)),
       );
@@ -3686,13 +3686,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(87)),
       );
@@ -3703,13 +3703,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1458)),
       );
@@ -3720,13 +3720,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4162)),
       );
@@ -3737,13 +3737,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4869)),
       );
@@ -3754,13 +3754,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6102)),
       );
@@ -3771,13 +3771,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4483)),
       );
@@ -3788,13 +3788,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5098)),
       );
@@ -3805,13 +3805,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3840)),
       );
@@ -3822,13 +3822,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4251)),
       );
@@ -3839,13 +3839,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2414)),
       );
@@ -3856,13 +3856,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5442)),
       );
@@ -3873,13 +3873,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5372)),
       );
@@ -3890,13 +3890,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6083)),
       );
@@ -3907,13 +3907,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(429)),
       );
@@ -3924,13 +3924,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1604)),
       );
@@ -3941,13 +3941,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2974)),
       );
@@ -3958,13 +3958,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6315)),
       );
@@ -3975,13 +3975,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4327)),
       );
@@ -3992,13 +3992,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6625)),
       );
@@ -4009,13 +4009,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5187)),
       );
@@ -4026,13 +4026,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6722)),
       );
@@ -4043,13 +4043,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2624)),
       );
@@ -4060,13 +4060,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3306)),
       );
@@ -4077,13 +4077,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4974)),
       );
@@ -4094,13 +4094,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3040)),
       );
@@ -4111,13 +4111,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3823)),
       );
@@ -4128,13 +4128,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3084)),
       );
@@ -4145,13 +4145,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3029)),
       );
@@ -4162,13 +4162,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4207)),
       );
@@ -4179,13 +4179,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6359)),
       );
@@ -4196,13 +4196,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2910)),
       );
@@ -4213,13 +4213,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3996)),
       );
@@ -4230,13 +4230,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4490)),
       );
@@ -4247,13 +4247,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3040)),
       );
@@ -4264,13 +4264,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(241)),
       );
@@ -4281,13 +4281,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2627)),
       );
@@ -4298,13 +4298,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2634)),
       );
@@ -4315,13 +4315,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3866)),
       );
@@ -4332,13 +4332,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6031)),
       );
@@ -4349,13 +4349,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4455)),
       );
@@ -4366,13 +4366,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2655)),
       );
@@ -4383,13 +4383,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3576)),
       );
@@ -4400,13 +4400,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3822)),
       );
@@ -4417,13 +4417,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(942)),
       );
@@ -4434,13 +4434,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6022)),
       );
@@ -4451,13 +4451,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3393)),
       );
@@ -4468,13 +4468,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4015)),
       );
@@ -4485,13 +4485,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4270)),
       );
@@ -4502,13 +4502,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5367)),
       );
@@ -4519,13 +4519,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3118)),
       );
@@ -4536,13 +4536,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3877)),
       );
@@ -4553,13 +4553,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3326)),
       );
@@ -4570,13 +4570,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2909)),
       );
@@ -4587,13 +4587,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(810)),
       );
@@ -4604,13 +4604,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5194)),
       );
@@ -4621,13 +4621,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4967)),
       );
@@ -4638,13 +4638,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3832)),
       );
@@ -4655,13 +4655,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3924)),
       );
@@ -4672,13 +4672,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3307)),
       );
@@ -4689,13 +4689,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6194)),
       );
@@ -4706,13 +4706,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4216)),
       );
@@ -4723,13 +4723,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6799)),
       );
@@ -4740,13 +4740,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1896)),
       );
@@ -4757,13 +4757,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6269)),
       );
@@ -4774,13 +4774,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5396)),
       );
@@ -4791,13 +4791,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6680)),
       );
@@ -4808,13 +4808,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1808)),
       );
@@ -4825,13 +4825,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3285)),
       );
@@ -4842,13 +4842,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6215)),
       );
@@ -4859,13 +4859,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3350)),
       );
@@ -4876,13 +4876,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5090)),
       );
@@ -4893,13 +4893,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1333)),
       );
@@ -4910,13 +4910,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7061)),
       );
@@ -4927,13 +4927,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(175)),
       );
@@ -4944,13 +4944,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1603)),
       );
@@ -4961,13 +4961,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6238)),
       );
@@ -4978,13 +4978,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4481)),
       );
@@ -4995,13 +4995,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5087)),
       );
@@ -5012,13 +5012,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4945)),
       );
@@ -5029,13 +5029,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6499)),
       );
@@ -5046,13 +5046,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2804)),
       );
@@ -5063,13 +5063,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3255)),
       );
@@ -5080,13 +5080,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3667)),
       );
@@ -5097,13 +5097,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4648)),
       );
@@ -5114,13 +5114,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2821)),
       );
@@ -5131,13 +5131,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4657)),
       );
@@ -5148,13 +5148,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4681)),
       );
@@ -5165,13 +5165,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2776)),
       );
@@ -5182,13 +5182,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4437)),
       );
@@ -5199,13 +5199,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(298)),
       );
@@ -5216,13 +5216,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1603)),
       );
@@ -5233,13 +5233,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1609)),
       );
@@ -5250,13 +5250,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1603)),
       );
@@ -5267,13 +5267,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5194)),
       );
@@ -5284,13 +5284,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2528)),
       );
@@ -5301,13 +5301,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5088)),
       );
@@ -5318,13 +5318,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3029)),
       );
@@ -5335,13 +5335,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3197)),
       );
@@ -5352,13 +5352,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5591)),
       );
@@ -5369,13 +5369,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2416)),
       );
@@ -5386,13 +5386,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5812)),
       );
@@ -5403,13 +5403,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2672)),
       );
@@ -5420,13 +5420,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5801)),
       );
@@ -5437,13 +5437,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6769)),
       );
@@ -5454,13 +5454,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4938)),
       );
@@ -5471,13 +5471,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4872)),
       );
@@ -5488,13 +5488,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1605)),
       );
@@ -5505,13 +5505,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6909)),
       );
@@ -5522,13 +5522,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2991)),
       );
@@ -5539,13 +5539,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7219)),
       );
@@ -5556,13 +5556,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2634)),
       );
@@ -5573,13 +5573,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5756)),
       );
@@ -5590,13 +5590,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6509)),
       );
@@ -5607,13 +5607,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2679)),
       );
@@ -5624,13 +5624,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5202)),
       );
@@ -5641,13 +5641,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5310)),
       );
@@ -5658,13 +5658,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5408)),
       );
@@ -5675,13 +5675,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5187)),
       );
@@ -5692,13 +5692,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3062)),
       );
@@ -5709,13 +5709,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6554)),
       );
@@ -5726,13 +5726,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7020)),
       );
@@ -5743,13 +5743,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6714)),
       );
@@ -5760,13 +5760,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3250)),
       );
@@ -5777,13 +5777,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3019)),
       );
@@ -5794,13 +5794,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3876)),
       );
@@ -5811,13 +5811,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6076)),
       );
@@ -5828,13 +5828,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3794)),
       );
@@ -5845,13 +5845,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(265)),
       );
@@ -5862,13 +5862,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6359)),
       );
@@ -5879,13 +5879,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6187)),
       );
@@ -5896,13 +5896,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6131)),
       );
@@ -5913,13 +5913,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3998)),
       );
@@ -5930,13 +5930,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3305)),
       );
@@ -5947,13 +5947,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4939)),
       );
@@ -5964,13 +5964,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6189)),
       );
@@ -5981,13 +5981,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6908)),
       );
@@ -5998,13 +5998,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6472)),
       );
@@ -6015,13 +6015,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5126)),
       );
@@ -6032,13 +6032,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(132)),
       );
@@ -6049,13 +6049,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4278)),
       );
@@ -6066,13 +6066,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6187)),
       );
@@ -6083,13 +6083,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6415)),
       );
@@ -6100,13 +6100,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4450)),
       );
@@ -6117,13 +6117,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4878)),
       );
@@ -6134,13 +6134,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6194)),
       );
@@ -6151,13 +6151,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5966)),
       );
@@ -6168,13 +6168,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5847)),
       );
@@ -6185,13 +6185,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6121)),
       );
@@ -6202,13 +6202,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5882)),
       );
@@ -6219,13 +6219,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2504)),
       );
@@ -6236,13 +6236,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7056)),
       );
@@ -6253,13 +6253,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5378)),
       );
@@ -6270,13 +6270,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6021)),
       );
@@ -6287,13 +6287,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6505)),
       );
@@ -6304,13 +6304,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4653)),
       );
@@ -6321,13 +6321,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5099)),
       );
@@ -6338,13 +6338,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6721)),
       );
@@ -6355,13 +6355,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2710)),
       );
@@ -6372,13 +6372,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6266)),
       );
@@ -6389,13 +6389,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6075)),
       );
@@ -6406,13 +6406,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6301)),
       );
@@ -6423,13 +6423,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2629)),
       );
@@ -6440,13 +6440,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3575)),
       );
@@ -6457,13 +6457,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2580)),
       );
@@ -6474,13 +6474,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4461)),
       );
@@ -6491,13 +6491,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4009)),
       );
@@ -6508,13 +6508,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5088)),
       );
@@ -6525,13 +6525,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3846)),
       );
@@ -6542,13 +6542,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4226)),
       );
@@ -6559,13 +6559,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3249)),
       );
@@ -6576,13 +6576,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4876)),
       );
@@ -6593,13 +6593,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3131)),
       );
@@ -6610,13 +6610,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4285)),
       );
@@ -6627,13 +6627,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3074)),
       );
@@ -6644,13 +6644,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2546)),
       );
@@ -6661,13 +6661,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6387)),
       );
@@ -6678,13 +6678,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6239)),
       );
@@ -6695,13 +6695,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5848)),
       );
@@ -6712,13 +6712,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3326)),
       );
@@ -6729,13 +6729,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7015)),
       );
@@ -6746,13 +6746,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6321)),
       );
@@ -6763,13 +6763,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2853)),
       );
@@ -6780,13 +6780,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4658)),
       );
@@ -6797,13 +6797,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1625)),
       );
@@ -6814,13 +6814,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5031)),
       );
@@ -6831,13 +6831,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7217)),
       );
@@ -6848,13 +6848,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3076)),
       );
@@ -6865,13 +6865,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3205)),
       );
@@ -6882,13 +6882,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4280)),
       );
@@ -6899,13 +6899,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1528)),
       );
@@ -6916,13 +6916,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4377)),
       );
@@ -6933,13 +6933,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2820)),
       );
@@ -6950,13 +6950,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3682)),
       );
@@ -6967,13 +6967,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1101)),
       );
@@ -6984,13 +6984,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2702)),
       );
@@ -7001,13 +7001,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6267)),
       );
@@ -7018,13 +7018,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6195)),
       );
@@ -7035,13 +7035,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3776)),
       );
@@ -7052,13 +7052,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4381)),
       );
@@ -7069,13 +7069,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2754)),
       );
@@ -7086,13 +7086,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4481)),
       );
@@ -7103,13 +7103,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3249)),
       );
@@ -7120,13 +7120,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4876)),
       );
@@ -7137,13 +7137,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4211)),
       );
@@ -7154,13 +7154,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4647)),
       );
@@ -7171,13 +7171,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2758)),
       );
@@ -7188,13 +7188,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6414)),
       );
@@ -7205,13 +7205,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1607)),
       );
@@ -7222,13 +7222,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5765)),
       );
@@ -7239,13 +7239,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7246)),
       );
@@ -7256,13 +7256,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4310)),
       );
@@ -7273,13 +7273,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4020)),
       );
@@ -7290,13 +7290,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5765)),
       );
@@ -7307,13 +7307,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1600)),
       );
@@ -7324,13 +7324,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2604)),
       );
@@ -7341,13 +7341,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2724)),
       );
@@ -7358,13 +7358,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3087)),
       );
@@ -7375,13 +7375,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2941)),
       );
@@ -7392,13 +7392,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6798)),
       );
@@ -7409,13 +7409,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3649)),
       );
@@ -7426,13 +7426,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4527)),
       );
@@ -7443,13 +7443,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6230)),
       );
@@ -7460,13 +7460,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(226)),
       );
@@ -7477,13 +7477,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3932)),
       );
@@ -7494,13 +7494,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6246)),
       );
@@ -7511,13 +7511,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3249)),
       );
@@ -7528,13 +7528,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5317)),
       );
@@ -7545,13 +7545,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2857)),
       );
@@ -7562,13 +7562,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7042)),
       );
@@ -7579,13 +7579,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2864)),
       );
@@ -7596,13 +7596,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4939)),
       );
@@ -7613,13 +7613,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3306)),
       );
@@ -7630,13 +7630,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3611)),
       );
@@ -7647,13 +7647,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4059)),
       );
@@ -7664,13 +7664,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5801)),
       );
@@ -7681,13 +7681,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2591)),
       );
@@ -7698,13 +7698,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5429)),
       );
@@ -7715,13 +7715,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3631)),
       );
@@ -7732,13 +7732,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3000)),
       );
@@ -7749,13 +7749,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3560)),
       );
@@ -7766,13 +7766,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7022)),
       );
@@ -7783,13 +7783,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1839)),
       );
@@ -7800,13 +7800,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7009)),
       );
@@ -7817,13 +7817,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4563)),
       );
@@ -7834,13 +7834,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2645)),
       );
@@ -7851,13 +7851,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2627)),
       );
@@ -7868,13 +7868,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4426)),
       );
@@ -7885,13 +7885,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6231)),
       );
@@ -7902,13 +7902,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5663)),
       );
@@ -7919,13 +7919,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4755)),
       );
@@ -7936,13 +7936,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5966)),
       );
@@ -7953,13 +7953,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2661)),
       );
@@ -7970,13 +7970,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3219)),
       );
@@ -7987,13 +7987,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6882)),
       );
@@ -8004,13 +8004,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3605)),
       );
@@ -8021,13 +8021,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5611)),
       );
@@ -8038,13 +8038,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3337)),
       );
@@ -8055,13 +8055,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3462)),
       );
@@ -8072,13 +8072,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4308)),
       );
@@ -8089,13 +8089,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3003)),
       );
@@ -8106,13 +8106,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3646)),
       );
@@ -8123,13 +8123,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3721)),
       );
@@ -8140,13 +8140,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1689)),
       );
@@ -8157,13 +8157,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6300)),
       );
@@ -8174,13 +8174,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5052)),
       );
@@ -8191,13 +8191,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5333)),
       );
@@ -8208,13 +8208,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3559)),
       );
@@ -8225,13 +8225,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5141)),
       );
@@ -8242,13 +8242,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2711)),
       );
@@ -8259,13 +8259,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2633)),
       );
@@ -8276,13 +8276,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6194)),
       );
@@ -8293,13 +8293,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2887)),
       );
@@ -8310,13 +8310,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3353)),
       );
@@ -8327,13 +8327,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2600)),
       );
@@ -8344,13 +8344,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4445)),
       );
@@ -8361,13 +8361,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2273)),
       );
@@ -8378,13 +8378,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3491)),
       );
@@ -8395,13 +8395,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6904)),
       );
@@ -8412,13 +8412,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3462)),
       );
@@ -8429,13 +8429,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3338)),
       );
@@ -8446,13 +8446,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3212)),
       );
@@ -8463,13 +8463,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1140)),
       );
@@ -8480,13 +8480,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2009)),
       );
@@ -8497,13 +8497,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7121)),
       );
@@ -8514,13 +8514,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7020)),
       );
@@ -8531,13 +8531,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4323)),
       );
@@ -8548,13 +8548,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3902)),
       );
@@ -8565,13 +8565,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6799)),
       );
@@ -8582,13 +8582,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(186)),
       );
@@ -8599,13 +8599,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4327)),
       );
@@ -8616,13 +8616,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1355)),
       );
@@ -8633,13 +8633,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4658)),
       );
@@ -8650,13 +8650,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1840)),
       );
@@ -8667,13 +8667,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3771)),
       );
@@ -8684,13 +8684,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1808)),
       );
@@ -8701,13 +8701,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4006)),
       );
@@ -8718,13 +8718,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1475)),
       );
@@ -8735,13 +8735,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3284)),
       );
@@ -8752,13 +8752,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5582)),
       );
@@ -8769,13 +8769,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2207)),
       );
@@ -8786,13 +8786,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2933)),
       );
@@ -8803,13 +8803,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2847)),
       );
@@ -8820,13 +8820,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2501)),
       );
@@ -8837,13 +8837,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3875)),
       );
@@ -8854,13 +8854,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(195)),
       );
@@ -8871,13 +8871,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4088)),
       );
@@ -8888,13 +8888,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5318)),
       );
@@ -8905,13 +8905,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3014)),
       );
@@ -8922,13 +8922,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4701)),
       );
@@ -8939,13 +8939,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4102)),
       );
@@ -8956,13 +8956,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5802)),
       );
@@ -8973,13 +8973,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3866)),
       );
@@ -8990,13 +8990,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4570)),
       );
@@ -9007,13 +9007,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5847)),
       );
@@ -9024,13 +9024,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1605)),
       );
@@ -9041,13 +9041,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4140)),
       );
@@ -9058,13 +9058,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5414)),
       );
@@ -9075,13 +9075,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4888)),
       );
@@ -9092,13 +9092,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4767)),
       );
@@ -9109,13 +9109,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4490)),
       );
@@ -9126,13 +9126,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(353)),
       );
@@ -9143,13 +9143,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6251)),
       );
@@ -9160,13 +9160,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2844)),
       );
@@ -9177,13 +9177,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3328)),
       );
@@ -9194,13 +9194,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2990)),
       );
@@ -9211,13 +9211,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3767)),
       );
@@ -9228,13 +9228,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7008)),
       );
@@ -9245,13 +9245,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2700)),
       );
@@ -9262,13 +9262,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5151)),
       );
@@ -9279,13 +9279,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4157)),
       );
@@ -9296,13 +9296,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6436)),
       );
@@ -9313,13 +9313,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4207)),
       );
@@ -9330,13 +9330,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3382)),
       );
@@ -9347,13 +9347,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3986)),
       );
@@ -9364,13 +9364,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2985)),
       );
@@ -9381,13 +9381,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4350)),
       );
@@ -9398,13 +9398,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6714)),
       );
@@ -9415,13 +9415,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5847)),
       );
@@ -9432,13 +9432,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4887)),
       );
@@ -9449,13 +9449,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4547)),
       );
@@ -9466,13 +9466,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4736)),
       );
@@ -9483,13 +9483,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2660)),
       );
@@ -9500,13 +9500,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3294)),
       );
@@ -9517,13 +9517,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6350)),
       );
@@ -9534,13 +9534,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5811)),
       );
@@ -9551,13 +9551,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3354)),
       );
@@ -9568,13 +9568,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3435)),
       );
@@ -9585,13 +9585,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3018)),
       );
@@ -9602,13 +9602,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2138)),
       );
@@ -9619,13 +9619,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2111)),
       );
@@ -9636,13 +9636,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6350)),
       );
@@ -9653,13 +9653,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(784)),
       );
@@ -9670,13 +9670,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4688)),
       );
@@ -9687,13 +9687,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1602)),
       );
@@ -9704,13 +9704,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3631)),
       );
@@ -9721,13 +9721,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1608)),
       );
@@ -9738,13 +9738,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3996)),
       );
@@ -9755,13 +9755,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5528)),
       );
@@ -9772,13 +9772,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5751)),
       );
@@ -9789,13 +9789,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3997)),
       );
@@ -9806,13 +9806,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3029)),
       );
@@ -9823,13 +9823,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3304)),
       );
@@ -9840,13 +9840,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2759)),
       );
@@ -9857,13 +9857,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(294)),
       );
@@ -9874,13 +9874,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4492)),
       );
@@ -9891,13 +9891,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4705)),
       );
@@ -9908,13 +9908,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2746)),
       );
@@ -9925,13 +9925,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5087)),
       );
@@ -9942,13 +9942,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4342)),
       );
@@ -9959,13 +9959,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5442)),
       );
@@ -9976,13 +9976,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4484)),
       );
@@ -9993,13 +9993,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2645)),
       );
@@ -10010,13 +10010,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4020)),
       );
@@ -10027,13 +10027,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6554)),
       );
@@ -10044,13 +10044,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5536)),
       );
@@ -10061,13 +10061,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4650)),
       );
@@ -10078,13 +10078,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5325)),
       );
@@ -10095,13 +10095,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2811)),
       );
@@ -10112,13 +10112,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6483)),
       );
@@ -10129,13 +10129,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3683)),
       );
@@ -10146,13 +10146,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5223)),
       );
@@ -10163,13 +10163,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6266)),
       );
@@ -10180,13 +10180,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6302)),
       );
@@ -10197,13 +10197,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5213)),
       );
@@ -10214,13 +10214,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5976)),
       );
@@ -10231,13 +10231,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4005)),
       );
@@ -10248,13 +10248,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2689)),
       );
@@ -10265,13 +10265,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2316)),
       );
@@ -10282,13 +10282,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1197)),
       );
@@ -10299,13 +10299,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4349)),
       );
@@ -10316,13 +10316,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3384)),
       );
@@ -10333,13 +10333,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3931)),
       );
@@ -10350,13 +10350,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6399)),
       );
@@ -10367,13 +10367,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5318)),
       );
@@ -10384,13 +10384,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1605)),
       );
@@ -10401,13 +10401,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5628)),
       );
@@ -10418,13 +10418,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2842)),
       );
@@ -10435,13 +10435,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1831)),
       );
@@ -10452,13 +10452,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5333)),
       );
@@ -10469,13 +10469,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2801)),
       );
@@ -10486,13 +10486,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1297)),
       );
@@ -10503,13 +10503,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3887)),
       );
@@ -10520,13 +10520,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2942)),
       );
@@ -10537,13 +10537,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4569)),
       );
@@ -10554,13 +10554,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6687)),
       );
@@ -10571,13 +10571,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5106)),
       );
@@ -10588,13 +10588,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3108)),
       );
@@ -10605,13 +10605,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6473)),
       );
@@ -10622,13 +10622,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5801)),
       );
@@ -10639,13 +10639,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6943)),
       );
@@ -10656,13 +10656,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3646)),
       );
@@ -10673,13 +10673,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5015)),
       );
@@ -10690,13 +10690,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3075)),
       );
@@ -10707,13 +10707,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5855)),
       );
@@ -10724,13 +10724,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3037)),
       );
@@ -10741,13 +10741,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7035)),
       );
@@ -10758,13 +10758,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5120)),
       );
@@ -10775,13 +10775,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4095)),
       );
@@ -10792,13 +10792,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3546)),
       );
@@ -10809,13 +10809,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6679)),
       );
@@ -10826,13 +10826,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4526)),
       );
@@ -10843,13 +10843,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4795)),
       );
@@ -10860,13 +10860,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6700)),
       );
@@ -10877,13 +10877,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2667)),
       );
@@ -10894,13 +10894,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2987)),
       );
@@ -10911,13 +10911,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4494)),
       );
@@ -10928,13 +10928,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3786)),
       );
@@ -10945,13 +10945,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7222)),
       );
@@ -10962,13 +10962,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3822)),
       );
@@ -10979,13 +10979,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7008)),
       );
@@ -10996,13 +10996,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3019)),
       );
@@ -11013,13 +11013,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3346)),
       );
@@ -11030,13 +11030,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4226)),
       );
@@ -11047,13 +11047,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4150)),
       );
@@ -11064,13 +11064,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1600)),
       );
@@ -11081,13 +11081,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4867)),
       );
@@ -11098,13 +11098,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5967)),
       );
@@ -11115,13 +11115,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(7163)),
       );
@@ -11132,13 +11132,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(328)),
       );
@@ -11149,13 +11149,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6611)),
       );
@@ -11166,13 +11166,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6727)),
       );
@@ -11183,13 +11183,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4666)),
       );
@@ -11200,13 +11200,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5592)),
       );
@@ -11217,13 +11217,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2846)),
       );
@@ -11234,13 +11234,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3647)),
       );
@@ -11251,13 +11251,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4211)),
       );
@@ -11268,13 +11268,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2857)),
       );
@@ -11285,13 +11285,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5188)),
       );
@@ -11302,13 +11302,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(245)),
       );
@@ -11319,13 +11319,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6763)),
       );
@@ -11336,13 +11336,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3086)),
       );
@@ -11353,13 +11353,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4309)),
       );
@@ -11370,13 +11370,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2699)),
       );
@@ -11387,13 +11387,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4216)),
       );
@@ -11404,13 +11404,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6753)),
       );
@@ -11421,13 +11421,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5106)),
       );
@@ -11438,13 +11438,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1145)),
       );
@@ -11455,13 +11455,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1604)),
       );
@@ -11472,13 +11472,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2661)),
       );
@@ -11489,13 +11489,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5680)),
       );
@@ -11506,13 +11506,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3033)),
       );
@@ -11523,13 +11523,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4211)),
       );
@@ -11540,13 +11540,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2560)),
       );
@@ -11557,13 +11557,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3354)),
       );
@@ -11574,13 +11574,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2898)),
       );
@@ -11591,13 +11591,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4065)),
       );
@@ -11608,13 +11608,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(315)),
       );
@@ -11625,13 +11625,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3996)),
       );
@@ -11642,13 +11642,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5756)),
       );
@@ -11659,13 +11659,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4922)),
       );
@@ -11676,13 +11676,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3648)),
       );
@@ -11693,13 +11693,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3547)),
       );
@@ -11710,13 +11710,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3283)),
       );
@@ -11727,13 +11727,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(295)),
       );
@@ -11744,13 +11744,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4346)),
       );
@@ -11761,13 +11761,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(362)),
       );
@@ -11778,13 +11778,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2561)),
       );
@@ -11795,13 +11795,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4657)),
       );
@@ -11812,13 +11812,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2824)),
       );
@@ -11829,13 +11829,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4711)),
       );
@@ -11846,13 +11846,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1448)),
       );
@@ -11863,13 +11863,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3492)),
       );
@@ -11880,13 +11880,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7041)),
       );
@@ -11897,13 +11897,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2985)),
       );
@@ -11914,13 +11914,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3881)),
       );
@@ -11931,13 +11931,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2611)),
       );
@@ -11948,13 +11948,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2821)),
       );
@@ -11965,13 +11965,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5036)),
       );
@@ -11982,13 +11982,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4749)),
       );
@@ -11999,13 +11999,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3606)),
       );
@@ -12016,13 +12016,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4611)),
       );
@@ -12033,13 +12033,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3610)),
       );
@@ -12050,13 +12050,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3295)),
       );
@@ -12067,13 +12067,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3218)),
       );
@@ -12084,13 +12084,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3986)),
       );
@@ -12101,13 +12101,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5758)),
       );
@@ -12118,13 +12118,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4226)),
       );
@@ -12135,13 +12135,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2887)),
       );
@@ -12152,13 +12152,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5370)),
       );
@@ -12169,13 +12169,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4495)),
       );
@@ -12186,13 +12186,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6386)),
       );
@@ -12203,13 +12203,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2854)),
       );
@@ -12220,13 +12220,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2549)),
       );
@@ -12237,13 +12237,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4728)),
       );
@@ -12254,13 +12254,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6352)),
       );
@@ -12271,13 +12271,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1601)),
       );
@@ -12288,13 +12288,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4646)),
       );
@@ -12305,13 +12305,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6230)),
       );
@@ -12322,13 +12322,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(893)),
       );
@@ -12339,13 +12339,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5662)),
       );
@@ -12356,13 +12356,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6580)),
       );
@@ -12373,13 +12373,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4271)),
       );
@@ -12390,13 +12390,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4052)),
       );
@@ -12407,13 +12407,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2919)),
       );
@@ -12424,13 +12424,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5427)),
       );
@@ -12441,13 +12441,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2821)),
       );
@@ -12458,13 +12458,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4216)),
       );
@@ -12475,13 +12475,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5607)),
       );
@@ -12492,13 +12492,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1048)),
       );
@@ -12509,13 +12509,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1255)),
       );
@@ -12526,13 +12526,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5042)),
       );
@@ -12543,13 +12543,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6365)),
       );
@@ -12560,13 +12560,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6202)),
       );
@@ -12577,13 +12577,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3556)),
       );
@@ -12594,13 +12594,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3096)),
       );
@@ -12611,13 +12611,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2985)),
       );
@@ -12628,13 +12628,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6748)),
       );
@@ -12645,13 +12645,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6358)),
       );
@@ -12662,13 +12662,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2534)),
       );
@@ -12679,13 +12679,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1819)),
       );
@@ -12696,13 +12696,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4461)),
       );
@@ -12713,13 +12713,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6939)),
       );
@@ -12730,13 +12730,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3021)),
       );
@@ -12747,13 +12747,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6074)),
       );
@@ -12764,13 +12764,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6688)),
       );
@@ -12781,13 +12781,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5271)),
       );
@@ -12798,13 +12798,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3111)),
       );
@@ -12815,13 +12815,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3244)),
       );
@@ -12832,13 +12832,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5415)),
       );
@@ -12849,13 +12849,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6718)),
       );
@@ -12866,13 +12866,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2974)),
       );
@@ -12883,13 +12883,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(749)),
       );
@@ -12900,13 +12900,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4650)),
       );
@@ -12917,13 +12917,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2096)),
       );
@@ -12934,13 +12934,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6316)),
       );
@@ -12951,13 +12951,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5628)),
       );
@@ -12968,13 +12968,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3776)),
       );
@@ -12985,13 +12985,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3874)),
       );
@@ -13002,13 +13002,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4454)),
       );
@@ -13019,13 +13019,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4427)),
       );
@@ -13036,13 +13036,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5066)),
       );
@@ -13053,13 +13053,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2479)),
       );
@@ -13070,13 +13070,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1609)),
       );
@@ -13087,13 +13087,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2732)),
       );
@@ -13104,13 +13104,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3173)),
       );
@@ -13121,13 +13121,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3118)),
       );
@@ -13138,13 +13138,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2956)),
       );
@@ -13155,13 +13155,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2678)),
       );
@@ -13172,13 +13172,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3610)),
       );
@@ -13189,13 +13189,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4547)),
       );
@@ -13206,13 +13206,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2023)),
       );
@@ -13223,13 +13223,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2897)),
       );
@@ -13240,13 +13240,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3771)),
       );
@@ -13257,13 +13257,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5752)),
       );
@@ -13274,13 +13274,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2909)),
       );
@@ -13291,13 +13291,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4059)),
       );
@@ -13308,13 +13308,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4225)),
       );
@@ -13325,13 +13325,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6104)),
       );
@@ -13342,13 +13342,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3306)),
       );
@@ -13359,13 +13359,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4673)),
       );
@@ -13376,13 +13376,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2845)),
       );
@@ -13393,13 +13393,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4876)),
       );
@@ -13410,13 +13410,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1952)),
       );
@@ -13427,13 +13427,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6714)),
       );
@@ -13444,13 +13444,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6470)),
       );
@@ -13461,13 +13461,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6302)),
       );
@@ -13478,13 +13478,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(753)),
       );
@@ -13495,13 +13495,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3786)),
       );
@@ -13512,13 +13512,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2888)),
       );
@@ -13529,13 +13529,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6230)),
       );
@@ -13546,13 +13546,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5230)),
       );
@@ -13563,13 +13563,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2579)),
       );
@@ -13580,13 +13580,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2839)),
       );
@@ -13597,13 +13597,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(624)),
       );
@@ -13614,13 +13614,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2882)),
       );
@@ -13631,13 +13631,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6679)),
       );
@@ -13648,13 +13648,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4261)),
       );
@@ -13665,13 +13665,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4427)),
       );
@@ -13682,13 +13682,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5471)),
       );
@@ -13699,13 +13699,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3586)),
       );
@@ -13716,13 +13716,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6366)),
       );
@@ -13733,13 +13733,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2470)),
       );
@@ -13750,13 +13750,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6388)),
       );
@@ -13767,13 +13767,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1809)),
       );
@@ -13784,13 +13784,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1360)),
       );
@@ -13801,13 +13801,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3465)),
       );
@@ -13818,13 +13818,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2626)),
       );
@@ -13835,13 +13835,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3411)),
       );
@@ -13852,13 +13852,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4270)),
       );
@@ -13869,13 +13869,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5006)),
       );
@@ -13886,13 +13886,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(229)),
       );
@@ -13903,13 +13903,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2206)),
       );
@@ -13920,13 +13920,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2798)),
       );
@@ -13937,13 +13937,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5810)),
       );
@@ -13954,13 +13954,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2689)),
       );
@@ -13971,13 +13971,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6679)),
       );
@@ -13988,13 +13988,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3997)),
       );
@@ -14005,13 +14005,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3620)),
       );
@@ -14022,13 +14022,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2493)),
       );
@@ -14039,13 +14039,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2779)),
       );
@@ -14056,13 +14056,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(209)),
       );
@@ -14073,13 +14073,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2721)),
       );
@@ -14090,13 +14090,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4437)),
       );
@@ -14107,13 +14107,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6806)),
       );
@@ -14124,13 +14124,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6232)),
       );
@@ -14141,13 +14141,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5142)),
       );
@@ -14158,13 +14158,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4754)),
       );
@@ -14175,13 +14175,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4327)),
       );
@@ -14192,13 +14192,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2777)),
       );
@@ -14209,13 +14209,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6231)),
       );
@@ -14226,13 +14226,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6021)),
       );
@@ -14243,13 +14243,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6827)),
       );
@@ -14260,13 +14260,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5628)),
       );
@@ -14277,13 +14277,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5529)),
       );
@@ -14294,13 +14294,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2039)),
       );
@@ -14311,13 +14311,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1458)),
       );
@@ -14328,13 +14328,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4428)),
       );
@@ -14345,13 +14345,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2294)),
       );
@@ -14362,13 +14362,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(626)),
       );
@@ -14379,13 +14379,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3140)),
       );
@@ -14396,13 +14396,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4052)),
       );
@@ -14413,13 +14413,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6109)),
       );
@@ -14430,13 +14430,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2650)),
       );
@@ -14447,13 +14447,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(1614)),
       );
@@ -14464,13 +14464,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2813)),
       );
@@ -14481,13 +14481,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5335)),
       );
@@ -14498,13 +14498,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3064)),
       );
@@ -14515,13 +14515,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4762)),
       );
@@ -14532,13 +14532,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4006)),
       );
@@ -14549,13 +14549,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4020)),
       );
@@ -14566,13 +14566,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5757)),
       );
@@ -14583,13 +14583,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2512)),
       );
@@ -14600,13 +14600,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4270)),
       );
@@ -14617,13 +14617,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(204)),
       );
@@ -14634,13 +14634,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6372)),
       );
@@ -14651,13 +14651,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5971)),
       );
@@ -14668,13 +14668,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1715)),
       );
@@ -14685,13 +14685,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6232)),
       );
@@ -14702,13 +14702,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4429)),
       );
@@ -14719,13 +14719,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3601)),
       );
@@ -14736,13 +14736,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6204)),
       );
@@ -14753,13 +14753,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3384)),
       );
@@ -14770,13 +14770,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6022)),
       );
@@ -14787,13 +14787,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(238)),
       );
@@ -14804,13 +14804,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4429)),
       );
@@ -14821,13 +14821,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(1830)),
       );
@@ -14838,13 +14838,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6360)),
       );
@@ -14855,13 +14855,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5160)),
       );
@@ -14872,13 +14872,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(246)),
       );
@@ -14889,13 +14889,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6714)),
       );
@@ -14906,13 +14906,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3328)),
       );
@@ -14923,13 +14923,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3153)),
       );
@@ -14940,13 +14940,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(1609)),
       );
@@ -14957,13 +14957,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6736)),
       );
@@ -14974,13 +14974,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3282)),
       );
@@ -14991,13 +14991,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2075)),
       );
@@ -15008,13 +15008,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2625)),
       );
@@ -15025,13 +15025,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2688)),
       );
@@ -15042,13 +15042,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4282)),
       );
@@ -15059,13 +15059,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3293)),
       );
@@ -15076,13 +15076,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(605)),
       );
@@ -15093,13 +15093,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4976)),
       );
@@ -15110,13 +15110,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5107)),
       );
@@ -15127,13 +15127,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1382)),
       );
@@ -15144,13 +15144,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(809)),
       );
@@ -15161,13 +15161,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5582)),
       );
@@ -15178,13 +15178,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3661)),
       );
@@ -15195,13 +15195,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4043)),
       );
@@ -15212,13 +15212,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2668)),
       );
@@ -15229,13 +15229,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6699)),
       );
@@ -15246,13 +15246,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4751)),
       );
@@ -15263,13 +15263,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3175)),
       );
@@ -15280,13 +15280,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2468)),
       );
@@ -15297,13 +15297,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4938)),
       );
@@ -15314,13 +15314,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6743)),
       );
@@ -15331,13 +15331,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(260)),
       );
@@ -15348,13 +15348,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3426)),
       );
@@ -15365,13 +15365,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4005)),
       );
@@ -15382,13 +15382,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(7009)),
       );
@@ -15399,13 +15399,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6715)),
       );
@@ -15416,13 +15416,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4426)),
       );
@@ -15433,13 +15433,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6279)),
       );
@@ -15450,13 +15450,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3988)),
       );
@@ -15467,13 +15467,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3101)),
       );
@@ -15484,13 +15484,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4206)),
       );
@@ -15501,13 +15501,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2767)),
       );
@@ -15518,13 +15518,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6273)),
       );
@@ -15535,13 +15535,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4541)),
       );
@@ -15552,13 +15552,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4867)),
       );
@@ -15569,13 +15569,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4233)),
       );
@@ -15586,13 +15586,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6763)),
       );
@@ -15603,13 +15603,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2502)),
       );
@@ -15620,13 +15620,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2549)),
       );
@@ -15637,13 +15637,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4945)),
       );
@@ -15654,13 +15654,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3604)),
       );
@@ -15671,13 +15671,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5801)),
       );
@@ -15688,13 +15688,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4667)),
       );
@@ -15705,13 +15705,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4426)),
       );
@@ -15722,13 +15722,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(4718)),
       );
@@ -15739,13 +15739,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6197)),
       );
@@ -15756,13 +15756,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.king,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6742)),
       );
@@ -15773,13 +15773,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4026)),
       );
@@ -15790,13 +15790,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2037)),
       );
@@ -15807,13 +15807,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6805)),
       );
@@ -15824,13 +15824,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3346)),
       );
@@ -15841,13 +15841,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5746)),
       );
@@ -15858,13 +15858,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(211)),
       );
@@ -15875,13 +15875,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(6203)),
       );
@@ -15892,13 +15892,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6682)),
       );
@@ -15909,13 +15909,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3428)),
       );
@@ -15926,13 +15926,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4436)),
       );
@@ -15943,13 +15943,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6749)),
       );
@@ -15960,13 +15960,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2501)),
       );
@@ -15977,13 +15977,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5325)),
       );
@@ -15994,13 +15994,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2766)),
       );
@@ -16011,13 +16011,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2908)),
       );
@@ -16028,13 +16028,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5186)),
       );
@@ -16045,13 +16045,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2546)),
       );
@@ -16062,13 +16062,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.four,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6301)),
       );
@@ -16079,13 +16079,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3398)),
       );
@@ -16096,13 +16096,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2603)),
       );
@@ -16113,13 +16113,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2419)),
       );
@@ -16130,13 +16130,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(1603)),
       );
@@ -16147,13 +16147,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5627)),
       );
@@ -16164,13 +16164,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(5979)),
       );
@@ -16181,13 +16181,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3228)),
       );
@@ -16198,13 +16198,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7036)),
       );
@@ -16215,13 +16215,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2603)),
       );
@@ -16232,13 +16232,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7238)),
       );
@@ -16249,13 +16249,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.five,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3216)),
       );
@@ -16266,13 +16266,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(5825)),
       );
@@ -16283,13 +16283,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5889)),
       );
@@ -16300,13 +16300,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(7036)),
       );
@@ -16317,13 +16317,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6280)),
       );
@@ -16334,13 +16334,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6023)),
       );
@@ -16351,13 +16351,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6269)),
       );
@@ -16368,13 +16368,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.deuce,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(7041)),
       );
@@ -16385,13 +16385,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(470)),
       );
@@ -16402,13 +16402,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3293)),
       );
@@ -16419,13 +16419,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2746)),
       );
@@ -16436,13 +16436,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.six,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2184)),
       );
@@ -16453,13 +16453,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6051)),
       );
@@ -16470,13 +16470,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.four,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2561)),
       );
@@ -16487,13 +16487,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.jack,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4095)),
       );
@@ -16504,13 +16504,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6031)),
       );
@@ -16521,13 +16521,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.eight,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3647)),
       );
@@ -16538,13 +16538,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5253)),
       );
@@ -16555,13 +16555,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(4321)),
       );
@@ -16572,13 +16572,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.six,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(274)),
       );
@@ -16589,13 +16589,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(2754)),
       );
@@ -16606,13 +16606,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.heart),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6199)),
       );
@@ -16623,13 +16623,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5340)),
       );
@@ -16640,13 +16640,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.queen, suit: Suit.spade),
+          Card( Rank.king,  Suit.club),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.queen,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5526)),
       );
@@ -16657,13 +16657,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(3930)),
       );
@@ -16674,13 +16674,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.king, suit: Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.king,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(6268)),
       );
@@ -16691,13 +16691,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.queen,  Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(4327)),
       );
@@ -16708,13 +16708,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.jack,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3217)),
       );
@@ -16725,13 +16725,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.nine, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.club),
+          Card( Rank.nine,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.ten,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5977)),
       );
@@ -16742,13 +16742,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ace,  Suit.spade),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.queen,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2579)),
       );
@@ -16759,13 +16759,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(2858)),
       );
@@ -16776,13 +16776,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.spade),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.five, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.trey,  Suit.spade),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.five,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.ace,  Suit.club),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(3172)),
       );
@@ -16793,13 +16793,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5931)),
       );
@@ -16810,13 +16810,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(6000)),
       );
@@ -16827,13 +16827,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.spade),
-          Card(rank: Rank.deuce, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.five, suit: Suit.club),
-          Card(rank: Rank.eight, suit: Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.five,  Suit.spade),
+          Card( Rank.deuce,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.five,  Suit.club),
+          Card( Rank.eight,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(3121)),
       );
@@ -16844,13 +16844,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.heart),
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.diamond),
-          Card(rank: Rank.queen, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.heart),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.eight,  Suit.heart),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ace,  Suit.diamond),
+          Card( Rank.queen,  Suit.heart),
+          Card( Rank.seven,  Suit.heart),
         })),
         equals(MadeHand.fromIndex(245)),
       );
@@ -16861,13 +16861,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.club),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.ten, suit: Suit.diamond),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.six, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.jack,  Suit.club),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.ten,  Suit.diamond),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.six,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(2963)),
       );
@@ -16878,13 +16878,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.heart),
-          Card(rank: Rank.nine, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.four, suit: Suit.heart),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.club),
+          Card( Rank.trey,  Suit.heart),
+          Card( Rank.nine,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.four,  Suit.heart),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.king,  Suit.club),
         })),
         equals(MadeHand.fromIndex(6832)),
       );
@@ -16895,13 +16895,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.heart),
-          Card(rank: Rank.four, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.ten, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.club),
-          Card(rank: Rank.nine, suit: Suit.spade),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.seven,  Suit.heart),
+          Card( Rank.four,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.ten,  Suit.club),
+          Card( Rank.nine,  Suit.club),
+          Card( Rank.nine,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4563)),
       );
@@ -16912,13 +16912,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.spade),
-          Card(rank: Rank.ace, suit: Suit.heart),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.king,  Suit.diamond),
+          Card( Rank.six,  Suit.spade),
+          Card( Rank.eight,  Suit.spade),
+          Card( Rank.ace,  Suit.heart),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(4648)),
       );
@@ -16929,13 +16929,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.spade),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.king, suit: Suit.heart),
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.diamond),
+          Card( Rank.ten,  Suit.heart),
+          Card( Rank.seven,  Suit.spade),
+          Card( Rank.jack,  Suit.spade),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.king,  Suit.heart),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.diamond),
         })),
         equals(MadeHand.fromIndex(3648)),
       );
@@ -16946,13 +16946,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.ten, suit: Suit.spade),
-          Card(rank: Rank.six, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.spade),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.club),
+          Card( Rank.ten,  Suit.spade),
+          Card( Rank.six,  Suit.diamond),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.spade),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5004)),
       );
@@ -16963,13 +16963,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.eight, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.jack, suit: Suit.diamond),
-          Card(rank: Rank.jack, suit: Suit.heart),
-          Card(rank: Rank.queen, suit: Suit.diamond),
-          Card(rank: Rank.nine, suit: Suit.spade),
-          Card(rank: Rank.nine, suit: Suit.club),
+          Card( Rank.eight,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.jack,  Suit.diamond),
+          Card( Rank.jack,  Suit.heart),
+          Card( Rank.queen,  Suit.diamond),
+          Card( Rank.nine,  Suit.spade),
+          Card( Rank.nine,  Suit.club),
         })),
         equals(MadeHand.fromIndex(2844)),
       );
@@ -16980,13 +16980,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.king, suit: Suit.spade),
-          Card(rank: Rank.four, suit: Suit.club),
-          Card(rank: Rank.seven, suit: Suit.diamond),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.four, suit: Suit.spade),
-          Card(rank: Rank.eight, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.spade),
+          Card( Rank.king,  Suit.spade),
+          Card( Rank.four,  Suit.club),
+          Card( Rank.seven,  Suit.diamond),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.four,  Suit.spade),
+          Card( Rank.eight,  Suit.club),
+          Card( Rank.trey,  Suit.spade),
         })),
         equals(MadeHand.fromIndex(5611)),
       );
@@ -16997,13 +16997,13 @@ void main() {
         () {
       expect(
         MadeHand.best(ImmutableCardSet.of({
-          Card(rank: Rank.trey, suit: Suit.diamond),
-          Card(rank: Rank.seven, suit: Suit.club),
-          Card(rank: Rank.five, suit: Suit.diamond),
-          Card(rank: Rank.six, suit: Suit.club),
-          Card(rank: Rank.trey, suit: Suit.club),
-          Card(rank: Rank.deuce, suit: Suit.diamond),
-          Card(rank: Rank.eight, suit: Suit.club),
+          Card( Rank.trey,  Suit.diamond),
+          Card( Rank.seven,  Suit.club),
+          Card( Rank.five,  Suit.diamond),
+          Card( Rank.six,  Suit.club),
+          Card( Rank.trey,  Suit.club),
+          Card( Rank.deuce,  Suit.diamond),
+          Card( Rank.eight,  Suit.club),
         })),
         equals(MadeHand.fromIndex(5946)),
       );

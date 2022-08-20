@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:math' as math;
 import 'package:meta/meta.dart';
 import './rank.dart';
 import './suit.dart';
@@ -33,8 +33,7 @@ import './suit.dart';
 ///                //   Card(Rank.king, Suit.club)
 ///                // ]
 /// ```
-@immutable
-class Card implements Comparable {
+abstract class Card {
   /// Creates a [Card] from Rank and Suit.
   ///
   /// ```dart
@@ -43,12 +42,11 @@ class Card implements Comparable {
   /// final TreyOfDiamond = Card(rank: Rank.trey, suit: Suit.diamond);
   /// final kingOfClub = Card(rank: Rank.king, suit: Suit.club);
   /// ```
-  Card({required Rank rank, required Suit suit})
-      : index = pow(2, rank.index + suit.index * 13).toInt();
+  const factory Card(Rank rank, Suit suit) = _RankSuitBasedCard;
 
   /// Creates a [Card] from a hash int value.
   @protected
-  const Card.fromIndex(this.index);
+  const factory Card.fromIndex(int index) = _IndexBasedCard;
 
   /// Creates a [Card] by a 2-character-length [String].
   ///
@@ -63,30 +61,37 @@ class Card implements Comparable {
       throw CardParseFailure(value);
     }
 
-    return Card(rank: Rank.parse(value[0]), suit: Suit.parse(value[1]));
+    return _RankSuitBasedCard(Rank.parse(value[0]), Suit.parse(value[1]));
   }
 
   /// Returns the hash integer value of this card.
-  final int index;
+  int get index;
 
   /// The [Rank] of this card.
-  Rank get rank => Rank.fromIndex((log(index) / log(2)).floor() % 13);
+  Rank get rank;
 
   /// The [Suit] of this card.
-  Suit get suit => Suit.fromIndex(((log(index) / log(2)) / 13).floor());
-
-  @override
-  int compareTo(dynamic other) {
-    if (other is! Card) return 0;
-
-    if (suit != other.suit) {
-      return suit.index - other.suit.index;
-    }
-
-    return rank.index - other.rank.index;
-  }
+  Suit get suit;
 
   /// Returns a string representation. Ace of spade is `"As"`, 10 of heart is `"Th"` and deuce of diamond is `"2d"`.
+  @override
+  String toString();
+}
+
+@immutable
+class _IndexBasedCard implements Card {
+  const _IndexBasedCard(this.index);
+
+  @override
+  final int index;
+
+  @override
+  Rank get rank => Rank.fromIndex((math.log(index) / math.log(2)).floor() % 13);
+
+  @override
+  Suit get suit =>
+      Suit.fromIndex(((math.log(index) / math.log(2)) / 13).floor());
+
   @override
   String toString() => '$rank$suit';
 
@@ -96,6 +101,31 @@ class Card implements Comparable {
   @override
   bool operator ==(Object other) => other is Card && other.index == index;
 }
+
+@immutable
+class _RankSuitBasedCard implements Card {
+  const _RankSuitBasedCard(this.rank, this.suit);
+
+  @override
+  int get index => math.pow(2, rank.index + suit.index * 13).toInt();
+
+  @override
+  final Rank rank;
+
+  @override
+  final Suit suit;
+
+  @override
+  String toString() => '$rank$suit';
+
+  @override
+  int get hashCode => index;
+
+  @override
+  bool operator ==(Object other) => other is Card && other.index == index;
+}
+
+@immutable
 
 /// An exception that expresses `Card.parse()` failed due to the given String was invalid.
 class CardParseFailure implements Exception {
