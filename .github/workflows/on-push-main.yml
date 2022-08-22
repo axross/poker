@@ -24,3 +24,15 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           directory: coverage
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: release-please-action
+        uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          release-type: dart
+          package-name: poker
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
