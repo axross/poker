@@ -309,13 +309,6 @@ class HandRange {
     }
   }
 
-  /// Whether it contains all [CardPair]s in the given [HandRange].
-  bool contains(HandRange handRange) =>
-      _pocketRankPairs.containsAll(handRange._pocketRankPairs) &&
-      _suitedRankPairs.containsAll(handRange._suitedRankPairs) &&
-      _ofsuitRankPairs.containsAll(handRange._ofsuitRankPairs) &&
-      _individualCardPairs.containsAll(handRange._individualCardPairs);
-
   @override
   String toString() {
     String result = '';
