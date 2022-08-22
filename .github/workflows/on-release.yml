@@ -8,6 +8,7 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
+      - run: ls -al
       - name: Publish a new version of Dart package
         uses: k-paxian/dart-package-publisher@1.5
         with:
