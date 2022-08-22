@@ -1,0 +1,14 @@
+name: on Release
+on:
+  release:
+    - published
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish a new version of Dart package
+        uses: k-paxian/dart-package-publisher@1.5
+        with:
+          credentialJson: ${{ secrets.PUB_CREDENTIAL_JSON }}
+          skipTests: true
