@@ -12,7 +12,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.0.1"
-      - name: Install npm packages
+      - name: Install pub packages
         run: dart pub get
       - name: Run Unit Tests
         run: dart run test --coverage=coverage
@@ -25,10 +25,11 @@ jobs:
         with:
           directory: coverage
   release:
+    needs: [unit-test]
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: release-please-action
+      - name: Run Release Please
         uses: google-github-actions/release-please-action@v3
         with:
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}

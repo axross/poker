@@ -10,7 +10,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.0.1"
-      - name: Install npm packages
+      - name: Install pub packages
         run: dart pub get
       - name: Dart Analyze
         run: dart analyze
@@ -22,7 +22,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.0.1"
-      - name: Install npm packages
+      - name: Install pub packages
         run: dart pub get
       - name: Run Unit Tests
         run: dart run test --coverage=coverage
